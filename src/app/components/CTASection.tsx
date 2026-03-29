@@ -1,0 +1,99 @@
+import { motion } from "motion/react";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
+
+export function CTASection() {
+  const { t, isRTL } = useLanguage();
+
+  return (
+    <section className="py-6 md:py-10 bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          dir={isRTL ? "rtl" : "ltr"}
+          className="relative w-full overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#482D7A] via-[#482D7A] to-[#3a2260] px-6 py-14 md:px-16 md:py-20 text-center"
+        >
+          {/* Decorative blobs */}
+          <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-white/5 -translate-y-24 translate-x-24" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#FAB51F]/10 translate-y-16 -translate-x-16" />
+          <div className="absolute top-1/2 left-[10%] w-3 h-3 rounded-full bg-[#FAB51F] opacity-60 -translate-y-1/2" />
+          <div className="absolute top-[20%] right-[15%] w-2 h-2 rounded-full bg-white opacity-40" />
+          <div className="absolute bottom-[25%] right-[8%] w-4 h-4 rounded-full bg-[#FAB51F]/50 border border-[#FAB51F]" />
+
+          {/* Content */}
+          <div className="relative z-10">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-8"
+            >
+              <Sparkles size={14} className="text-[#FAB51F]" />
+              <span
+                className="text-white/80"
+                style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.825rem" }}
+              >
+                {t.cta.badge}
+              </span>
+            </motion.div>
+
+            <h2
+              className="text-white mb-6 mx-auto max-w-3xl"
+              style={{
+                fontFamily: t.fontHeading,
+                fontWeight: 800,
+                fontSize: "clamp(2.2rem, 5vw, 4rem)",
+                lineHeight: 1.1,
+                letterSpacing: "-0.02em",
+              }}
+            >
+              {t.cta.heading}{" "}
+              <span
+                style={{
+                  background: "linear-gradient(135deg, #FAB51F, #F59E0B)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                {t.cta.headingAccent}
+              </span>
+            </h2>
+
+            <p
+              className="text-white/60 max-w-xl mx-auto mb-10"
+              style={{ fontFamily: t.fontBody, fontWeight: 400, fontSize: "1.05rem", lineHeight: 1.7 }}
+            >
+              {t.cta.description}
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <motion.button
+                whileHover={{ scale: 1.07, boxShadow: "0 0 40px rgba(251,191,36,0.5)" }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+                className="flex items-center justify-center gap-2 w-full sm:w-auto px-10 py-4 rounded-full bg-[#FAB51F] text-[#482D7A] shadow-xl shadow-yellow-500/30"
+                style={{ fontFamily: t.fontBody, fontWeight: 700, fontSize: "1rem" }}
+              >
+                {t.cta.btnStart}
+                <ArrowRight size={18} />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.15)" }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => document.querySelector("#portfolio")?.scrollIntoView({ behavior: "smooth" })}
+                className="w-full sm:w-auto px-10 py-4 rounded-full border border-white/30 text-white transition-colors duration-200"
+                style={{ fontFamily: t.fontBody, fontWeight: 600, fontSize: "1rem" }}
+              >
+                {t.cta.btnWork}
+              </motion.button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
