@@ -24,8 +24,8 @@ const cardVariants = {
 };
 
 export function ServicesSection() {
-  const { t } = useLanguage();
-
+  const { t , lang } = useLanguage();
+  
   return (
     <section id="services" className="py-16 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -67,6 +67,7 @@ export function ServicesSection() {
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
+           key={lang} 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}

@@ -52,8 +52,10 @@ export function Navbar() {
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 100); 
   };
 
   const navLinks = [
@@ -98,7 +100,11 @@ export function Navbar() {
               <button
                 onClick={() => handleNavClick(link.href)}
                 className="text-white/70 hover:text-white transition-colors duration-200 relative group cursor-pointer"
-                style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.9rem" }}
+                style={{
+                  fontFamily: t.fontBody,
+                  fontWeight: 500,
+                  fontSize: "0.9rem",
+                }}
               >
                 {link.label}
                 <span
@@ -117,8 +123,14 @@ export function Navbar() {
             whileTap={{ scale: 0.97 }}
             onClick={toggleLang}
             className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-white/20 text-white/80 hover:text-white hover:border-[#FAB51F]/60 transition-all duration-200 cursor-pointer"
-            style={{ fontFamily: t.fontBody, fontWeight: 600, fontSize: "0.8rem" }}
-            title={lang === "en" ? "Switch to Arabic" : "التبديل إلى الإنجليزية"}
+            style={{
+              fontFamily: t.fontBody,
+              fontWeight: 600,
+              fontSize: "0.8rem",
+            }}
+            title={
+              lang === "en" ? "Switch to Arabic" : "التبديل إلى الإنجليزية"
+            }
           >
             <Globe size={14} className="text-[#FAB51F]" />
             <span>{lang === "en" ? "عربي" : "EN"}</span>
@@ -129,7 +141,11 @@ export function Navbar() {
             whileTap={{ scale: 0.97 }}
             onClick={() => handleNavClick("#contact")}
             className="px-5 py-2.5 rounded-full bg-[#FAB51F] text-[#482D7A] hover:bg-[#F59E0B] transition-colors duration-200 shadow-md shadow-yellow-500/25 cursor-pointer"
-            style={{ fontFamily: t.fontBody, fontWeight: 600, fontSize: "0.875rem" }}
+            style={{
+              fontFamily: t.fontBody,
+              fontWeight: 600,
+              fontSize: "0.875rem",
+            }}
           >
             {t.nav.cta}
           </motion.button>
@@ -142,7 +158,11 @@ export function Navbar() {
             whileTap={{ scale: 0.95 }}
             onClick={toggleLang}
             className="flex items-center gap-1 px-3 py-1.5 rounded-full border border-white/20 text-white/80 cursor-pointer"
-            style={{ fontFamily: t.fontBody, fontWeight: 600, fontSize: "0.75rem" }}
+            style={{
+              fontFamily: t.fontBody,
+              fontWeight: 600,
+              fontSize: "0.75rem",
+            }}
           >
             <Globe size={13} className="text-[#FAB51F]" />
             <span>{lang === "en" ? "عربي" : "EN"}</span>
@@ -187,7 +207,11 @@ export function Navbar() {
                 <button
                   onClick={() => handleNavClick("#contact")}
                   className="w-full px-5 py-3 rounded-full bg-[#FAB51F] text-[#482D7A] mt-2 cursor-pointer"
-                  style={{ fontFamily: t.fontBody, fontWeight: 600, fontSize: "0.9rem" }}
+                  style={{
+                    fontFamily: t.fontBody,
+                    fontWeight: 600,
+                    fontSize: "0.9rem",
+                  }}
                 >
                   {t.nav.cta}
                 </button>

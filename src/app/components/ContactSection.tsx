@@ -2,26 +2,51 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { Mail, MapPin, MessageCircle, Send, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import emailjs from "@emailjs/browser";
+//todo : make it in env 
+const EMAILJS_SERVICE_ID = "service_ojsojzn";
+const EMAILJS_TEMPLATE_ID = "template_4ns1vxs";
+const EMAILJS_PUBLIC_KEY = "Ge8mze7a09lK1mIIy";
 
 export function ContactSection() {
   const { t } = useLanguage();
   const [form, setForm] = useState({
     name: "",
     email: "",
-    company: "",
+    budget: "",
     service: "",
     message: "",
   });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    setError("");
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          budget: form.budget || "Not specified",
+          service: form.service || "Not specified",
+          message: form.message,
+          to_email: "YOUR_EMAIL@gmail.com", // 🔧 your email here
+        },
+        EMAILJS_PUBLIC_KEY
+      );
       setSent(true);
-    }, 1500);
+    } catch (err) {
+      console.error(err);
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputClass =
@@ -91,7 +116,6 @@ export function ContactSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2 flex flex-col gap-5"
           >
-            {/* Info Cards */}
             {infoCards.map((info) => {
               const Icon = info.icon;
               return (
@@ -124,9 +148,9 @@ export function ContactSection() {
               );
             })}
 
-            {/* WhatsApp */}
+            {/* WhatsApp — fixed link */}
             <motion.a
-              href="https://wa.me/966500000000"
+              href="https://wa.me/201272860656"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03, boxShadow: "0 12px 32px rgba(37,211,102,0.25)" }}
@@ -193,6 +217,14 @@ export function ContactSection() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                  {/* Error message */}
+                  {error && (
+                    <div className="px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm"
+                      style={{ fontFamily: t.fontBody }}>
+                      {error}
+                    </div>
+                  )}
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                       <label
@@ -236,15 +268,15 @@ export function ContactSection() {
                         className="block text-[#374151] mb-2"
                         style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
                       >
-                        {t.contact.form.company}
+                        {t.contact.form.budget}
                       </label>
                       <input
-                        type="text"
-                        placeholder={t.contact.form.companyPlaceholder}
+                        type="number"
+                        placeholder={t.contact.form.budgetPlaceholder}
                         className={inputClass}
                         style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                        value={form.company}
-                        onChange={(e) => setForm({ ...form, company: e.target.value })}
+                        value={form.budget}
+                        onChange={(e) => setForm({ ...form, budget: e.target.value })}
                       />
                     </div>
                     <div>

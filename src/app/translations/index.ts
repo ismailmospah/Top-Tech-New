@@ -29,7 +29,7 @@ export const translations = {
         { value: "150+", label: "Projects Done" },
         { value: "80+", label: "Happy Clients" },
         { value: "5+", label: "Years of Mastery" },
-        { value: "20+", label: "Awards Won" },
+        // { value: "20+", label: "Awards Won" },
       ],
     },
 
@@ -199,8 +199,8 @@ export const translations = {
         namePlaceholder: "Your name",
         email: "Email Address",
         emailPlaceholder: "your@email.com",
-        company: "Company",
-        companyPlaceholder: "Your company",
+        budget: "Budget",
+        budgetPlaceholder: "Your expected budget",
         service: "Service Needed",
         servicePlaceholder: "Select a service",
         serviceOptions: [
@@ -436,8 +436,8 @@ export const translations = {
         namePlaceholder: "اسمك",
         email: "البريد الإلكتروني",
         emailPlaceholder: "بريدك@الإلكتروني.com",
-        company: "الشركة",
-        companyPlaceholder: "اسم شركتك",
+        budget: "الميزانية",
+        budgetPlaceholder: "ميزانيتك المتوقعة",
         service: "الخدمة المطلوبة",
         servicePlaceholder: "اختر خدمة",
         serviceOptions: [
@@ -450,7 +450,7 @@ export const translations = {
         ],
         message: "تفاصيل المشروع",
         messagePlaceholder:
-          "أخبرنا عن مشروعك وأهدافك وأي متطلبات ��اصة...",
+          "أخبرنا عن مشروعك وأهدافك وأي متطلبات ...",
         submit: "إرسال الرسالة",
         sending: "جارٍ الإرسال...",
         successTitle: "تم إرسال رسالتك!",
