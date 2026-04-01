@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
@@ -12,12 +12,21 @@ const avatars = [
 export function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
   const { t, isRTL } = useLanguage();
+  const items = t.testimonials.items;
 
-  const prev = () => setCurrent((c) => (c === 0 ? t.testimonials.items.length - 1 : c - 1));
-  const next = () => setCurrent((c) => (c === t.testimonials.items.length - 1 ? 0 : c + 1));
+  useEffect(() => {
+    if (current >= items.length) {
+      setCurrent(0);
+    }
+  }, [current, items.length]);
 
-  const item = t.testimonials.items[current];
-  const { avatar, avatarColor } = avatars[current];
+  const prev = () => setCurrent((c) => (c === 0 ? items.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === items.length - 1 ? 0 : c + 1));
+
+  const item = items[current] ?? items[0];
+  const avatarEntry = avatars[current % avatars.length] ?? avatars[0];
+  const avatar = avatarEntry.avatar;
+  const avatarColor = avatarEntry.avatarColor;
 
   return (
     <section className="py-16 md:py-28 bg-[#1a0533] overflow-hidden">
@@ -122,7 +131,7 @@ export function TestimonialsSection() {
           <div className="flex items-center justify-between mt-8">
             {/* Dots */}
             <div className="flex gap-2">
-              {t.testimonials.items.map((_, i) => (
+              {items.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
@@ -141,18 +150,18 @@ export function TestimonialsSection() {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={prev}
+                onClick={isRTL ? next : prev}
                 className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors duration-200"
               >
-                <ChevronLeft size={20} />
+                {isRTL ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={next}
+                onClick={isRTL ? prev : next}
                 className="w-12 h-12 rounded-full bg-[#482D7A] flex items-center justify-center text-white hover:bg-[#6D28D9] transition-colors duration-200"
               >
-                <ChevronRight size={20} />
+                {isRTL ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
               </motion.button>
             </div>
           </div>

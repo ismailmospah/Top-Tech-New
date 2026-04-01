@@ -1,14 +1,26 @@
 import { motion } from "motion/react";
-import { Instagram, Twitter, Youtube, Linkedin, ArrowRight } from "lucide-react";
+import {
+  Instagram,
+  Twitter,
+  Globe,
+  Link2,
+  MessageCircle,
+  BriefcaseBusiness,
+  Music2,
+  Facebook,
+
+} from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 
-const LOGO_SRC = "figma:asset/a5b38343e7194b49f7e652a03bb95c87a692b3b4.png";
-
 const socials = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter/X" },
-  { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  // { icon: Globe, href: "https://top-tech.framer.website/", label: "Website" },
+  // { icon: Link2, href: "https://linktr.ee/Top_Tech_Company", label: "Linktree" },
+  { icon: Facebook, href: "https://www.facebook.com/share/16vibMnJEv/?mibextid=wwXIfr", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/toptech.company?igsh=eXZqeHY5cnU3Mm8z", label: "Instagram" },
+  { icon: Music2, href: "https://www.tiktok.com/@toptechcompany?_t=8mDY8zdjT8w&_r=1", label: "TikTok" },
+  { icon: Twitter, href: "https://x.com/toptechcompany5?s=21", label: "X" },
+  { icon: MessageCircle, href: "https://wa.me/966592661980", label: "WhatsApp" },
+  { icon: BriefcaseBusiness, href: "https://www.behance.net/TopTechCompany", label: "Behance" },
 ];
 
 export function Footer() {
@@ -60,13 +72,15 @@ export function Footer() {
             </p>
 
             {/* Social Links */}
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               {socials.map((s) => {
                 const Icon = s.icon;
                 return (
                   <motion.a
                     key={s.label}
                     href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, backgroundColor: "#482D7A" }}
                     className="w-10 h-10 rounded-xl border border-white/10 flex items-center justify-center text-white/50 hover:text-white transition-colors duration-200"
                     aria-label={s.label}
@@ -79,7 +93,9 @@ export function Footer() {
           </div>
 
           {/* Links */}
-          {Object.entries(t.footer.links).map(([title, items]) => (
+          {Object.entries(t.footer.links as Record<string, string[]>)
+            .filter(([title]) => title !== "Contact" && title !== "التواصل")
+            .map(([title, items]: [string, string[]]) => (
             <div key={title}>
               <h4
                 className="text-white mb-5"
@@ -104,39 +120,7 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Newsletter */}
-        <div className="p-5 md:p-8 rounded-2xl bg-[#1a0533] border border-white/10 mb-10 md:mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
-          <div>
-            <h4
-              className="text-white mb-1"
-              style={{ fontFamily: t.fontHeading, fontWeight: 700, fontSize: "1.1rem" }}
-            >
-              {t.footer.newsletter}
-            </h4>
-            <p
-              className="text-white/50"
-              style={{ fontFamily: t.fontBody, fontWeight: 400, fontSize: "0.875rem" }}
-            >
-              {t.footer.newsletterSub}
-            </p>
-          </div>
-          <div className="flex gap-2 w-full md:w-auto">
-            <input
-              type="email"
-              placeholder={t.footer.emailPlaceholder}
-              className="flex-1 md:w-64 px-4 py-3 rounded-xl bg-white/10 border border-white/15 text-white placeholder-white/30 focus:outline-none focus:border-[#482D7A] transition-colors duration-200 min-w-0"
-              style={{ fontFamily: t.fontBody, fontSize: "0.875rem" }}
-            />
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="px-5 py-3 rounded-xl bg-[#FAB51F] text-[#482D7A]"
-              style={{ fontFamily: t.fontBody, fontWeight: 700, fontSize: "0.875rem" }}
-            >
-              <ArrowRight size={18} />
-            </motion.button>
-          </div>
-        </div>
+      
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">

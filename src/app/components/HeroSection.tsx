@@ -57,56 +57,12 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0f0620]">
-      {/* Animated grid lines */}
-      <AnimatedLines />
-
-      {/* Corner accents */}
-      <motion.div
-        className="absolute top-0 left-0 w-40 h-40 border-l-2 border-t-2 border-[#482D7A]/20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      />
-      <motion.div
-        className="absolute bottom-0 right-0 w-40 h-40 border-r-2 border-b-2 border-[#482D7A]/20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.7 }}
-      />
-
-      {/* Floating geometric shapes */}
-      <motion.div
-        className="absolute top-[15%] right-[10%] w-16 h-16 border-2 border-[#FAB51F]/20 rotate-45 hidden md:block"
-        animate={{ y: [0, -12, 0], rotate: [45, 50, 40, 45] }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-[22%] left-[7%] w-12 h-12 border-2 border-[#8B7BB8]/15 rounded-full hidden md:block"
-        animate={{ y: [0, 10, 0], scale: [1, 1.1, 1] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-      />
-      <motion.div
-        className="absolute top-[50%] right-[6%] w-8 h-8 border border-[#482D7A]/25 hidden lg:block"
-        animate={{ rotate: [0, 90, 180, 270, 360] }}
-        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-      />
-      <motion.div
-        className="absolute top-[35%] left-[4%] w-1 h-16 bg-[#FAB51F]/15 hidden md:block"
-        animate={{ scaleY: [1, 1.5, 1], opacity: [0.15, 0.35, 0.15] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      />
-
-      {/* Pulsing dots */}
-      <PulsingDot top="20%" left="30%" size={4} color="rgba(250,181,31,0.4)" delay={0} />
-      <PulsingDot top="65%" left="85%" size={3} color="rgba(139,123,184,0.4)" delay={1} />
-      <PulsingDot top="75%" left="15%" size={3} color="rgba(250,181,31,0.3)" delay={2} />
-      <PulsingDot top="12%" left="70%" size={4} color="rgba(139,123,184,0.3)" delay={0.5} />
-      <PulsingDot top="45%" left="92%" size={3} color="rgba(250,181,31,0.25)" delay={1.5} />
+      {/* Background animations removed as requested */}
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 text-center pt-24 pb-10">
         {/* Badge */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -119,7 +75,7 @@ export function HeroSection() {
           >
             {t.hero.badge}
           </span>
-        </motion.div>
+        </motion.div> */}
 
         {/* Heading */}
         <motion.h1
@@ -186,7 +142,10 @@ export function HeroSection() {
           <motion.button
             whileHover={{ scale: 1.05, backgroundColor: "rgba(72,45,122,0.25)" }}
             whileTap={{ scale: 0.97 }}
-            onClick={() => scrollToSection("#contact")}
+            onClick={() => {
+              window.history.pushState({}, "", "/contact");
+              window.dispatchEvent(new PopStateEvent("popstate"));
+            }}
             className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-full border border-white/15 text-white cursor-pointer"
             style={{ fontFamily: t.fontBody, fontWeight: 600, fontSize: "1rem" }}
           >

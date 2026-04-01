@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Vision 2030 Campaign",
+    "titleAr": "حملة رؤية 2030",
+    "category": "Motion Graphics",
+    "categoryAr": "موشن جرافيك",
+    "image": "https://images.unsplash.com/photo-1737768437560-9d523fa3adc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3Rpb24lMjBncmFwaGljcyUyMGFic3RyYWN0JTIwcHVycGxlJTIwYW5pbWF0aW9ufGVufDF8fHx8MTc3MzAwNzExOHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "accent": "#482D7A",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": 2,
+    "title": "Brand Identity Reveal",
+    "titleAr": "كشف الهوية البصرية",
+    "category": "Branding",
+    "categoryAr": "هوية بصرية",
+    "image": "https://images.unsplash.com/photo-1762787863004-767d5d7eac07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFuZGluZyUyMGRlc2lnbiUyMGxvZ28lMjBpZGVudGl0eXxlbnwxfHx8fDE3NzMwMDcxMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "accent": "#FAB51F",
+    "youtubeUrl": null
+  },
+  {
+    "id": 3,
+    "title": "TechStartup Explainer",
+    "titleAr": "فيديو تعريفي لشركة ناشئة",
+    "category": "Video",
+    "categoryAr": "فيديو",
+    "image": "https://images.unsplash.com/photo-1651085039733-ff793bd5af27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleHBsYWluZXIlMjB2aWRlbyUyMGFuaW1hdGlvbiUyMGNvbG9yZnVsfGVufDF8fHx8MTc3MzAwNzEyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "accent": "#8B7BB8",
+    "youtubeUrl": "https://www.youtube.com/embed/ysz5S6PUM-U"
+  },
+  {
+    "id": 4,
+    "title": "Social Reels Package",
+    "titleAr": "باقة ريلز سوشيال",
+    "category": "Social Media",
+    "categoryAr": "وسائل التواصل",
+    "image": "https://images.unsplash.com/photo-1764664281874-95ebc77286a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMGRpZ2l0YWwlMjBjb250ZW50JTIwY3JlYXRpdmV8ZW58MXx8fHwxNzczMDA3MTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "accent": "#FAB51F",
+    "youtubeUrl": null
+  },
+  {
+    "id": 5,
+    "title": "3D Product Showcase",
+    "titleAr": "عرض منتج ثلاثي الأبعاد",
+    "category": "Motion Graphics",
+    "categoryAr": "موشن جرافيك",
+    "image": "https://images.unsplash.com/photo-1662658825247-8fe2a88da496?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGFuaW1hdGlvbiUyMHJlbmRlciUyMGFic3RyYWN0JTIwY29sb3JmdWx8ZW58MXx8fHwxNzczMDA3MTI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "accent": "#482D7A",
+    "youtubeUrl": "https://www.youtube.com/embed/jNQXAC9IVRw"
+  },
+  {
+    "id": 6,
+    "title": "Corporate Event Film",
+    "titleAr": "فيلم حدث مؤسسي",
+    "category": "Video",
+    "categoryAr": "فيديو",
+    "image": "https://images.unsplash.com/photo-1762028892567-6ebfbb894992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBzdHVkaW8lMjBjcmVhdGl2ZXxlbnwxfHx8fDE3NzI5NTMwNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "accent": "#8B7BB8",
+    "youtubeUrl": "https://www.youtube.com/embed/ScMzIvxBSi4"
+  }
+]

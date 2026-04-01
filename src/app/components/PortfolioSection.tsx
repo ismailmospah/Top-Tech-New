@@ -1,18 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Play, ExternalLink } from "lucide-react";
+import { Play, ExternalLink, X } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
-
-const projectImages = [
-  "https://images.unsplash.com/photo-1737768437560-9d523fa3adc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3Rpb24lMjBncmFwaGljcyUyMGFic3RyYWN0JTIwcHVycGxlJTIwYW5pbWF0aW9ufGVufDF8fHx8MTc3MzAwNzExOHww&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1762787863004-767d5d7eac07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFuZGluZyUyMGRlc2lnbiUyMGxvZ28lMjBpZGVudGl0eXxlbnwxfHx8fDE3NzMwMDcxMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1651085039733-ff793bd5af27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleHBsYWluZXIlMjB2aWRlbyUyMGFuaW1hdGlvbiUyMGNvbG9yZnVsfGVufDF8fHx8MTc3MzAwNzEyMHww&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1764664281874-95ebc77286a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMGRpZ2l0YWwlMjBjb250ZW50JTIwY3JlYXRpdmV8ZW58MXx8fHwxNzczMDA3MTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1662658825247-8fe2a88da496?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGFuaW1hdGlvbiUyMHJlbmRlciUyMGFic3RyYWN0JTIwY29sb3JmdWx8ZW58MXx8fHwxNzczMDA3MTI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1762028892567-6ebfbb894992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBzdHVkaW8lMjBjcmVhdGl2ZXxlbnwxfHx8fDE3NzI5NTMwNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-];
-
-const accents = ["#482D7A", "#FAB51F", "#8B7BB8", "#FAB51F", "#482D7A", "#8B7BB8"];
+import projectsData from "../data/projects.json";
 
 const containerVariants = {
   hidden: {},
@@ -21,19 +11,22 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, scale: 0.9 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
 };
 
 export function PortfolioSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [activeVideoUrl, setActiveVideoUrl] = useState<string | null>(null);
 
   const categories = t.portfolio.categories;
-  const projects = t.portfolio.projects.map((p, i) => ({
-    ...p,
-    id: i + 1,
-    image: projectImages[i],
-    accent: accents[i],
+  const projects = projectsData.map((p) => ({
+    id: p.id,
+    title: lang === "ar" ? p.titleAr : p.title,
+    category: lang === "ar" ? p.categoryAr : p.category,
+    image: p.image,
+    accent: p.accent,
+    youtubeUrl: p.youtubeUrl,
   }));
 
   const filtered =
@@ -116,6 +109,11 @@ export function PortfolioSection() {
                 layout
                 exit={{ opacity: 0, scale: 0.8 }}
                 className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer"
+                onClick={() => {
+                  if (project.youtubeUrl) {
+                    setActiveVideoUrl(project.youtubeUrl);
+                  }
+                }}
               >
                 {/* Image */}
                 <img
@@ -165,6 +163,14 @@ export function PortfolioSection() {
                       {t.portfolio.viewProject}
                     </span>
                   </div>
+                  {project.youtubeUrl ? (
+                    <div
+                      className="text-white/80 mt-2"
+                      style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.78rem" }}
+                    >
+                      Live video: YouTube
+                    </div>
+                  ) : null}
                 </div>
 
                 {/* Accent border glow */}
@@ -190,10 +196,54 @@ export function PortfolioSection() {
             whileTap={{ scale: 0.97 }}
             className="px-8 py-4 rounded-full border border-[#482D7A]/50 text-white hover:bg-[#482D7A]/20 transition-colors duration-200"
             style={{ fontFamily: t.fontBody, fontWeight: 600, fontSize: "0.95rem" }}
+            onClick={() => {
+              window.history.pushState({}, "", "/projects");
+              window.dispatchEvent(new PopStateEvent("popstate"));
+            }}
           >
             {t.portfolio.viewAll}
           </motion.button>
         </motion.div>
+
+        <AnimatePresence>
+          {activeVideoUrl ? (
+            <motion.div
+              className="fixed inset-0 z-[90] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setActiveVideoUrl(null)}
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                className="w-full max-w-4xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex justify-end mb-3">
+                  <button
+                    onClick={() => setActiveVideoUrl(null)}
+                    className="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20"
+                    aria-label="Close video"
+                  >
+                    <X size={18} />
+                  </button>
+                </div>
+                <div className="relative w-full pt-[56.25%] rounded-2xl overflow-hidden bg-black">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={activeVideoUrl}
+                    title="Project video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
       </div>
     </section>
   );

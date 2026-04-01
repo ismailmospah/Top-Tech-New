@@ -132,7 +132,10 @@ export function ProcessSection() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: "0 8px 24px rgba(250,181,31,0.35)" }}
             whileTap={{ scale: 0.97 }}
-            onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => {
+              window.history.pushState({}, "", "/contact");
+              window.dispatchEvent(new PopStateEvent("popstate"));
+            }}
             className="w-full md:w-auto px-8 py-4 rounded-full bg-[#482D7A] text-white shadow-lg shadow-purple-500/25 whitespace-nowrap"
             style={{ fontFamily: t.fontBody, fontWeight: 700, fontSize: "0.95rem" }}
           >

@@ -15,7 +15,7 @@ export function StatsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
+          className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 justify-center"
         >
           {t.hero.stats.map((stat, i) => (
             <motion.div

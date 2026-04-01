@@ -10,6 +10,7 @@ export const translations = {
     nav: {
       services: "Services",
       work: "Work",
+      blogs: "Blogs",
       process: "Process",
       clients: "Clients",
       contact: "Contact",
@@ -28,7 +29,7 @@ export const translations = {
       stats: [
         { value: "150+", label: "Projects Done" },
         { value: "80+", label: "Happy Clients" },
-        { value: "5+", label: "Years of Mastery" },
+        { value: "7+", label: "Years of Mastery" },
         // { value: "20+", label: "Awards Won" },
       ],
     },
@@ -48,29 +49,19 @@ export const translations = {
       customCta: "Get a Custom Quote",
       items: [
         {
-          title: "Motion Graphics",
+          title: "Motion Graphic",
           description:
             "Eye-catching motion graphics that bring your brand story to life with dynamic visuals, kinetic typography, and seamless transitions.",
         },
         {
-          title: "Explainer Videos",
+          title: "Content Creation",
           description:
-            "Clear, engaging explainer videos that simplify complex ideas and communicate your product's value in seconds.",
+            "Engaging content creation services including scripts, storyboards, and creative assets tailored for your brand.",
         },
         {
-          title: "Social Media Animations",
+          title: "Social Media Marketing",
           description:
-            "Scroll-stopping animated content for Instagram, TikTok, YouTube, and all platforms to grow your digital presence.",
-        },
-        {
-          title: "Branding & Logo Animation",
-          description:
-            "Transform your static brand identity into an animated masterpiece with logo reveals, idents, and brand kits.",
-        },
-        {
-          title: "Video Editing",
-          description:
-            "Professional video editing that elevates raw footage into polished, cinematic productions ready to wow your audience.",
+            "Grow your digital presence with scroll-stopping animated and static content for all social platforms.",
         },
       ],
     },
@@ -82,7 +73,13 @@ export const translations = {
       headingAccent: "Louder Than Words",
       description:
         "A curated selection of our most impactful projects delivered for brands across the region.",
-      categories: ["All", "Motion Graphics", "Branding", "Social Media", "Video"],
+      categories: [
+        "All",
+        "Motion Graphics",
+        "Branding",
+        "Social Media",
+        "Video",
+      ],
       viewProject: "View Project",
       viewAll: "View All Projects",
       projects: [
@@ -131,7 +128,7 @@ export const translations = {
     clients: {
       trusted: "TRUSTED BY LEADING BRANDS ACROSS THE REGION",
       heading: "Brands That Trust",
-      headingAccent: "Motio",
+      headingAccent: "Top Tech",
       more: "+ 70 more companies across Saudi Arabia and the GCC",
     },
 
@@ -205,11 +202,8 @@ export const translations = {
         servicePlaceholder: "Select a service",
         serviceOptions: [
           "Motion Graphics",
-          "Explainer Video",
-          "Social Media Animations",
-          "Branding & Logo Animation",
-          "Video Editing",
-          "Custom Package",
+          "Content Creation ",
+          "Social Media Marketing",
         ],
         message: "Project Details",
         messagePlaceholder:
@@ -227,14 +221,28 @@ export const translations = {
       tagline:
         "Saudi Arabia's leading motion graphics studio. We create visual stories that move brands forward.",
       links: {
-        Services: ["Motion Graphics", "Explainer Videos", "Social Animations", "Branding", "Video Editing"],
+        Services: [
+          "Motion Graphics",
+          "Content Creation",
+          "Social Media Marketing"
+        ],
         Company: ["About Us", "Our Process", "Portfolio", "Careers", "Blog"],
-        Contact: ["hello@motio.sa", "Riyadh, Saudi Arabia", "WhatsApp", "Instagram", "LinkedIn"],
+        Contact: [
+          "toptechcompany51@gmail.com",
+          "https://top-tech.framer.website/",
+          "https://linktr.ee/Top_Tech_Company",
+          "wa.me/966592661980",
+          "https://www.behance.net/TopTechCompany",
+          "https://www.tiktok.com/@toptechcompany?_t=8mDY8zdjT8w&_r=1",
+          "https://x.com/toptechcompany5?s=21",
+          "https://www.facebook.com/share/16vibMnJEv/?mibextid=wwXIfr",
+          "https://www.instagram.com/toptech.company?igsh=eXZqeHY5cnU3Mm8z",
+        ],
       },
       newsletter: "Stay Inspired",
       newsletterSub: "Get motion tips, project showcases, and studio updates.",
       emailPlaceholder: "Enter your email",
-      copyright: "© 2026 Motio Studio. All rights reserved. Riyadh, Saudi Arabia.",
+      copyright: "© 2026 Top Tech Studio. All rights reserved.",
       legal: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
     },
   },
@@ -248,6 +256,7 @@ export const translations = {
     nav: {
       services: "خدماتنا",
       work: "أعمالنا",
+      blogs: "المدونة",
       process: "منهجيتنا",
       clients: "عملاؤنا",
       contact: "تواصل معنا",
@@ -266,8 +275,8 @@ export const translations = {
       stats: [
         { value: "+150", label: "مشروع منجز" },
         { value: "+80", label: "عميل سعيد" },
-        { value: "+5", label: "سنوات من الإبداع" },
-        { value: "+20", label: "جائزة مكتسبة" },
+        { value: "+7", label: "سنوات من الإبداع" },
+        // { value: "+20", label: "جائزة مكتسبة" },
       ],
     },
 
@@ -291,24 +300,14 @@ export const translations = {
             "موشن جرافيك جذاب يجسّد قصة علامتك التجارية بصور ديناميكية وطباعة حركية وانتقالات سلسة لا تُنسى.",
         },
         {
-          title: "فيديو تعريفي",
+          title: "صناعة المحتوى",
           description:
-            "فيديوهات تعريفية واضحة وجذابة تبسّط الأفكار المعقدة وتوصل قيمة منتجك في ثوانٍ معدودة.",
+            "خدمات صناعة محتوى إبداعي تشمل كتابة النصوص، السيناريوهات، وتصميم الأصول الإبداعية لعلامتك التجارية.",
         },
         {
-          title: "انيميشن وسائل التواصل",
+          title: "تسويق عبر وسائل التواصل",
           description:
-            "محتوى متحرك يستوقف المتصفح على إنستغرام وتيك توك ويوتيوب وجميع المنصات لتعزيز حضورك الرقمي.",
-        },
-        {
-          title: "هوية بصرية وشعار متحرك",
-          description:
-            "حوّل هويتك البصرية الثابتة إلى تحفة متحركة بكشف الشعار والهويات البصرية والمجموعات الإبداعية.",
-        },
-        {
-          title: "مونتاج فيديو",
-          description:
-            "مونتاج احترافي يحوّل اللقطات الخام إلى إنتاجات سينمائية متقنة تبهر جمهورك وتترك انطباعاً دائماً.",
+            "نمِّ حضورك الرقمي بمحتوى متحرك وثابت يجذب الانتباه لجميع منصات التواصل الاجتماعي.",
         },
       ],
     },
@@ -320,7 +319,13 @@ export const translations = {
       headingAccent: "بصوت أعلى من الكلمات",
       description:
         "مجموعة مختارة من أكثر مشاريعنا تأثيراً التي أنجزناها للعلامات التجارية في المنطقة.",
-      categories: ["الكل", "موشن جرافيك", "هوية بصرية", "وسائل التواصل", "فيديو"],
+      categories: [
+        "الكل",
+        "موشن جرافيك",
+        "هوية بصرية",
+        "وسائل التواصل",
+        "فيديو",
+      ],
       viewProject: "عرض المشروع",
       viewAll: "عرض جميع المشاريع",
       projects: [
@@ -429,8 +434,7 @@ export const translations = {
       whatsapp: "تواصل عبر واتساب",
       whatsappSub: "متاحون الأحد–الخميس، 9ص–6م",
       turnaround: "🚀 تسليم سريع",
-      turnaroundText:
-        "معظم المشاريع تُسلَّم خلال 5–15 يوم عمل حسب النطاق.",
+      turnaroundText: "معظم المشاريع تُسلَّم خلال 5–15 يوم عمل حسب النطاق.",
       form: {
         name: "الاسم الكامل",
         namePlaceholder: "اسمك",
@@ -440,22 +444,13 @@ export const translations = {
         budgetPlaceholder: "ميزانيتك المتوقعة",
         service: "الخدمة المطلوبة",
         servicePlaceholder: "اختر خدمة",
-        serviceOptions: [
-          "موشن جرافيك",
-          "فيديو تعريفي",
-          "انيميشن وسائل التواصل",
-          "هوية بصرية وشعار متحرك",
-          "مونتاج فيديو",
-          "باقة مخصصة",
-        ],
+        serviceOptions: ["موشن جرافيك", "صناعة المحتوى", "تسويق عبر وسائل التواصل"],
         message: "تفاصيل المشروع",
-        messagePlaceholder:
-          "أخبرنا عن مشروعك وأهدافك وأي متطلبات ...",
+        messagePlaceholder: "أخبرنا عن مشروعك وأهدافك وأي متطلبات ...",
         submit: "إرسال الرسالة",
         sending: "جارٍ الإرسال...",
         successTitle: "تم إرسال رسالتك!",
-        successText:
-          "استلمنا رسالتك وسنتواصل معك خلال 24 ساعة.",
+        successText: "استلمنا رسالتك وسنتواصل معك خلال 24 ساعة.",
       },
     },
 
@@ -464,14 +459,29 @@ export const translations = {
       tagline:
         "استوديو الموشن جرافيك الرائد في المملكة العربية السعودية. نصنع قصصاً بصرية تحرّك العلامات التجارية إلى الأمام.",
       links: {
-        "الخدمات": ["موشن جرافيك", "فيديو تعريفي", "انيميشن سوشيال", "هوية بصرية", "مونتاج"],
-        "الشركة": ["من نحن", "منهجيتنا", "أعمالنا", "الوظائف", "المدونة"],
-        "التواصل": ["hello@motio.sa", "الرياض، السعودية", "واتساب", "إنستغرام", "لينكدإن"],
+        الخدمات: [
+          "موشن جرافيك",
+          "صناعة المحتوى",
+          "تسويق عبر وسائل التواصل"
+        ],
+        الشركة: ["من نحن", "منهجيتنا", "أعمالنا", "الوظائف", "المدونة"],
+        التواصل: [
+          "toptechcompany51@gmail.com",
+          "https://top-tech.framer.website/",
+          "https://linktr.ee/Top_Tech_Company",
+          "wa.me/966592661980",
+          "https://www.behance.net/TopTechCompany",
+          "https://www.tiktok.com/@toptechcompany?_t=8mDY8zdjT8w&_r=1",
+          "https://x.com/toptechcompany5?s=21",
+          "https://www.facebook.com/share/16vibMnJEv/?mibextid=wwXIfr",
+          "https://www.instagram.com/toptech.company?igsh=eXZqeHY5cnU3Mm8z",
+        ],
       },
       newsletter: "ابقَ ملهماً",
-      newsletterSub: "احصل على نصائح الموشن وعروض المشاريع وآخر أخبار الاستوديو.",
+      newsletterSub:
+        "احصل على نصائح الموشن وعروض المشاريع وآخر أخبار الاستوديو.",
       emailPlaceholder: "أدخل بريدك الإلكتروني",
-      copyright: "© 2026 استوديو موشيو. جميع الحقوق محفوظة. الرياض، المملكة العربية السعودية.",
+      copyright: "© 2026 استوديو توب تيك. جميع الحقوق محفوظة. .",
       legal: ["سياسة الخصوصية", "شروط الخدمة", "سياسة ملفات تعريف الارتباط"],
     },
   },

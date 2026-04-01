@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Mail, MapPin, MessageCircle, Send, CheckCircle2 } from "lucide-react";
+import { Mail, MessageCircle, Send, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import emailjs from "@emailjs/browser";
 //todo : make it in env 
-const EMAILJS_SERVICE_ID = "service_ojsojzn";
+const EMAILJS_SERVICE_ID = "service_wybaj13";
 const EMAILJS_TEMPLATE_ID = "template_4ns1vxs";
 const EMAILJS_PUBLIC_KEY = "Ge8mze7a09lK1mIIy";
 
@@ -56,16 +56,9 @@ export function ContactSection() {
     {
       icon: Mail,
       label: t.contact.emailLabel,
-      value: "hello@motio.sa",
+      value: "toptechcompany51@gmail.com",
       color: "#482D7A",
       bg: "#EDE9FE",
-    },
-    {
-      icon: MapPin,
-      label: t.contact.locationLabel,
-      value: t.contact.locationValue,
-      color: "#5B21B6",
-      bg: "#DDD6FE",
     },
   ];
 
@@ -150,7 +143,7 @@ export function ContactSection() {
 
             {/* WhatsApp — fixed link */}
             <motion.a
-              href="https://wa.me/201272860656"
+              href="https://wa.me/966592661980"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03, boxShadow: "0 12px 32px rgba(37,211,102,0.25)" }}

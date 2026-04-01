@@ -43,6 +43,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { lang, setLang, t, isRTL } = useLanguage();
+  const isHomePage = window.location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -52,10 +53,22 @@ export function Navbar() {
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
+
+    if (href.startsWith("/")) {
+      window.history.pushState({}, "", href);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      return;
+    }
+
+    if (window.location.pathname !== "/") {
+      window.history.pushState({}, "", "/");
+      window.dispatchEvent(new PopStateEvent("popstate"));
+    }
+
     setTimeout(() => {
       const el = document.querySelector(href);
       if (el) el.scrollIntoView({ behavior: "smooth" });
-    }, 100); 
+    }, 100);
   };
 
   const navLinks = [
@@ -63,7 +76,8 @@ export function Navbar() {
     { label: t.nav.work, href: "#portfolio" },
     { label: t.nav.process, href: "#process" },
     { label: t.nav.clients, href: "#clients" },
-    { label: t.nav.contact, href: "#contact" },
+    { label: t.nav.contact, href: "/contact" },
+     { label: t.nav.blogs, href: "/blogs" },
   ];
 
   const toggleLang = () => setLang(lang === "en" ? "ar" : "en");
@@ -75,7 +89,7 @@ export function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       dir={isRTL ? "rtl" : "ltr"}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || !isHomePage
           ? "bg-[#482D7A]/95 backdrop-blur-xl shadow-lg shadow-purple-900/20"
           : "bg-transparent"
       }`}
@@ -139,7 +153,7 @@ export function Navbar() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            onClick={() => handleNavClick("#contact")}
+            onClick={() => handleNavClick("/contact")}
             className="px-5 py-2.5 rounded-full bg-[#FAB51F] text-[#482D7A] hover:bg-[#F59E0B] transition-colors duration-200 shadow-md shadow-yellow-500/25 cursor-pointer"
             style={{
               fontFamily: t.fontBody,
@@ -205,7 +219,7 @@ export function Navbar() {
               ))}
               <li>
                 <button
-                  onClick={() => handleNavClick("#contact")}
+                  onClick={() => handleNavClick("/contact")}
                   className="w-full px-5 py-3 rounded-full bg-[#FAB51F] text-[#482D7A] mt-2 cursor-pointer"
                   style={{
                     fontFamily: t.fontBody,

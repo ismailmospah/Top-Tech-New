@@ -25,21 +25,7 @@ export function CTASection() {
 
           {/* Content */}
           <div className="relative z-10">
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-8"
-            >
-              <Sparkles size={14} className="text-[#FAB51F]" />
-              <span
-                className="text-white/80"
-                style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.825rem" }}
-              >
-                {t.cta.badge}
-              </span>
-            </motion.div>
+          
 
             <h2
               className="text-white mb-6 mx-auto max-w-3xl"
@@ -74,7 +60,10 @@ export function CTASection() {
               <motion.button
                 whileHover={{ scale: 1.07, boxShadow: "0 0 40px rgba(251,191,36,0.5)" }}
                 whileTap={{ scale: 0.97 }}
-                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => {
+                  window.history.pushState({}, "", "/contact");
+                  window.dispatchEvent(new PopStateEvent("popstate"));
+                }}
                 className="flex items-center justify-center gap-2 w-full sm:w-auto px-10 py-4 rounded-full bg-[#FAB51F] text-[#482D7A] shadow-xl shadow-yellow-500/30"
                 style={{ fontFamily: t.fontBody, fontWeight: 700, fontSize: "1rem" }}
               >
