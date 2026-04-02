@@ -1,16 +1,14 @@
+/// <reference types="vite/client" />
+
 import { motion } from "motion/react";
 import { useLanguage } from "../context/LanguageContext";
 
-const clients = [
-  { name: "Aramco", abbr: "AR" },
-  { name: "STC Group", abbr: "STC" },
-  { name: "Almarai", abbr: "ALM" },
-  { name: "NEOM", abbr: "NM" },
-  { name: "Jarir", abbr: "JR" },
-  { name: "Savola", abbr: "SV" },
-  { name: "stc pay", abbr: "STP" },
-  { name: "Noon", abbr: "NN" },
-];
+const clientImages = Object.values(
+  import.meta.glob("/src/assets/clients/*.{png,jpg,jpeg,webp,svg,avif}", {
+    eager: true,
+    import: "default",
+  }),
+) as string[];
 
 export function ClientsSection() {
   const { t } = useLanguage();
@@ -42,38 +40,35 @@ export function ClientsSection() {
         </motion.div>
 
         {/* Clients Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
-          {clients.map((client, i) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          {clientImages.map((imageSrc, i) => (
             <motion.div
-              key={client.name}
+              key={imageSrc}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.07 }}
               whileHover={{ y: -4, boxShadow: "0 12px 32px rgba(124,58,237,0.12)" }}
-              className="group flex flex-col items-center justify-center gap-3 p-8 rounded-2xl bg-white border border-[#e5e7eb] cursor-pointer transition-all duration-300"
+              className="group aspect-square overflow-hidden rounded-xl bg-white border border-[#e5e7eb] cursor-pointer transition-all duration-300"
             >
-              {/* Logo placeholder */}
-              <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center transition-colors duration-300 group-hover:bg-[#482D7A]"
-                style={{ backgroundColor: "#EDE9FE" }}
-              >
-                <span
-                  className="text-[#482D7A] group-hover:text-white transition-colors duration-300"
-                  style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "0.75rem", letterSpacing: "0.05em" }}
-                >
-                  {client.abbr}
-                </span>
-              </div>
-              <span
-                className="text-[#717182] group-hover:text-[#482D7A] transition-colors duration-300"
-                style={{ fontFamily: t.fontBody, fontWeight: 600, fontSize: "0.875rem" }}
-              >
-                {client.name}
-              </span>
+              <img
+                src={imageSrc}
+                alt="Client logo"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </motion.div>
           ))}
         </div>
+
+        {clientImages.length === 0 && (
+          <p
+            className="text-center text-[#717182] mt-6"
+            style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.95rem" }}
+          >
+            Add your client logos to src/assets/clients
+          </p>
+        )}
 
         {/* Partner Text */}
         <motion.p

@@ -4,6 +4,16 @@ import { Play, ExternalLink, X } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import projectsData from "../data/projects.json";
 
+type PortfolioItem = {
+  id: number | string;
+  title: string;
+  category: string;
+  image: string;
+  accent: string;
+  youtubeUrl: string | null;
+  isDesign?: boolean;
+};
+
 const containerVariants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
@@ -19,8 +29,16 @@ export function PortfolioSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeVideoUrl, setActiveVideoUrl] = useState<string | null>(null);
 
-  const categories = t.portfolio.categories;
-  const projects = projectsData.map((p) => ({
+  const designCategoryLabel = lang === "ar" ? "تصاميم" : "Designs";
+  const designImages = Object.values(
+    import.meta.glob("/src/assets/projects/designs/*.{png,jpg,jpeg,webp,svg}", {
+      eager: true,
+      import: "default",
+    }),
+  ) as string[];
+
+  const categories = [...t.portfolio.categories, designCategoryLabel];
+  const projects: PortfolioItem[] = projectsData.map((p) => ({
     id: p.id,
     title: lang === "ar" ? p.titleAr : p.title,
     category: lang === "ar" ? p.categoryAr : p.category,
@@ -29,10 +47,40 @@ export function PortfolioSection() {
     youtubeUrl: p.youtubeUrl,
   }));
 
-  const filtered =
+  const designProjects: PortfolioItem[] = designImages.map((image, idx) => ({
+    id: `design-${idx}`,
+    title: `Design ${idx + 1}`,
+    category: designCategoryLabel,
+    image,
+    accent: "#FAB51F",
+    youtubeUrl: null,
+    isDesign: true,
+  }));
+
+  const allItems: PortfolioItem[] = [...projects, ...designProjects];
+
+  const filtered = allItems.filter((p) => p.category === categories[activeIndex]);
+  const allCategoryPreview: PortfolioItem[] = categories
+    .slice(1)
+    .map((category) => {
+      if (category === designCategoryLabel) {
+        return designProjects[0];
+      }
+
+      return projects.find((project) => project.category === category);
+    })
+    .filter((project): project is PortfolioItem => Boolean(project));
+
+  const displayedItems =
     activeIndex === 0
-      ? projects
-      : projects.filter((p) => p.category === categories[activeIndex]);
+      ? allCategoryPreview.length > 4
+        ? (() => {
+            const designItem = allCategoryPreview.find((item) => item.category === designCategoryLabel);
+            const nonDesignItems = allCategoryPreview.filter((item) => item.category !== designCategoryLabel);
+            return designItem ? [...nonDesignItems.slice(0, 3), designItem] : allCategoryPreview.slice(0, 4);
+          })()
+        : allCategoryPreview
+      : filtered.slice(0, 4);
 
   return (
     <section id="portfolio" className="py-16 md:py-28 bg-[#1a0533]">
@@ -102,13 +150,13 @@ export function PortfolioSection() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           <AnimatePresence mode="popLayout">
-            {filtered.map((project) => (
+            {displayedItems.map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
                 layout
                 exit={{ opacity: 0, scale: 0.8 }}
-                className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer"
+                  className={`group relative rounded-2xl overflow-hidden cursor-pointer ${project.isDesign ? "aspect-square" : "aspect-[4/3]"}`}
                 onClick={() => {
                   if (project.youtubeUrl) {
                     setActiveVideoUrl(project.youtubeUrl);
@@ -122,62 +170,66 @@ export function PortfolioSection() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0533] via-[#1a0533]/40 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
+                {!project.isDesign ? (
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0533] via-[#1a0533]/40 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
+                ) : null}
 
-                {/* External link icon */}
-                <motion.div
-                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <ExternalLink size={16} className="text-white" />
-                </motion.div>
+                {!project.isDesign ? (
+                  <motion.div
+                    className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    <ExternalLink size={16} className="text-white" />
+                  </motion.div>
+                ) : null}
 
-                {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <span
-                    className="inline-block px-3 py-1 rounded-full mb-3"
-                    style={{
-                      fontFamily: t.fontBody,
-                      fontWeight: 600,
-                      fontSize: "0.72rem",
-                      backgroundColor: project.accent + "33",
-                      color: project.accent,
-                      border: `1px solid ${project.accent}50`,
-                    }}
-                  >
-                    {project.category}
-                  </span>
-                  <h3
-                    className="text-white"
-                    style={{ fontFamily: t.fontHeading, fontWeight: 700, fontSize: "1.15rem" }}
-                  >
-                    {project.title}
-                  </h3>
-                  <div className="flex items-center gap-2 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
-                    <Play size={12} className="text-[#FAB51F]" fill="#FAB51F" />
+                {!project.isDesign ? (
+                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     <span
-                      className="text-[#FAB51F]"
-                      style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.82rem" }}
+                      className="inline-block px-3 py-1 rounded-full mb-3"
+                      style={{
+                        fontFamily: t.fontBody,
+                        fontWeight: 600,
+                        fontSize: "0.72rem",
+                        backgroundColor: project.accent + "33",
+                        color: project.accent,
+                        border: `1px solid ${project.accent}50`,
+                      }}
                     >
-                      {t.portfolio.viewProject}
+                      {project.category}
                     </span>
-                  </div>
-                  {project.youtubeUrl ? (
-                    <div
-                      className="text-white/80 mt-2"
-                      style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.78rem" }}
+                    <h3
+                      className="text-white"
+                      style={{ fontFamily: t.fontHeading, fontWeight: 700, fontSize: "1.15rem" }}
                     >
-                      Live video: YouTube
+                      {project.title}
+                    </h3>
+                    <div className="flex items-center gap-2 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
+                      <Play size={12} className="text-[#FAB51F]" fill="#FAB51F" />
+                      <span
+                        className="text-[#FAB51F]"
+                        style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.82rem" }}
+                      >
+                        {t.portfolio.viewProject}
+                      </span>
                     </div>
-                  ) : null}
-                </div>
+                    {project.youtubeUrl ? (
+                      <div
+                        className="text-white/80 mt-2"
+                        style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.78rem" }}
+                      >
+                        Live video: YouTube
+                      </div>
+                    ) : null}
+                  </div>
+                ) : null}
 
-                {/* Accent border glow */}
-                <div
-                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{ boxShadow: `inset 0 0 0 2px ${project.accent}40` }}
-                />
+                {!project.isDesign ? (
+                  <div
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    style={{ boxShadow: `inset 0 0 0 2px ${project.accent}40` }}
+                  />
+                ) : null}
               </motion.div>
             ))}
           </AnimatePresence>
