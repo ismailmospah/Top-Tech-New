@@ -1,62 +1,102 @@
 [
   {
     "id": 1,
-    "title": "Vision 2030 Campaign",
-    "titleAr": "حملة رؤية 2030",
+    "title": "",
+    "titleAr": "موشن 1",
     "category": "Motion Graphics",
     "categoryAr": "موشن جرافيك",
-    "image": "https://images.unsplash.com/photo-1737768437560-9d523fa3adc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3Rpb24lMjBncmFwaGljcyUyMGFic3RyYWN0JTIwcHVycGxlJTIwYW5pbWF0aW9ufGVufDF8fHx8MTc3MzAwNzExOHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image": "",
     "accent": "#482D7A",
-    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "youtubeUrl": "https://youtu.be/0AqcwMhAob0?si=luRSvJNbfsMf9XXz"
   },
   {
     "id": 2,
-    "title": "Brand Identity Reveal",
-    "titleAr": "كشف الهوية البصرية",
-    "category": "Branding",
-    "categoryAr": "هوية بصرية",
-    "image": "https://images.unsplash.com/photo-1762787863004-767d5d7eac07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFuZGluZyUyMGRlc2lnbiUyMGxvZ28lMjBpZGVudGl0eXxlbnwxfHx8fDE3NzMwMDcxMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "title": "Motion Reel 2",
+    "titleAr": "موشن 2",
+    "category": "Motion Graphics",
+    "categoryAr": "موشن جرافيك",
+    "image": "",
     "accent": "#FAB51F",
-    "youtubeUrl": null
+    "youtubeUrl": "https://youtu.be/hevKv9xpOCg?si=Z5JptVVMUc3UjF2Y"
   },
   {
     "id": 3,
-    "title": "TechStartup Explainer",
-    "titleAr": "فيديو تعريفي لشركة ناشئة",
-    "category": "Video",
-    "categoryAr": "فيديو",
-    "image": "https://images.unsplash.com/photo-1651085039733-ff793bd5af27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleHBsYWluZXIlMjB2aWRlbyUyMGFuaW1hdGlvbiUyMGNvbG9yZnVsfGVufDF8fHx8MTc3MzAwNzEyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "title": "Motion Reel 3",
+    "titleAr": "موشن 3",
+    "category": "Motion Graphics",
+    "categoryAr": "موشن جرافيك",
+    "image": "",
     "accent": "#8B7BB8",
-    "youtubeUrl": "https://www.youtube.com/embed/ysz5S6PUM-U"
+    "youtubeUrl": "https://youtu.be/b2WLA9hoXiI?si=49l3D_MnTMosYyFr"
   },
   {
     "id": 4,
-    "title": "Social Reels Package",
-    "titleAr": "باقة ريلز سوشيال",
-    "category": "Social Media",
-    "categoryAr": "وسائل التواصل",
-    "image": "https://images.unsplash.com/photo-1764664281874-95ebc77286a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMGRpZ2l0YWwlMjBjb250ZW50JTIwY3JlYXRpdmV8ZW58MXx8fHwxNzczMDA3MTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "title": "Motion Reel 4",
+    "titleAr": "موشن 4",
+    "category": "Motion Graphics",
+    "categoryAr": "موشن جرافيك",
+    "image": "",
     "accent": "#FAB51F",
-    "youtubeUrl": null
+    "youtubeUrl": "https://youtu.be/YuJk54MZmik?si=NwMxwwRpJKODfdh0"
   },
   {
     "id": 5,
-    "title": "3D Product Showcase",
-    "titleAr": "عرض منتج ثلاثي الأبعاد",
+    "title": "Motion Reel 5",
+    "titleAr": "موشن 5",
     "category": "Motion Graphics",
     "categoryAr": "موشن جرافيك",
-    "image": "https://images.unsplash.com/photo-1662658825247-8fe2a88da496?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGFuaW1hdGlvbiUyMHJlbmRlciUyMGFic3RyYWN0JTIwY29sb3JmdWx8ZW58MXx8fHwxNzczMDA3MTI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image": "",
     "accent": "#482D7A",
-    "youtubeUrl": "https://www.youtube.com/embed/jNQXAC9IVRw"
+    "youtubeUrl": "https://youtu.be/t5N26saL8dc?si=aef6p8OXSonZcaTj"
   },
   {
     "id": 6,
-    "title": "Corporate Event Film",
-    "titleAr": "فيلم حدث مؤسسي",
-    "category": "Video",
-    "categoryAr": "فيديو",
-    "image": "https://images.unsplash.com/photo-1762028892567-6ebfbb894992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBzdHVkaW8lMjBjcmVhdGl2ZXxlbnwxfHx8fDE3NzI5NTMwNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "title": "Motion Reel 6",
+    "titleAr": "موشن 6",
+    "category": "Motion Graphics",
+    "categoryAr": "موشن جرافيك",
+    "image": "",
     "accent": "#8B7BB8",
-    "youtubeUrl": "https://www.youtube.com/embed/ScMzIvxBSi4"
+    "youtubeUrl": "https://youtu.be/0AqcwMhAob0?si=ijdau9TiK-rPIyS6"
+  },
+  {
+    "id": 7,
+    "title": "Animation Reel 1",
+    "titleAr": "أنيميشن 1",
+    "category": "Animation",
+    "categoryAr": "أنيميشن",
+    "image": "",
+    "accent": "#8B7BB8",
+    "youtubeUrl": "https://youtu.be/tiKTDsf82G8?si=mvbQpWvNU9J99lES"
+  },
+  {
+    "id": 8,
+    "title": "Video Editing Reel 1",
+    "titleAr": "مونتاج فيديو 1",
+    "category": "Video Editing",
+    "categoryAr": "مونتاج فيديو",
+    "image": "",
+    "accent": "#8B7BB8",
+    "youtubeUrl": "https://youtu.be/W6oLJfj3saY?si=WxIrDNfBgxfjI-rj"
+  },
+  {
+    "id": 9,
+    "title": "Video Editing Reel 2",
+    "titleAr": "مونتاج فيديو 2",
+    "category": "Video Editing",
+    "categoryAr": "مونتاج فيديو",
+    "image": "",
+    "accent": "#8B7BB8",
+    "youtubeUrl": "https://youtu.be/n0vBKiZC-gM?si=D4DookVpAez9HF0Q"
+  },
+  {
+    "id": 10,
+    "title": "Videography Reel 1",
+    "titleAr": "تصوير 1",
+    "category": "Videography",
+    "categoryAr": "تصوير",
+    "image": "",
+    "accent": "#FAB51F",
+    "youtubeUrl": "https://youtu.be/W6oLJfj3saY?si=hwMOvdLlv-XeR1dV"
   }
 ]

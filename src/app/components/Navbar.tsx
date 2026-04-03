@@ -2,10 +2,26 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import logo from "../../assets/logo.png";
 
 function Logo({ size = "lg" }: { size?: "lg" | "sm" }) {
-  const fontSize = size === "lg" ? "1.6rem" : "1.4rem";
-  const studioSize = size === "lg" ? "0.55rem" : "0.48rem";
+  const [imageFailed, setImageFailed] = useState(false);
+  const fontSize = size === "lg" ? "1.35rem" : "1.2rem";
+  const studioSize = size === "lg" ? "0.5rem" : "0.44rem";
+  const imageHeight = size === "lg" ? 24 : 20;
+
+  if (!imageFailed) {
+    return (
+      <img
+        src={logo}
+        alt="Top Tech"
+        height={imageHeight}
+        className="w-auto h-auto max-w-[95px] md:max-w-[115px] object-contain"
+        onError={() => setImageFailed(true)}
+      />
+    );
+  }
+
   return (
     <span
       style={{
@@ -98,7 +114,11 @@ export function Navbar() {
         {/* Logo */}
         <a
           href="#"
-          className="flex items-center gap-2 group shrink-0"
+          className={`flex items-center gap-2 group shrink-0 rounded-xl transition-all duration-200 ${
+            scrolled || !isHomePage
+              ? "bg-white/95 px-2.5 py-1.5 shadow-sm"
+              : "bg-transparent"
+          }`}
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });

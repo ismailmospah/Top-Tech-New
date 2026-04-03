@@ -76,9 +76,8 @@ export const translations = {
       categories: [
         "All",
         "Motion Graphics",
-        "Branding",
-        "Social Media",
-        "Video",
+        "Animation",
+        "Video Editing",
       ],
       viewProject: "View Project",
       viewAll: "View All Projects",
@@ -335,9 +334,8 @@ export const translations = {
       categories: [
         "الكل",
         "موشن جرافيك",
-        "هوية بصرية",
-        "وسائل التواصل",
-        "فيديو",
+        "أنيميشن",
+        "مونتاج فيديو",
       ],
       viewProject: "عرض المشروع",
       viewAll: "عرض جميع المشاريع",

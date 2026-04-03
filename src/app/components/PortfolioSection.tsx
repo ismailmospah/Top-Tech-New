@@ -24,12 +24,47 @@ const itemVariants = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
 };
 
+const getYouTubeId = (url: string | null) => {
+  if (!url) return null;
+
+  try {
+    const parsed = new URL(url);
+
+    if (parsed.hostname.includes("youtu.be")) {
+      return parsed.pathname.slice(1);
+    }
+
+    if (parsed.pathname.includes("/embed/")) {
+      return parsed.pathname.split("/embed/")[1]?.split("/")[0] ?? null;
+    }
+
+    if (parsed.pathname.includes("/shorts/")) {
+      return parsed.pathname.split("/shorts/")[1]?.split("/")[0] ?? null;
+    }
+
+    return parsed.searchParams.get("v");
+  } catch {
+    return null;
+  }
+};
+
+const getYouTubeEmbedUrl = (url: string | null) => {
+  const id = getYouTubeId(url);
+  return id ? `https://www.youtube.com/embed/${id}` : null;
+};
+
+const getYouTubeThumbnail = (url: string | null) => {
+  const id = getYouTubeId(url);
+  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : null;
+};
+
 export function PortfolioSection() {
   const { t, lang } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeVideoUrl, setActiveVideoUrl] = useState<string | null>(null);
 
   const designCategoryLabel = lang === "ar" ? "تصاميم" : "Designs";
+  const videographyCategoryLabel = lang === "ar" ? "تصوير" : "Videography";
   const designImages = Object.values(
     import.meta.glob("/src/assets/projects/designs/*.{png,jpg,jpeg,webp,svg}", {
       eager: true,
@@ -37,14 +72,14 @@ export function PortfolioSection() {
     }),
   ) as string[];
 
-  const categories = [...t.portfolio.categories, designCategoryLabel];
+  const categories = [...t.portfolio.categories, designCategoryLabel, videographyCategoryLabel];
   const projects: PortfolioItem[] = projectsData.map((p) => ({
     id: p.id,
     title: lang === "ar" ? p.titleAr : p.title,
     category: lang === "ar" ? p.categoryAr : p.category,
-    image: p.image,
+    image: getYouTubeThumbnail(p.youtubeUrl) ?? p.image,
     accent: p.accent,
-    youtubeUrl: p.youtubeUrl,
+    youtubeUrl: getYouTubeEmbedUrl(p.youtubeUrl),
   }));
 
   const designProjects: PortfolioItem[] = designImages.map((image, idx) => ({
@@ -198,12 +233,6 @@ export function PortfolioSection() {
                     >
                       {project.category}
                     </span>
-                    <h3
-                      className="text-white"
-                      style={{ fontFamily: t.fontHeading, fontWeight: 700, fontSize: "1.15rem" }}
-                    >
-                      {project.title}
-                    </h3>
                     <div className="flex items-center gap-2 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
                       <Play size={12} className="text-[#FAB51F]" fill="#FAB51F" />
                       <span
