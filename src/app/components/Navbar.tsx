@@ -16,7 +16,7 @@ function Logo({ size = "lg" }: { size?: "lg" | "sm" }) {
         src={logo}
         alt="Top Tech"
         height={imageHeight}
-        className="w-auto h-auto max-w-[95px] md:max-w-[115px] object-contain"
+        className="w-auto h-auto max-w-[35px] md:max-w-[40px] object-contain"
         onError={() => setImageFailed(true)}
       />
     );
@@ -124,7 +124,7 @@ export function Navbar() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <Logo size="lg" />
+          <Logo size="sm" />
         </a>
 
         {/* Desktop Nav */}
