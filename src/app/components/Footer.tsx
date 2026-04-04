@@ -2,8 +2,6 @@ import { motion } from "motion/react";
 import {
   Instagram,
   Twitter,
-  Globe,
-  Link2,
   MessageCircle,
   BriefcaseBusiness,
   Music2,
@@ -11,6 +9,7 @@ import {
 
 } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import logo from "../../assets/logo.png";
 
 const socials = [
   // { icon: Globe, href: "https://top-tech.framer.website/", label: "Website" },
@@ -34,35 +33,12 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 lg:col-span-2">
             <div className="flex items-center gap-2 mb-5">
-              <span
-                style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontWeight: 800,
-                  color: "white",
-                  whiteSpace: "nowrap",
-                  direction: "ltr",
-                  display: "inline-flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  lineHeight: 1,
-                }}
-              >
-                <span style={{ fontSize: "1.4rem" }}>
-                  <span style={{ color: "#FAB51F" }}>Top</span> Tech
-                </span>
-                <span
-                  style={{
-                    fontSize: "0.48rem",
-                    fontWeight: 600,
-                    letterSpacing: "0.35em",
-                    textTransform: "uppercase",
-                    color: "rgba(255,255,255,0.6)",
-                    marginTop: "2px",
-                  }}
-                >
-                  Studio
-                </span>
-              </span>
+              <img
+                src={logo}
+                alt="Top Tech"
+                height={20}
+                className="w-auto h-auto max-w-[35px] md:max-w-[40px] object-contain"
+              />
             </div>
             <p
               className="text-white/50 mb-6 max-w-xs"
