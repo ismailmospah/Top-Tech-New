@@ -375,7 +375,7 @@ export function ContactSection() {
                     )}
                   </motion.button>
 
-                  <motion.a
+                  {/* <motion.a
                     href="https://wa.me/966592661980"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -392,7 +392,7 @@ export function ContactSection() {
                         {t.contact.whatsappSub}
                       </div>
                     </div>
-                  </motion.a>
+                  </motion.a> */}
                 </form>
               )}
             </div>

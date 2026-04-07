@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "motion/react";
 import { Lightbulb, BookOpen, Sparkles, Rocket } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
@@ -12,7 +13,7 @@ const stepColors = [
 const stepNumbers = ["01", "02", "03", "04"];
 
 export function ProcessSection() {
-  const { t } = useLanguage();
+  const { t, isRTL } = useLanguage();
 
   return (
     <section id="process" className="py-16 md:py-28 bg-white overflow-hidden">
@@ -113,7 +114,7 @@ export function ProcessSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 md:mt-20 p-6 md:p-10 rounded-3xl bg-gradient-to-br from-[#f5f3ff] to-[#ede9fe] flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left"
+          className={`mt-12 md:mt-20 p-6 md:p-10 rounded-3xl bg-gradient-to-br from-[#f5f3ff] to-[#ede9fe] flex flex-col md:flex-row items-center justify-between gap-6 text-center ${isRTL ? "md:text-right" : "md:text-left"}`}
         >
           <div>
             <h3

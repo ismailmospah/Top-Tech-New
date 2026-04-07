@@ -1,5 +1,6 @@
+import React from "react";
 import { motion } from "motion/react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 
 export function CTASection() {
@@ -16,13 +17,6 @@ export function CTASection() {
           dir={isRTL ? "rtl" : "ltr"}
           className="relative w-full overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#482D7A] via-[#482D7A] to-[#3a2260] px-6 py-14 md:px-16 md:py-20 text-center"
         >
-          {/* Decorative blobs */}
-          <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-white/5 -translate-y-24 translate-x-24" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#FAB51F]/10 translate-y-16 -translate-x-16" />
-          <div className="absolute top-1/2 left-[10%] w-3 h-3 rounded-full bg-[#FAB51F] opacity-60 -translate-y-1/2" />
-          <div className="absolute top-[20%] right-[15%] w-2 h-2 rounded-full bg-white opacity-40" />
-          <div className="absolute bottom-[25%] right-[8%] w-4 h-4 rounded-full bg-[#FAB51F]/50 border border-[#FAB51F]" />
-
           {/* Content */}
           <div className="relative z-10">
           

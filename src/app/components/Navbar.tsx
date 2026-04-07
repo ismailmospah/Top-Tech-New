@@ -70,6 +70,15 @@ export function Navbar() {
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
 
+    if (href === "/") {
+      if (window.location.pathname !== "/") {
+        window.history.pushState({}, "", "/");
+        window.dispatchEvent(new PopStateEvent("popstate"));
+      }
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     if (href.startsWith("/")) {
       window.history.pushState({}, "", href);
       window.dispatchEvent(new PopStateEvent("popstate"));
@@ -88,6 +97,7 @@ export function Navbar() {
   };
 
   const navLinks = [
+    { label: t.nav.home, href: "/" },
     { label: t.nav.services, href: "#services" },
     { label: t.nav.work, href: "#portfolio" },
     { label: t.nav.process, href: "#process" },

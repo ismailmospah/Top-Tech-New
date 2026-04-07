@@ -8,6 +8,7 @@ export const translations = {
 
     // Navbar
     nav: {
+      home: "Home",
       services: "Services",
       work: "Work",
       blogs: "Blogs",
@@ -138,28 +139,34 @@ export const translations = {
       headingAccent: "What We Create",
       items: [
         {
-          name: "Ahmed Al-Rashidi",
-          role: "Marketing Director",
-          company: "STC Group",
-          text: "Motio transformed our brand presentation completely. Their motion graphics are unlike anything we've seen from agencies in the region. The quality, speed, and creativity are simply world-class. Our campaign engagement increased by 3x after working with them.",
+          name: "حسن",
+          role: "Owner",
+          company: "كاسكا Cafe",
+          text: "صراحة أنتم من أفضل الشركات اللي تعاملت معها في تصميم الفيديوهات، أفكاركم متنوعة وشغلكم احترافي، والتسليم كان بسرعة قياسية. يعطيكم العافية والله، وشكرًا لكم.",
         },
         {
-          name: "Sara Al-Otaibi",
-          role: "Brand Manager",
-          company: "Almarai",
-          text: "Working with Motio was an incredible experience. They understood our brand DNA instantly and delivered animations that felt both premium and uniquely us. The team is professional, creative, and genuinely passionate about their craft.",
+          name: "ليال",
+          role: "Founder",
+          company: "Aqdar App",
+          text: "نشكر لكم حسن تعاملكم ورحابة صدركم في التعامل معنا وتجاوبكم السريع في التعديلات.. صح احنا كنا دقيقين كثير لكن انتم محترفين ماشاءالله وطلعنا بنتيجة مرضية.",
         },
         {
-          name: "Khalid Al-Harbi",
-          role: "CEO",
-          company: "TechVentures KSA",
-          text: "Our product explainer video generated more leads in one week than our previous campaigns did in months. Motio didn't just create a video—they built a conversion machine. Absolutely worth every riyal.",
+          name: "أسماء عبد الرحمن",
+          role: "Founder",
+          company: "UniLink Platform",
+          text: "تم مشاركة فريق المشروع الفديو ايضا حمدلله تم التسليم لللجنة واتفضل لك اكيد خالص الشكر مني و من فريق المشروع على الجهد المقدم والرائع، ونسأل الله أن يجعل ما بذلتموه من علم ووقت وجهد في ميزان حسناتك، وأن يكون شاهدًا لك لا عليك، وجزاك الله عنا خير الجزاء.",
         },
         {
-          name: "Noura Al-Mansouri",
-          role: "Digital Lead",
-          company: "NEOM",
-          text: "Exceptional storytelling through motion. Motio helped us communicate the scale and vision of NEOM in a way that words simply couldn't. The animations are breathtaking and exactly on brand. Highly recommended.",
+          name: "سعيد عبدالعظيم",
+          role: "Founder",
+          company: "sellzaki Platform",
+          text: "Thank you so much .. it was a pleasure working with you guys .. thanks a lot for your efforts and your kind support.",
+        },
+        {
+          name: "حسن رسلان",
+          role: "Owner",
+          company: "أريكا & Knowcap",
+          text: "Perfecto. 3aaaaash.",
         },
       ],
     },
@@ -238,7 +245,7 @@ export const translations = {
           "Content Creation",
           "Social Media Marketing"
         ],
-        Company: ["About Us", "Our Process", "Portfolio", "Careers", "Blog"],
+        Company: ["Home", "About Us", "Our Process", "Portfolio", "Careers", "Blog"],
         Contact: [
           "toptechcompany51@gmail.com",
           "https://top-tech.framer.website/",
@@ -266,6 +273,7 @@ export const translations = {
 
     // Navbar
     nav: {
+      home: "الرئيسية",
       services: "خدماتنا",
       work: "أعمالنا",
       blogs: "المدونة",
@@ -396,28 +404,34 @@ export const translations = {
       headingAccent: "ما نصنعه",
       items: [
         {
-          name: "أحمد الرشيدي",
-          role: "مدير تسويق",
-          company: "مجموعة STC",
-          text: "غيّر موشيو طريقة تقديم علامتنا التجارية كلياً. موشن جرافيكهم لا يضاهيه أي استوديو في المنطقة. الجودة والسرعة والإبداع ببساطة على مستوى عالمي. ارتفع تفاعل حملتنا ثلاثة أضعاف بعد العمل معهم.",
+          name: "حسن",
+          role: "صاحب مقهى",
+          company: "كاسكا",
+          text: "صراحة أنتم من أفضل الشركات اللي تعاملت معها في تصميم الفيديوهات، أفكاركم متنوعة وشغلكم احترافي، والتسليم كان بسرعة قياسية. يعطيكم العافية والله، وشكرًا لكم.",
         },
         {
-          name: "سارة العتيبي",
-          role: "مديرة العلامة التجارية",
-          company: "المراعي",
-          text: "كان العمل مع موشيو تجربة رائعة حقاً. فهموا هوية علامتنا التجارية على الفور وقدموا انيميشن يحمل روحنا المميزة. الفريق محترف ومبدع وشغوف بعمله بصدق.",
+          name: "ليال",
+          role: "صاحبة تطبيق",
+          company: "أقدر",
+          text: "نشكر لكم حسن تعاملكم ورحابة صدركم في التعامل معنا وتجاوبكم السريع في التعديلات.. صح احنا كنا دقيقين كثير لكن انتم محترفين ماشاءالله وطلعنا بنتيجة مرضية.",
         },
         {
-          name: "خالد الحربي",
-          role: "الرئيس التنفيذي",
-          company: "TechVentures KSA",
-          text: "فيديو المنتج التعريفي أدى في أسبوع واحد ما لم تؤده حملاتنا السابقة في أشهر. موشيو لم يصنعوا فيديو فحسب، بل بنوا آلة تحويل حقيقية. يستحق كل ريال بلا شك.",
+          name: "أسماء عبد الرحمن",
+          role: "صاحبة منصة",
+          company: "UniLink",
+          text: "تم مشاركة فريق المشروع الفديو ايضا حمدلله تم التسليم لللجنة واتفضل لك اكيد خالص الشكر مني و من فريق المشروع على الجهد المقدم  والرائع و نسأل الله أن يجعل ما بذلتموه من علم ووقت وجهد في ميزان حسناتك، وأن يكون شاهدًا لك لا عليك، وجزاك الله عنا خير الجزاء.",
         },
         {
-          name: "نورة المنصوري",
-          role: "قائدة التحول الرقمي",
-          company: "نيوم",
-          text: "قصص استثنائية عبر الحركة. ساعدنا موشيو على توصيل حجم رؤية نيوم وطموحها بطريقة لا تستطيعها الكلمات. الانيميشن خلاب ومنسجم تماماً مع هويتنا. أنصح بهم بشدة.",
+          name: "سعيد عبدالعظيم",
+          role: "صاحب منصة",
+          company: "sellzaki",
+          text: "Thank you so much .. it was a pleasure working with you guys .. thanks a lot for your efforts and your kind support 🙏🩵",
+        },
+        {
+          name: "حسن رسلان",
+          role: "صاحب شركة",
+          company: "أريكا و Knowcap",
+          text: "Perfecto 🤩 3aaaaash",
         },
       ],
     },
@@ -493,7 +507,7 @@ export const translations = {
           "صناعة المحتوى",
           "تسويق عبر وسائل التواصل"
         ],
-        الشركة: ["من نحن", "منهجيتنا", "أعمالنا", "الوظائف", "المدونة"],
+        الشركة: ["الرئيسية", "من نحن", "منهجيتنا", "أعمالنا", "الوظائف", "المدونة"],
         التواصل: [
           "toptechcompany51@gmail.com",
           "https://top-tech.framer.website/",

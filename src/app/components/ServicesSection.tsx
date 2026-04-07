@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "motion/react";
 import {
   Film,
@@ -152,8 +153,6 @@ export function ServicesSection() {
             whileHover={{ y: -8, boxShadow: "0 24px 48px rgba(72,45,122,0.2)" }}
             className="group relative p-5 sm:p-8 rounded-3xl bg-gradient-to-br from-[#482D7A] to-[#3a2260] cursor-pointer col-span-1 md:col-span-2 lg:col-span-3 overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-32 sm:w-48 h-32 sm:h-48 rounded-full bg-white/5 -translate-y-12 translate-x-12" />
-            <div className="absolute bottom-0 left-0 w-24 sm:w-32 h-24 sm:h-32 rounded-full bg-[#FAB51F]/10 translate-y-10 -translate-x-8" />
             <div className="relative z-10">
               <span
                 className="inline-block px-3 py-1 rounded-full bg-[#FAB51F] text-[#482D7A] mb-4"
