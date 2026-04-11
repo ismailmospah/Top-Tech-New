@@ -55,14 +55,14 @@ export const translations = {
             "Eye-catching motion graphics that bring your brand story to life with dynamic visuals, kinetic typography, and seamless transitions.",
         },
         {
-          title: "Content Creation",
+          title: "Social Media Content Management",
           description:
-            "Engaging content creation services including scripts, storyboards, and creative assets tailored for your brand.",
+            "End-to-end social media content management and design—graphics, videos, and reels—planned and produced for your brand across every platform.",
         },
         {
           title: "Social Media Marketing",
           description:
-            "Grow your digital presence with scroll-stopping animated and static content for all social platforms.",
+            "If you want to create campaigns on your social media, get in touch with us now.",
         },
       ],
     },
@@ -75,7 +75,6 @@ export const translations = {
       description:
         "A curated selection of our most impactful projects delivered for brands across the region.",
       categories: [
-        "All",
         "Motion Graphics",
         "Animation",
         "Video Editing",
@@ -220,13 +219,23 @@ export const translations = {
         service: "Service Needed",
         servicePlaceholder: "Select a service",
         motionService: "Motion Graphics",
-        digitalService: "التسويق الإلكتروني / Digital Marketing",
+        graphicDesignService: "Graphic Design",
+        reelsService: "Reels Videos",
+        socialMediaMarketingService: "Social Media Marketing",
+        socialContentManagementService: "Full Social Media Content Management",
+        otherService: "Other",
+        customServiceName: "Service name",
+        customServiceNamePlaceholder: "Type the service you need",
         industry: "Industry",
         industryPlaceholder: "Your industry",
         details: "Project Details",
         detailsPlaceholder: "Tell us about your project, goals, and requirements...",
         videoDuration: "Video Duration",
         videoDurationPlaceholder: "e.g. 30 sec, 60 sec, 2 min",
+        videoDurationSecondsHint: "Enter duration in whole seconds (e.g. 30)",
+        errMotionDuration: "Please enter video length as a whole number of seconds greater than 1.",
+        errReelsDuration: "Please enter the reels / video duration.",
+        errCustomService: "Please enter the service name.",
         submit: "Send Message",
         sending: "Sending...",
         successTitle: "Message Sent!",
@@ -242,10 +251,10 @@ export const translations = {
       links: {
         Services: [
           "Motion Graphics",
-          "Content Creation",
+          "Social Media Content Management",
           "Social Media Marketing"
         ],
-        Company: ["Home", "About Us", "Our Process", "Portfolio", "Careers", "Blog"],
+        Company: ["Home", "About Us", "Our Process", "Portfolio", "Blog"],
         Contact: [
           "toptechcompany51@gmail.com",
           "https://top-tech.framer.website/",
@@ -320,14 +329,14 @@ export const translations = {
             "موشن جرافيك جذاب يجسّد قصة علامتك التجارية بصور ديناميكية وطباعة حركية وانتقالات سلسة لا تُنسى.",
         },
         {
-          title: "صناعة المحتوى",
+          title: "إدارة محتوى سوشيال ميديا",
           description:
-            "خدمات صناعة محتوى إبداعي تشمل كتابة النصوص، السيناريوهات، وتصميم الأصول الإبداعية لعلامتك التجارية.",
+            "إدارة وتصميم محتوى السوشيال ميديا بالكامل—سواء تصاميم، فيديوهات، أو ريلز—بخطة متكاملة تناسب علامتك وجمهورك على كل المنصات.",
         },
         {
           title: "تسويق عبر وسائل التواصل",
           description:
-            "نمِّ حضورك الرقمي بمحتوى متحرك وثابت يجذب الانتباه لجميع منصات التواصل الاجتماعي.",
+            "إذا كنت تريد إنشاء حملات على السوشيال ميديا الخاص بك، تواصل معنا الآن.",
         },
       ],
     },
@@ -340,7 +349,6 @@ export const translations = {
       description:
         "مجموعة مختارة من أكثر مشاريعنا تأثيراً التي أنجزناها للعلامات التجارية في المنطقة.",
       categories: [
-        "الكل",
         "موشن جرافيك",
         "أنيميشن",
         "مونتاج فيديو",
@@ -483,13 +491,23 @@ export const translations = {
         service: "الخدمة المطلوبة",
         servicePlaceholder: "اختر خدمة",
         motionService: "موشن جرافيك",
-        digitalService: "التسويق الإلكتروني / Digital Marketing",
+        graphicDesignService: "تصميم جرافيك",
+        reelsService: "فيديوهات ريلز",
+        socialMediaMarketingService: "سوشيال ميديا ماركتنج",
+        socialContentManagementService: "إدارة محتوى السوشيال ميديا كامل",
+        otherService: "غير ذلك",
+        customServiceName: "اسم الخدمة",
+        customServiceNamePlaceholder: "اكتب اسم الخدمة التي تحتاجها",
         industry: "المجال",
         industryPlaceholder: "مجال عملكم",
         details: "تفاصيل المشروع",
         detailsPlaceholder: "أخبرنا عن مشروعك وأهدافك والمتطلبات المطلوبة...",
         videoDuration: "مدة الفيديو",
         videoDurationPlaceholder: "مثال: 30 ثانية، 60 ثانية، دقيقتان",
+        videoDurationSecondsHint: "أدخل المدة بالثواني كرقم صحيح (مثال: 30)",
+        errMotionDuration: "يرجى إدخال مدة الفيديو بالثواني كرقم صحيح أكبر من 1.",
+        errReelsDuration: "يرجى إدخال مدة الريلز أو الفيديو.",
+        errCustomService: "يرجى كتابة اسم الخدمة.",
         submit: "إرسال الرسالة",
         sending: "جارٍ الإرسال...",
         successTitle: "تم إرسال رسالتك!",
@@ -504,10 +522,10 @@ export const translations = {
       links: {
         الخدمات: [
           "موشن جرافيك",
-          "صناعة المحتوى",
+          "إدارة محتوى سوشيال ميديا",
           "تسويق عبر وسائل التواصل"
         ],
-        الشركة: ["الرئيسية", "من نحن", "منهجيتنا", "أعمالنا", "الوظائف", "المدونة"],
+        الشركة: ["الرئيسية", "من نحن", "منهجيتنا", "أعمالنا", "المدونة"],
         التواصل: [
           "toptechcompany51@gmail.com",
           "https://top-tech.framer.website/",

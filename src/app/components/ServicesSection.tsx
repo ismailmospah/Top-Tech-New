@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import {
   Film,
-  Video,
+  LayoutGrid,
   Share2,
   Palette,
   Scissors,
@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 
-const icons = [Film, Video, Share2, Palette, Scissors];
+const icons = [Film, LayoutGrid, Share2, Palette, Scissors];
 const colors = [
   { color: "#482D7A", bg: "#EDE9FE" },
   { color: "#482D7A", bg: "#DDD6FE" },

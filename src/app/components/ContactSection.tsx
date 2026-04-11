@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import { MessageCircle, Send, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
@@ -7,6 +7,13 @@ import emailjs from "@emailjs/browser";
 const EMAILJS_SERVICE_ID = "service_wybaj13";
 const EMAILJS_TEMPLATE_ID = "template_fz6m9wt";
 const EMAILJS_PUBLIC_KEY = "-vRpD7rblXOjDMu1N";
+
+const SERVICE_MOTION = "motion";
+const SERVICE_GRAPHIC = "graphic";
+const SERVICE_REELS = "reels";
+const SERVICE_SOCIAL = "social";
+const SERVICE_SOCIAL_MGMT = "social_mgmt";
+const SERVICE_OTHER = "other";
 
 export function ContactSection() {
   const { t } = useLanguage();
@@ -17,6 +24,7 @@ export function ContactSection() {
     countryOther: "",
     companyName: "",
     service: "",
+    customServiceName: "",
     budget: "",
     details: "",
     industry: "",
@@ -26,6 +34,24 @@ export function ContactSection() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const isMotionService = form.service === SERVICE_MOTION;
+  const isReelsService = form.service === SERVICE_REELS;
+  const isOtherService = form.service === SERVICE_OTHER;
+
+  const resolveServiceLabel = () => {
+    if (form.service === SERVICE_OTHER) {
+      return `${t.contact.form.otherService}: ${form.customServiceName.trim()}`;
+    }
+    const labels: Record<string, string> = {
+      [SERVICE_MOTION]: t.contact.form.motionService,
+      [SERVICE_GRAPHIC]: t.contact.form.graphicDesignService,
+      [SERVICE_REELS]: t.contact.form.reelsService,
+      [SERVICE_SOCIAL]: t.contact.form.socialMediaMarketingService,
+      [SERVICE_SOCIAL_MGMT]: t.contact.form.socialContentManagementService,
+    };
+    return labels[form.service] ?? form.service;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
@@ -33,14 +59,25 @@ export function ContactSection() {
     if (isMotionService) {
       const durationSeconds = Number(form.videoDuration);
       const isValidSeconds = Number.isInteger(durationSeconds) && durationSeconds > 1;
-
       if (!isValidSeconds) {
-        setError("Video duration must be a whole number in seconds greater than 1.");
+        setError(t.contact.form.errMotionDuration);
         return;
       }
     }
 
+    if (isReelsService && !form.videoDuration.trim()) {
+      setError(t.contact.form.errReelsDuration);
+      return;
+    }
+
+    if (isOtherService && !form.customServiceName.trim()) {
+      setError(t.contact.form.errCustomService);
+      return;
+    }
+
     setLoading(true);
+
+    const serviceLabel = resolveServiceLabel();
 
     try {
       await emailjs.send(
@@ -53,7 +90,7 @@ export function ContactSection() {
           country: form.country === "Other" ? form.countryOther : form.country,
           company_name: form.companyName,
           budget: form.budget || "Not specified",
-          service: form.service || "Not specified",
+          service: serviceLabel,
           industry: form.industry || "Not specified",
           video_duration: form.videoDuration || "Not specified",
           message: form.details || "Not specified",
@@ -74,7 +111,6 @@ export function ContactSection() {
     "w-full px-4 py-3.5 rounded-xl border border-[#e5e7eb] bg-white focus:outline-none focus:border-[#482D7A] focus:ring-2 focus:ring-[#482D7A]/20 transition-all duration-200 text-[#482D7A] placeholder-[#9ca3af]";
 
   const showProjectFields = Boolean(form.service);
-  const isMotionService = form.service === "motion";
   const isOtherCountry = form.country === "Other";
 
   return (
@@ -262,6 +298,7 @@ export function ContactSection() {
                           setForm({
                             ...form,
                             service: e.target.value,
+                            customServiceName: "",
                             budget: "",
                             details: "",
                             industry: "",
@@ -270,13 +307,37 @@ export function ContactSection() {
                         }
                       >
                         <option value="">{t.contact.form.servicePlaceholder}</option>
-                        <option value="motion">{t.contact.form.motionService}</option>
-                        <option value="digital">{t.contact.form.digitalService}</option>
+                        <option value={SERVICE_MOTION}>{t.contact.form.motionService}</option>
+                        <option value={SERVICE_GRAPHIC}>{t.contact.form.graphicDesignService}</option>
+                        <option value={SERVICE_REELS}>{t.contact.form.reelsService}</option>
+                        <option value={SERVICE_SOCIAL}>{t.contact.form.socialMediaMarketingService}</option>
+                        <option value={SERVICE_SOCIAL_MGMT}>{t.contact.form.socialContentManagementService}</option>
+                        <option value={SERVICE_OTHER}>{t.contact.form.otherService}</option>
                       </select>
                   </div>
 
                   {showProjectFields && (
                     <>
+                      {isOtherService && (
+                        <div>
+                          <label
+                            className="block text-[#374151] mb-2"
+                            style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
+                          >
+                            {t.contact.form.customServiceName} *
+                          </label>
+                          <input
+                            type="text"
+                            required={isOtherService}
+                            placeholder={t.contact.form.customServiceNamePlaceholder}
+                            className={inputClass}
+                            style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
+                            value={form.customServiceName}
+                            onChange={(e) => setForm({ ...form, customServiceName: e.target.value })}
+                          />
+                        </div>
+                      )}
+
                       <div className="grid grid-cols-1 gap-5">
                         <div>
                           <label
@@ -328,6 +389,26 @@ export function ContactSection() {
                             min={2}
                             step={1}
                             required={isMotionService}
+                            placeholder={t.contact.form.videoDurationSecondsHint}
+                            className={inputClass}
+                            style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
+                            value={form.videoDuration}
+                            onChange={(e) => setForm({ ...form, videoDuration: e.target.value })}
+                          />
+                        </div>
+                      )}
+
+                      {isReelsService && (
+                        <div>
+                          <label
+                            className="block text-[#374151] mb-2"
+                            style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
+                          >
+                            {t.contact.form.videoDuration} *
+                          </label>
+                          <input
+                            type="text"
+                            required={isReelsService}
                             placeholder={t.contact.form.videoDurationPlaceholder}
                             className={inputClass}
                             style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}

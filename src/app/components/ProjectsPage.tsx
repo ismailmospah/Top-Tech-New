@@ -86,10 +86,9 @@ export function ProjectsPage() {
   }));
 
   const allProjects: ProjectItem[] = [...projects, ...designProjects];
-  const filteredProjects =
-    activeIndex === 0
-      ? allProjects
-      : allProjects.filter((project) => project.category === categories[activeIndex]);
+  const filteredProjects = allProjects.filter(
+    (project) => project.category === categories[activeIndex],
+  );
 
   return (
     <section id="projects" className="py-16 md:py-24 bg-[#1a0533] min-h-screen">

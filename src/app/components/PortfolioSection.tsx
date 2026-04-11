@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Play, ExternalLink, X } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
@@ -95,27 +95,7 @@ export function PortfolioSection() {
   const allItems: PortfolioItem[] = [...projects, ...designProjects];
 
   const filtered = allItems.filter((p) => p.category === categories[activeIndex]);
-  const allCategoryPreview: PortfolioItem[] = categories
-    .slice(1)
-    .map((category) => {
-      if (category === designCategoryLabel) {
-        return designProjects[0];
-      }
-
-      return projects.find((project) => project.category === category);
-    })
-    .filter((project): project is PortfolioItem => Boolean(project));
-
-  const displayedItems =
-    activeIndex === 0
-      ? allCategoryPreview.length > 4
-        ? (() => {
-            const designItem = allCategoryPreview.find((item) => item.category === designCategoryLabel);
-            const nonDesignItems = allCategoryPreview.filter((item) => item.category !== designCategoryLabel);
-            return designItem ? [...nonDesignItems.slice(0, 3), designItem] : allCategoryPreview.slice(0, 4);
-          })()
-        : allCategoryPreview
-      : filtered.slice(0, 4);
+  const displayedItems = filtered.slice(0, 4);
 
   return (
     <section id="portfolio" className="py-16 md:py-28 bg-[#1a0533]">

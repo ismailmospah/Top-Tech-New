@@ -14,7 +14,7 @@ const footerSectionHrefMap: Record<string, string> = {
   // English
   Home: "/",
   "Motion Graphics": "/#services",
-  "Content Creation": "/#services",
+  "Social Media Content Management": "/#services",
   "Social Media Marketing": "/#services",
   "About Us": "/#clients",
   "Our Process": "/#process",
@@ -23,7 +23,7 @@ const footerSectionHrefMap: Record<string, string> = {
   // Arabic
   "الرئيسية": "/",
   "موشن جرافيك": "/#services",
-  "صناعة المحتوى": "/#services",
+  "إدارة محتوى سوشيال ميديا": "/#services",
   "تسويق عبر وسائل التواصل": "/#services",
   "من نحن": "/#clients",
   "منهجيتنا": "/#process",
@@ -152,36 +152,37 @@ export function Footer() {
           {Object.entries(t.footer.links as Record<string, string[]>)
             .filter(([title]) => title !== "Contact" && title !== "التواصل")
             .map(([title, items]: [string, string[]]) => (
-            <div key={title}>
-              <h4
-                className="text-white mb-5"
-                style={{ fontFamily: t.fontHeading, fontWeight: 700, fontSize: "0.95rem" }}
-              >
-                {title}
-              </h4>
-              <ul className="flex flex-col gap-3">
-                {items.map((item: string) => (
-                  <li key={item}>
-                    <button
-                      type="button"
-                      onClick={() => handleFooterNavClick(getFooterLinkHref(item))}
-                      className="text-white/45 hover:text-white transition-colors duration-200"
-                      style={{
-                        fontFamily: t.fontBody,
-                        fontWeight: 400,
-                        fontSize: "0.875rem",
-                      }}
-                    >
-                      {item}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+              <div key={title}>
+                <h4
+                  className="text-white mb-5"
+                  style={{ fontFamily: t.fontHeading, fontWeight: 700, fontSize: "0.95rem" }}
+                >
+                  {title}
+                </h4>
+                <ul className="flex flex-col gap-3">
+                  {items.map((item: string) => (
+                    <li key={item}>
+                      <button
+                        type="button"
+                        onClick={() => handleFooterNavClick(getFooterLinkHref(item))}
+                        className="text-white/45 hover:text-white transition-colors duration-200 text-start leading-snug"
+                        style={{
+                          fontFamily: t.fontBody,
+                          fontWeight: 400,
+                          fontSize: "0.875rem",
+                          cursor: "pointer",
+                        }}
+                      >
+                        {item}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
         </div>
 
-      
+
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">

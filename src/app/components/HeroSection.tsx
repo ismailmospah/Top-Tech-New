@@ -1,5 +1,5 @@
+import React from "react";
 import { motion } from "motion/react";
-import { ArrowRight, Play, Sparkles } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 
 function AnimatedLines() {
@@ -131,28 +131,24 @@ export function HeroSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            onClick={() => scrollToSection("#portfolio")}
-            className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-full bg-[#FAB51F] text-[#1a0533] cursor-pointer"
+            onClick={() => {
+              window.history.pushState({}, "", "/contact");
+              window.dispatchEvent(new PopStateEvent("popstate"));
+            }}
+            className="flex items-center justify-center w-full sm:w-auto px-8 py-4 rounded-full bg-[#FAB51F] text-[#1a0533] cursor-pointer"
             style={{ fontFamily: t.fontBody, fontWeight: 700, fontSize: "1rem" }}
           >
-            {t.hero.btnWork}
-            <ArrowRight size={18} />
+            {t.hero.btnStart}
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.05, backgroundColor: "rgba(72,45,122,0.25)" }}
             whileTap={{ scale: 0.97 }}
-            onClick={() => {
-              window.history.pushState({}, "", "/contact");
-              window.dispatchEvent(new PopStateEvent("popstate"));
-            }}
-            className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-full border border-white/15 text-white cursor-pointer"
+            onClick={() => scrollToSection("#portfolio")}
+            className="flex items-center justify-center w-full sm:w-auto px-8 py-4 rounded-full border border-white/15 text-white cursor-pointer"
             style={{ fontFamily: t.fontBody, fontWeight: 600, fontSize: "1rem" }}
           >
-            <span className="w-8 h-8 rounded-full bg-[#482D7A]/40 flex items-center justify-center">
-              <Play size={12} className="ml-0.5" fill="white" />
-            </span>
-            {t.hero.btnStart}
+            {t.hero.btnWork}
           </motion.button>
         </motion.div>
       </div>
