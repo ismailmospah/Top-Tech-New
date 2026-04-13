@@ -103,7 +103,7 @@ export function Navbar() {
     { label: t.nav.process, href: "#process" },
     { label: t.nav.clients, href: "#clients" },
     { label: t.nav.contact, href: "/contact" },
-     { label: t.nav.blogs, href: "/blogs" },
+    { label: t.nav.blogs, href: "/blogs" },
   ];
 
   const toggleLang = () => setLang(lang === "en" ? "ar" : "en");
@@ -131,7 +131,12 @@ export function Navbar() {
           }`}
           onClick={(e) => {
             e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            if (window.location.pathname !== "/") {
+              window.history.pushState({}, "", "/");
+              window.dispatchEvent(new PopStateEvent("popstate"));
+            } else {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
           }}
         >
           <Logo size="sm" />

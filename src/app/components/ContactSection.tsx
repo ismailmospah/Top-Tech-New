@@ -58,11 +58,11 @@ export function ContactSection() {
 
     if (isMotionService) {
       const durationSeconds = Number(form.videoDuration);
-      const isValidSeconds = Number.isInteger(durationSeconds) && durationSeconds > 1;
-      if (!isValidSeconds) {
-        setError(t.contact.form.errMotionDuration);
-        return;
-      }
+      // const isValidSeconds = Number.isInteger(durationSeconds) && durationSeconds > 1;
+      // if (!isValidSeconds) {
+      //   setError(t.contact.form.errMotionDuration);
+      //   return;
+      // }
     }
 
     if (isReelsService && !form.videoDuration.trim()) {
@@ -385,7 +385,7 @@ export function ContactSection() {
                             {t.contact.form.videoDuration} *
                           </label>
                           <input
-                            type="number"
+                            type="text"
                             min={2}
                             step={1}
                             required={isMotionService}
