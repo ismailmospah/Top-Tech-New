@@ -4,9 +4,9 @@ import { MessageCircle, Send, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import emailjs from "@emailjs/browser";
 //todo : make it in env 
-const EMAILJS_SERVICE_ID = "service_wybaj13";
-const EMAILJS_TEMPLATE_ID = "template_fz6m9wt";
-const EMAILJS_PUBLIC_KEY = "-vRpD7rblXOjDMu1N";
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const SERVICE_MOTION = "motion";
 const SERVICE_GRAPHIC = "graphic";
