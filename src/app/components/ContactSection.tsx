@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { MessageCircle, Send, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import emailjs from "@emailjs/browser";
-//todo : make it in env 
+//todo : make it in env
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -96,7 +96,7 @@ export function ContactSection() {
           message: form.details || "Not specified",
           to_email: "YOUR_EMAIL@gmail.com", // 🔧 your email here
         },
-        EMAILJS_PUBLIC_KEY
+        EMAILJS_PUBLIC_KEY,
       );
       setSent(true);
     } catch (err) {
@@ -126,13 +126,23 @@ export function ContactSection() {
         >
           <span
             className="inline-block px-4 py-1.5 rounded-full bg-[#EDE9FE] text-[#482D7A] mb-4"
-            style={{ fontFamily: t.fontBody, fontWeight: 600, fontSize: "0.8rem", letterSpacing: "0.05em" }}
+            style={{
+              fontFamily: t.fontBody,
+              fontWeight: 600,
+              fontSize: "0.8rem",
+              letterSpacing: "0.05em",
+            }}
           >
             {t.contact.badge}
           </span>
           <p
             className="text-[#717182] max-w-md mx-auto"
-            style={{ fontFamily: t.fontBody, fontWeight: 400, fontSize: "1rem", lineHeight: 1.7 }}
+            style={{
+              fontFamily: t.fontBody,
+              fontWeight: 400,
+              fontSize: "1rem",
+              lineHeight: 1.7,
+            }}
           >
             {t.contact.description}
           </p>
@@ -145,338 +155,479 @@ export function ContactSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="w-full"
         >
-            <div className="p-5 sm:p-8 md:p-10 rounded-3xl border border-[#e5e7eb] bg-white shadow-xl shadow-purple-50">
-              {sent ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="flex flex-col items-center justify-center py-16 text-center"
+          <div className="p-5 sm:p-8 md:p-10 rounded-3xl border border-[#e5e7eb] bg-white shadow-xl shadow-purple-50">
+            {sent ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="flex flex-col items-center justify-center py-16 text-center"
+              >
+                <div className="w-20 h-20 rounded-full bg-[#EDE9FE] flex items-center justify-center mb-6">
+                  <CheckCircle2 size={40} color="#482D7A" />
+                </div>
+                <h3
+                  className="text-[#482D7A] mb-3"
+                  style={{
+                    fontFamily: t.fontHeading,
+                    fontWeight: 800,
+                    fontSize: "1.5rem",
+                  }}
                 >
-                  <div className="w-20 h-20 rounded-full bg-[#EDE9FE] flex items-center justify-center mb-6">
-                    <CheckCircle2 size={40} color="#482D7A" />
+                  {t.contact.form.successTitle}
+                </h3>
+                <p
+                  className="text-[#717182]"
+                  style={{
+                    fontFamily: t.fontBody,
+                    fontWeight: 400,
+                    fontSize: "0.95rem",
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {t.contact.form.successText}
+                </p>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                {/* Error message */}
+                {error && (
+                  <div
+                    className="px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm"
+                    style={{ fontFamily: t.fontBody }}
+                  >
+                    {error}
                   </div>
-                  <h3
-                    className="text-[#482D7A] mb-3"
-                    style={{ fontFamily: t.fontHeading, fontWeight: 800, fontSize: "1.5rem" }}
-                  >
-                    {t.contact.form.successTitle}
-                  </h3>
-                  <p
-                    className="text-[#717182]"
-                    style={{ fontFamily: t.fontBody, fontWeight: 400, fontSize: "0.95rem", lineHeight: 1.7 }}
-                  >
-                    {t.contact.form.successText}
-                  </p>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                  {/* Error message */}
-                  {error && (
-                    <div className="px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm"
-                      style={{ fontFamily: t.fontBody }}>
-                      {error}
+                )}
+
+                <div className="grid grid-cols-1 gap-5">
+                  <div>
+                    <label
+                      className="block text-[#374151] mb-2"
+                      style={{
+                        fontFamily: t.fontBody,
+                        fontWeight: 500,
+                        fontSize: "0.875rem",
+                      }}
+                    >
+                      {t.contact.form.name} *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder={t.contact.form.namePlaceholder}
+                      className={inputClass}
+                      style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
+                      value={form.name}
+                      onChange={(e) =>
+                        setForm({ ...form, name: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div>
+                    <label
+                      className="block text-[#374151] mb-2"
+                      style={{
+                        fontFamily: t.fontBody,
+                        fontWeight: 500,
+                        fontSize: "0.875rem",
+                      }}
+                    >
+                      {t.contact.form.whatsapp} *
+                    </label>
+                    <input
+                      type="tel"
+                      required
+                      placeholder={t.contact.form.whatsappPlaceholder}
+                      className={inputClass}
+                      style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
+                      value={form.whatsapp}
+                      onChange={(e) =>
+                        setForm({ ...form, whatsapp: e.target.value })
+                      }
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 gap-5">
+                  <div>
+                    <label
+                      className="block text-[#374151] mb-2"
+                      style={{
+                        fontFamily: t.fontBody,
+                        fontWeight: 500,
+                        fontSize: "0.875rem",
+                      }}
+                    >
+                      {t.contact.form.country} *
+                    </label>
+                    <select
+                      required
+                      className={inputClass}
+                      style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
+                      value={form.country}
+                      onChange={(e) =>
+                        setForm({
+                          ...form,
+                          country: e.target.value,
+                          countryOther:
+                            e.target.value === "Other" ? form.countryOther : "",
+                        })
+                      }
+                    >
+                      <option value="">
+                        {t.contact.form.countryPlaceholder}
+                      </option>
+                      {t.contact.form.countryOptions.map((opt: string) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {isOtherCountry && (
+                    <div>
+                      <label
+                        className="block text-[#374151] mb-2"
+                        style={{
+                          fontFamily: t.fontBody,
+                          fontWeight: 500,
+                          fontSize: "0.875rem",
+                        }}
+                      >
+                        {t.contact.form.otherCountry} *
+                      </label>
+                      <input
+                        type="text"
+                        required={isOtherCountry}
+                        placeholder={t.contact.form.otherCountryPlaceholder}
+                        className={inputClass}
+                        style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
+                        value={form.countryOther}
+                        onChange={(e) =>
+                          setForm({ ...form, countryOther: e.target.value })
+                        }
+                      />
                     </div>
                   )}
-
-                  <div className="grid grid-cols-1 gap-5">
-                    <div>
-                      <label
-                        className="block text-[#374151] mb-2"
-                        style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
-                      >
-                        {t.contact.form.name} *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder={t.contact.form.namePlaceholder}
-                        className={inputClass}
-                        style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      />
-                    </div>
-                    <div>
-                      <label
-                        className="block text-[#374151] mb-2"
-                        style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
-                      >
-                        {t.contact.form.whatsapp} *
-                      </label>
-                      <input
-                        type="tel"
-                        required
-                        placeholder={t.contact.form.whatsappPlaceholder}
-                        className={inputClass}
-                        style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                        value={form.whatsapp}
-                        onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-5">
-                    <div>
-                      <label
-                        className="block text-[#374151] mb-2"
-                        style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
-                      >
-                        {t.contact.form.country} *
-                      </label>
-                      <select
-                        required
-                        className={inputClass}
-                        style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                        value={form.country}
-                        onChange={(e) =>
-                          setForm({
-                            ...form,
-                            country: e.target.value,
-                            countryOther: e.target.value === "Other" ? form.countryOther : "",
-                          })
-                        }
-                      >
-                        <option value="">{t.contact.form.countryPlaceholder}</option>
-                        {t.contact.form.countryOptions.map((opt: string) => (
-                          <option key={opt} value={opt}>{opt}</option>
-                        ))}
-                      </select>
-                    </div>
-
-                    {isOtherCountry && (
-                      <div>
-                        <label
-                          className="block text-[#374151] mb-2"
-                          style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
-                        >
-                          {t.contact.form.otherCountry} *
-                        </label>
-                        <input
-                          type="text"
-                          required={isOtherCountry}
-                          placeholder={t.contact.form.otherCountryPlaceholder}
-                          className={inputClass}
-                          style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                          value={form.countryOther}
-                          onChange={(e) => setForm({ ...form, countryOther: e.target.value })}
-                        />
-                      </div>
-                    )}
-
-                    <div>
-                      <label
-                        className="block text-[#374151] mb-2"
-                        style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
-                      >
-                        {t.contact.form.companyName} *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder={t.contact.form.companyNamePlaceholder}
-                        className={inputClass}
-                        style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                        value={form.companyName}
-                        onChange={(e) => setForm({ ...form, companyName: e.target.value })}
-                      />
-                    </div>
-                  </div>
 
                   <div>
                     <label
                       className="block text-[#374151] mb-2"
-                      style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
+                      style={{
+                        fontFamily: t.fontBody,
+                        fontWeight: 500,
+                        fontSize: "0.875rem",
+                      }}
                     >
-                        {t.contact.form.service}
-                      </label>
-                      <select
-                        required
-                        className={inputClass}
-                        style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                        value={form.service}
-                        onChange={(e) =>
-                          setForm({
-                            ...form,
-                            service: e.target.value,
-                            customServiceName: "",
-                            budget: "",
-                            details: "",
-                            industry: "",
-                            videoDuration: "",
-                          })
-                        }
-                      >
-                        <option value="">{t.contact.form.servicePlaceholder}</option>
-                        <option value={SERVICE_MOTION}>{t.contact.form.motionService}</option>
-                        <option value={SERVICE_GRAPHIC}>{t.contact.form.graphicDesignService}</option>
-                        <option value={SERVICE_REELS}>{t.contact.form.reelsService}</option>
-                        <option value={SERVICE_SOCIAL}>{t.contact.form.socialMediaMarketingService}</option>
-                        <option value={SERVICE_SOCIAL_MGMT}>{t.contact.form.socialContentManagementService}</option>
-                        <option value={SERVICE_OTHER}>{t.contact.form.otherService}</option>
-                      </select>
+                      {t.contact.form.companyName} *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder={t.contact.form.companyNamePlaceholder}
+                      className={inputClass}
+                      style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
+                      value={form.companyName}
+                      onChange={(e) =>
+                        setForm({ ...form, companyName: e.target.value })
+                      }
+                    />
                   </div>
+                </div>
 
-                  {showProjectFields && (
-                    <>
-                      {isOtherService && (
-                        <div>
-                          <label
-                            className="block text-[#374151] mb-2"
-                            style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
-                          >
-                            {t.contact.form.customServiceName} *
-                          </label>
-                          <input
-                            type="text"
-                            required={isOtherService}
-                            placeholder={t.contact.form.customServiceNamePlaceholder}
-                            className={inputClass}
-                            style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                            value={form.customServiceName}
-                            onChange={(e) => setForm({ ...form, customServiceName: e.target.value })}
-                          />
-                        </div>
-                      )}
+                <div>
+                  <label
+                    className="block text-[#374151] mb-2"
+                    style={{
+                      fontFamily: t.fontBody,
+                      fontWeight: 500,
+                      fontSize: "0.875rem",
+                    }}
+                  >
+                    {t.contact.form.service}
+                  </label>
+                  <select
+                    required
+                    className={inputClass}
+                    style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
+                    value={form.service}
+                    onChange={(e) =>
+                      setForm({
+                        ...form,
+                        service: e.target.value,
+                        customServiceName: "",
+                        budget: "",
+                        details: "",
+                        industry: "",
+                        videoDuration: "",
+                      })
+                    }
+                  >
+                    <option value="">
+                      {t.contact.form.servicePlaceholder}
+                    </option>
+                    <option value={SERVICE_MOTION}>
+                      {t.contact.form.motionService}
+                    </option>
+                    <option value={SERVICE_GRAPHIC}>
+                      {t.contact.form.graphicDesignService}
+                    </option>
+                    <option value={SERVICE_REELS}>
+                      {t.contact.form.reelsService}
+                    </option>
+                    <option value={SERVICE_SOCIAL}>
+                      {t.contact.form.socialMediaMarketingService}
+                    </option>
+                    <option value={SERVICE_SOCIAL_MGMT}>
+                      {t.contact.form.socialContentManagementService}
+                    </option>
+                    <option value={SERVICE_OTHER}>
+                      {t.contact.form.otherService}
+                    </option>
+                  </select>
+                </div>
 
-                      <div className="grid grid-cols-1 gap-5">
-                        <div>
-                          <label
-                            className="block text-[#374151] mb-2"
-                            style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
-                          >
-                            {t.contact.form.budget} *
-                          </label>
-                          <input
-                            type="text"
-                            required={showProjectFields}
-                            placeholder={t.contact.form.budgetPlaceholder}
-                            className={inputClass}
-                            style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                            value={form.budget}
-                            onChange={(e) => setForm({ ...form, budget: e.target.value })}
-                          />
-                        </div>
-
-                        <div>
-                          <label
-                            className="block text-[#374151] mb-2"
-                            style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
-                          >
-                            {t.contact.form.industry} *
-                          </label>
-                          <input
-                            type="text"
-                            required={showProjectFields}
-                            placeholder={t.contact.form.industryPlaceholder}
-                            className={inputClass}
-                            style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                            value={form.industry}
-                            onChange={(e) => setForm({ ...form, industry: e.target.value })}
-                          />
-                        </div>
+                {showProjectFields && (
+                  <>
+                    {isOtherService && (
+                      <div>
+                        <label
+                          className="block text-[#374151] mb-2"
+                          style={{
+                            fontFamily: t.fontBody,
+                            fontWeight: 500,
+                            fontSize: "0.875rem",
+                          }}
+                        >
+                          {t.contact.form.customServiceName} *
+                        </label>
+                        <input
+                          type="text"
+                          required={isOtherService}
+                          placeholder={
+                            t.contact.form.customServiceNamePlaceholder
+                          }
+                          className={inputClass}
+                          style={{
+                            fontFamily: t.fontBody,
+                            fontSize: "0.95rem",
+                          }}
+                          value={form.customServiceName}
+                          onChange={(e) =>
+                            setForm({
+                              ...form,
+                              customServiceName: e.target.value,
+                            })
+                          }
+                        />
                       </div>
+                    )}
 
-                      {isMotionService && (
-                        <div>
-                          <label
-                            className="block text-[#374151] mb-2"
-                            style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
-                          >
-                            {t.contact.form.videoDuration} *
-                          </label>
-                          <input
-                            type="text"
-                            min={2}
-                            step={1}
-                            required={isMotionService}
-                            placeholder={t.contact.form.videoDurationSecondsHint}
-                            className={inputClass}
-                            style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                            value={form.videoDuration}
-                            onChange={(e) => setForm({ ...form, videoDuration: e.target.value })}
-                          />
-                        </div>
-                      )}
-
-                      {isReelsService && (
-                        <div>
-                          <label
-                            className="block text-[#374151] mb-2"
-                            style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
-                          >
-                            {t.contact.form.videoDuration} *
-                          </label>
-                          <input
-                            type="text"
-                            required={isReelsService}
-                            placeholder={t.contact.form.videoDurationPlaceholder}
-                            className={inputClass}
-                            style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                            value={form.videoDuration}
-                            onChange={(e) => setForm({ ...form, videoDuration: e.target.value })}
-                          />
-                        </div>
-                      )}
+                    <div className="grid grid-cols-1 gap-5">
+                      <div>
+                        <label
+                          className="block text-[#374151] mb-2"
+                          style={{
+                            fontFamily: t.fontBody,
+                            fontWeight: 500,
+                            fontSize: "0.875rem",
+                          }}
+                        >
+                          {t.contact.form.budget} *
+                        </label>
+                        <input
+                          type="text"
+                          required={showProjectFields}
+                          placeholder={t.contact.form.budgetPlaceholder}
+                          className={inputClass}
+                          style={{
+                            fontFamily: t.fontBody,
+                            fontSize: "0.95rem",
+                          }}
+                          value={form.budget}
+                          onChange={(e) =>
+                            setForm({ ...form, budget: e.target.value })
+                          }
+                        />
+                      </div>
 
                       <div>
                         <label
                           className="block text-[#374151] mb-2"
-                          style={{ fontFamily: t.fontBody, fontWeight: 500, fontSize: "0.875rem" }}
+                          style={{
+                            fontFamily: t.fontBody,
+                            fontWeight: 500,
+                            fontSize: "0.875rem",
+                          }}
                         >
-                          {t.contact.form.details} *
+                          {t.contact.form.industry} *
                         </label>
-                        <textarea
+                        <input
+                          type="text"
                           required={showProjectFields}
-                          rows={5}
-                          placeholder={t.contact.form.detailsPlaceholder}
-                          className={`${inputClass} resize-none`}
-                          style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
-                          value={form.details}
-                          onChange={(e) => setForm({ ...form, details: e.target.value })}
+                          placeholder={t.contact.form.industryPlaceholder}
+                          className={inputClass}
+                          style={{
+                            fontFamily: t.fontBody,
+                            fontSize: "0.95rem",
+                          }}
+                          value={form.industry}
+                          onChange={(e) =>
+                            setForm({ ...form, industry: e.target.value })
+                          }
                         />
                       </div>
+                    </div>
+
+                    {isMotionService && (
+                      <div>
+                        <label
+                          className="block text-[#374151] mb-2"
+                          style={{
+                            fontFamily: t.fontBody,
+                            fontWeight: 500,
+                            fontSize: "0.875rem",
+                          }}
+                        >
+                          {t.contact.form.videoDuration} *
+                        </label>
+                        <input
+                          type="text"
+                          min={2}
+                          step={1}
+                          required={isMotionService}
+                          placeholder={t.contact.form.videoDurationSecondsHint}
+                          className={inputClass}
+                          style={{
+                            fontFamily: t.fontBody,
+                            fontSize: "0.95rem",
+                          }}
+                          value={form.videoDuration}
+                          onChange={(e) =>
+                            setForm({ ...form, videoDuration: e.target.value })
+                          }
+                        />
+                      </div>
+                    )}
+
+                    {isReelsService && (
+                      <div>
+                        <label
+                          className="block text-[#374151] mb-2"
+                          style={{
+                            fontFamily: t.fontBody,
+                            fontWeight: 500,
+                            fontSize: "0.875rem",
+                          }}
+                        >
+                          {t.contact.form.videoDuration} *
+                        </label>
+                        <input
+                          type="text"
+                          required={isReelsService}
+                          placeholder={t.contact.form.videoDurationPlaceholder}
+                          className={inputClass}
+                          style={{
+                            fontFamily: t.fontBody,
+                            fontSize: "0.95rem",
+                          }}
+                          value={form.videoDuration}
+                          onChange={(e) =>
+                            setForm({ ...form, videoDuration: e.target.value })
+                          }
+                        />
+                      </div>
+                    )}
+
+                    <div>
+                      <label
+                        className="block text-[#374151] mb-2"
+                        style={{
+                          fontFamily: t.fontBody,
+                          fontWeight: 500,
+                          fontSize: "0.875rem",
+                        }}
+                      >
+                        {t.contact.form.details} *
+                      </label>
+                      <textarea
+                        required={showProjectFields}
+                        rows={5}
+                        placeholder={t.contact.form.detailsPlaceholder}
+                        className={`${inputClass} resize-none`}
+                        style={{ fontFamily: t.fontBody, fontSize: "0.95rem" }}
+                        value={form.details}
+                        onChange={(e) =>
+                          setForm({ ...form, details: e.target.value })
+                        }
+                      />
+                    </div>
+                  </>
+                )}
+
+                <motion.button
+                  type="submit"
+                  disabled={loading}
+                  whileHover={{
+                    scale: 1.02,
+                    boxShadow: "0 8px 24px rgba(124,58,237,0.3)",
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  className="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-[#482D7A] text-white disabled:opacity-70 transition-all duration-200"
+                  style={{
+                    fontFamily: t.fontBody,
+                    fontWeight: 700,
+                    fontSize: "1rem",
+                  }}
+                >
+                  {loading ? (
+                    <span>{t.contact.form.sending}</span>
+                  ) : (
+                    <>
+                      {t.contact.form.submit}
+                      <Send size={18} />
                     </>
                   )}
+                </motion.button>
 
-                  <motion.button
-                    type="submit"
-                    disabled={loading}
-                    whileHover={{ scale: 1.02, boxShadow: "0 8px 24px rgba(124,58,237,0.3)" }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-[#482D7A] text-white disabled:opacity-70 transition-all duration-200"
-                    style={{ fontFamily: t.fontBody, fontWeight: 700, fontSize: "1rem" }}
-                  >
-                    {loading ? (
-                      <span>{t.contact.form.sending}</span>
-                    ) : (
-                      <>
-                        {t.contact.form.submit}
-                        <Send size={18} />
-                      </>
-                    )}
-                  </motion.button>
-
-                  {/* <motion.a
-                    href="https://wa.me/966592661980"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.01, boxShadow: "0 12px 32px rgba(37,211,102,0.25)" }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-[#25D366] text-white cursor-pointer"
-                  >
-                    <MessageCircle size={20} strokeWidth={1.8} />
-                    <div className="text-center">
-                      <div style={{ fontFamily: t.fontHeading, fontWeight: 700, fontSize: "0.95rem" }}>
-                        {t.contact.whatsapp}
-                      </div>
-                      <div style={{ fontFamily: t.fontBody, fontWeight: 400, fontSize: "0.8rem", opacity: 0.9 }}>
-                        {t.contact.whatsappSub}
-                      </div>
+                <motion.a
+                  href="https://wa.me/966592661980"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{
+                    scale: 1.01,
+                    boxShadow: "0 12px 32px rgba(37,211,102,0.25)",
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  className="flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-[#25D366] text-white cursor-pointer"
+                >
+                  <MessageCircle size={20} strokeWidth={1.8} />
+                  <div className="text-center">
+                    <div
+                      style={{
+                        fontFamily: t.fontHeading,
+                        fontWeight: 700,
+                        fontSize: "0.95rem",
+                      }}
+                    >
+                      {t.contact.whatsapp}
                     </div>
-                  </motion.a> */}
-                </form>
-              )}
-            </div>
+                    <div
+                      style={{
+                        fontFamily: t.fontBody,
+                        fontWeight: 400,
+                        fontSize: "0.8rem",
+                        opacity: 0.9,
+                      }}
+                    >
+                      {t.contact.whatsappSub}
+                    </div>
+                  </div>
+                </motion.a>
+              </form>
+            )}
+          </div>
         </motion.div>
       </div>
     </section>
