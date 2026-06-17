@@ -438,8 +438,12 @@ main { position: relative; z-index: 3; }
 .story__headline { margin-bottom: clamp(2.5rem, 6vh, 4.5rem); }
 .story__phases {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(1.2rem, 3vw, 2rem);
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .story__phases { grid-template-columns: 1fr; }
 }
 .phase {
   position: relative;
