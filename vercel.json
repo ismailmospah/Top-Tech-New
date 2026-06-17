@@ -5,6 +5,7 @@
   "buildCommand": "echo \"static site — no build\"",
   "outputDirectory": ".",
   "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/contact.html", "destination": "/contact", "permanent": true }
   ],
   "rewrites": [
