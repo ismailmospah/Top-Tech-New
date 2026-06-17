@@ -365,13 +365,19 @@ gsap.from(".service", {
 });
 
 /* story phases cascade in */
-gsap.from(".phase", {
-  y: 70,
-  opacity: 0,
+gsap.set(".phase", { y: 70, opacity: 0 });
+gsap.to(".phase", {
+  y: 0,
+  opacity: 1,
   duration: 1,
   ease: "expo.out",
   stagger: 0.12,
-  scrollTrigger: { trigger: ".story__phases", start: "top 80%" },
+  clearProps: "all",
+  scrollTrigger: {
+    trigger: ".story__phases",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
 });
 
 /* reviews — two opposing auto-marquees, velocity-reactive */
