@@ -1,87 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOP TECH — Marketing That Moves | KSA &amp; Egypt</title>
+  <meta name="description" content="Top Tech is a full-service marketing agency in Saudi Arabia &amp; Egypt, born from motion. Strategy, content, campaigns and motion design engineered to move brands forward." />
+  <link rel="icon" href="assets/logo-original.svg" type="image/svg+xml" />
 
-    <!-- Primary Meta -->
-    <title>Top Tech</title>
-    <meta name="description" content="Top Tech Studio — your destination for the latest in technology, reviews, and insights." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Open Graph -->
-    <meta property="og:type"        content="website" />
-    <meta property="og:url"         content="https://www.toptech.studio/" />
-    <meta property="og:title"       content="Top Tech" />
-    <meta property="og:description" content="Top Tech Studio — your destination for the latest in technology, reviews, and insights." />
-    <meta property="og:image"       content="/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-shape="play">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card"        content="summary_large_image" />
-    <meta name="twitter:title"       content="Top Tech" />
-    <meta name="twitter:description" content="Top Tech Studio — your destination for the latest in technology, reviews, and insights." />
-    <meta name="twitter:image"       content="https://www.toptech.studio/og-image.jpg" />
+  <!-- ===================== PRELOADER ===================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__logo"><img src="assets/logo-white.svg" alt="Top Tech" id="loaderLogo" /></div>
+      <div class="loader__row">
+        <span class="loader__pct" id="loaderPct">000</span>
+      </div>
+      <div class="loader__bar"><span id="loaderBar"></span></div>
+    </div>
+    <div class="loader__curtain"></div>
+  </div>
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <!-- ===================== WEBGL UNIVERSE ===================== -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.toptech.studio/" />
+  <!-- ===================== CHROME ===================== -->
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
-    <!-- Facebook Domain Verification -->
-    <meta name="facebook-domain-verification" content="jgs5un48jog44hoh5u0pxr8ckapcc9" />
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"><i class="cursor__label" id="cursorLabel"></i></span>
+  </div>
 
-    <!-- Facebook Pixel -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '2116622618904017');
-      fbq('track', 'PageView');
-    </script>
+  <header class="header">
+    <a class="header__logo" href="#top" data-cursor="hover" aria-label="Top Tech home">
+      <img src="assets/logo-white.svg" alt="Top Tech" />
+    </a>
+    <nav class="header__nav" aria-label="Primary">
+      <a href="#story" data-cursor="hover" data-i18n="nav_story">Story</a>
+      <a href="#services" data-cursor="hover" data-i18n="nav_services">Services</a>
+      <a href="#reviews" data-cursor="hover" data-i18n="nav_clients">Clients</a>
+      <a href="contact.html" data-cursor="hover" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="header__actions">
+      <button class="langtoggle" id="langToggle" data-cursor="hover" aria-label="Switch language">
+        <span data-lang="en">EN</span>
+        <span data-lang="ar">ع</span>
+      </button>
+      <a class="header__cta magnetic" href="contact.html" data-cursor="go" data-i18n="nav_cta">Start a project</a>
+    </div>
+  </header>
 
-    <!-- TikTok Pixel Code Start -->
-    <script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  <main id="top">
 
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero" data-shape="play">
+      <p class="hero__kicker reveal-line"><span class="hero__kicker-dot"></span><span data-i18n="hero_kicker">Marketing Agency — KSA &amp; Egypt</span></p>
+      <h1 class="hero__title" id="heroTitle" data-i18n="hero_title" data-i18n-html aria-label="We make brands grow.">
+        <span class="hero__line"><span class="split" data-split>WE</span>&nbsp;<span class="split" data-split>MAKE</span></span>
+        <span class="hero__line hero__line--accent"><span class="split" data-split>BRANDS</span>&nbsp;<span class="split split--outline" data-split>GROW</span><span class="split hero__dot" data-split>.</span></span>
+      </h1>
+      <div class="hero__foot">
+        <p class="hero__blurb reveal-line"><span data-i18n="hero_blurb" data-i18n-html>Top Tech is a full-service marketing agency born from motion.<br>We combine creativity with strategy to deliver content that<br>doesn't just look good — it actually performs.</span></p>
+        <div class="hero__scroll" aria-hidden="true">
+          <span class="hero__scroll-track"><span class="hero__scroll-thumb"></span></span>
+          <span data-i18n="hero_scroll">Scroll</span>
+        </div>
+      </div>
+    </section>
 
-  ttq.load('D7FF5L3C77U41JIS43T0');
-  ttq.page();
-}(window, document, 'ttq');
-    </script>
-    <!-- TikTok Pixel Code End -->
+    <!-- ===================== MARQUEE (filled + translated by lang.js) ===================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__row" id="marqueeA" data-marquee="marquee_a"></div>
+      <div class="marquee__row marquee__row--alt" id="marqueeB" data-marquee="marquee_b"></div>
+    </div>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXWC3SFZJ2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <!-- ===================== STORY / EVOLUTION ===================== -->
+    <section class="story" id="story" data-shape="wave">
+      <p class="manifesto__index" data-i18n="story_index">01 — The evolution</p>
+      <h2 class="story__headline section-head__title" data-i18n="story_headline" data-i18n-html>Born in motion.<br><em>Built for marketing.</em></h2>
+      <div class="story__phases">
+        <article class="phase">
+          <span class="phase__num">01</span>
+          <h3 class="phase__title" data-i18n="phase1_title">The Studio Era</h3>
+          <p class="phase__desc" data-i18n="phase1_desc">We started as Saudi Arabia's premier motion graphics studio — crafting animation, video and visual stories that made brands unforgettable.</p>
+          <span class="phase__label" data-i18n="phase1_label">Motion Graphics</span>
+        </article>
+        <article class="phase">
+          <span class="phase__num">02</span>
+          <h3 class="phase__title" data-i18n="phase2_title">The Content Years</h3>
+          <p class="phase__desc" data-i18n="phase2_desc">Brands didn't just want videos. They wanted audiences. So we built full content engines — planning, producing and publishing across every platform.</p>
+          <span class="phase__label" data-i18n="phase2_label">Content &amp; Social</span>
+        </article>
+        <article class="phase">
+          <span class="phase__num">03</span>
+          <h3 class="phase__title" data-i18n="phase3_title">The Agency. Now.</h3>
+          <p class="phase__desc" data-i18n="phase3_desc">Today Top Tech is a full-stack marketing agency. Strategy, campaigns, performance and creative under one roof. The craft stayed. The mission grew.</p>
+          <span class="phase__label" data-i18n="phase3_label">Full-Service Marketing</span>
+        </article>
+      </div>
+    </section>
 
-      gtag('config', 'G-NXWC3SFZJ2');
-    </script>
+    <!-- ===================== SERVICES ===================== -->
+    <section class="services" id="services" data-shape="ring">
+      <div class="section-head">
+        <p class="section-head__index" data-i18n="services_index">02 — What we do</p>
+        <h2 class="section-head__title" data-i18n="services_title" data-i18n-html>Everything your brand needs<br><em>to grow loud.</em></h2>
+      </div>
+      <ul class="services__list">
+        <li class="service" data-cursor="view" data-hue="265">
+          <span class="service__num">01</span>
+          <h3 class="service__name" data-i18n="svc1_name">Marketing Strategy</h3>
+          <p class="service__desc" data-i18n="svc1_desc">Positioning, market research and go-to-market plans built on data — not guesswork.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </li>
+        <li class="service" data-cursor="view" data-hue="300">
+          <span class="service__num">02</span>
+          <h3 class="service__name" data-i18n="svc2_name">Social Media Marketing</h3>
+          <p class="service__desc" data-i18n="svc2_desc">Organic and paid campaigns across every platform your audience lives on.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </li>
+        <li class="service" data-cursor="view" data-hue="200">
+          <span class="service__num">03</span>
+          <h3 class="service__name" data-i18n="svc3_name">Content Management</h3>
+          <p class="service__desc" data-i18n="svc3_desc">End-to-end social content — graphics, videos and reels, planned and produced for your brand.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </li>
+        <li class="service" data-cursor="view" data-hue="160">
+          <span class="service__num">04</span>
+          <h3 class="service__name" data-i18n="svc4_name">Branding &amp; Design</h3>
+          <p class="service__desc" data-i18n="svc4_desc">Identities, systems and graphic design that make brands recognisable at a glance.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </li>
+        <li class="service" data-cursor="view" data-hue="38">
+          <span class="service__num">05</span>
+          <h3 class="service__name" data-i18n="svc5_name">Motion &amp; Video</h3>
+          <p class="service__desc" data-i18n="svc5_desc">Our origin craft — motion graphics, video editing and videography with cinematic polish.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </li>
+        <li class="service" data-cursor="view" data-hue="20">
+          <span class="service__num">06</span>
+          <h3 class="service__name" data-i18n="svc6_name">Media Buying</h3>
+          <p class="service__desc" data-i18n="svc6_desc">Paid campaigns planned, placed and optimised — turning ad spend into measurable growth.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </li>
+      </ul>
+    </section>
 
-  </head>
-  <body>
-    <!-- Facebook Pixel noscript -->
-    <noscript>
-      <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=2116622618904017&ev=PageView&noscript=1" />
-    </noscript>
+    <!-- ===================== REVIEWS (replaces Work) ===================== -->
+    <section class="reviews" id="reviews" data-shape="scatter">
+      <div class="section-head section-head--center">
+        <p class="section-head__index" data-i18n="reviews_index">03 — Client love</p>
+        <h2 class="section-head__title" data-i18n="reviews_title" data-i18n-html>Straight from our<br><em>clients' chats.</em></h2>
+      </div>
+      <div class="reviews__rows">
+        <div class="reviews__row">
+          <div class="reviews__track" id="reviewRowA">
+            <article class="bubble"><header><span class="bubble__avatar" style="--av:#f9b527">M</span><div><h4>Client</h4><small>WhatsApp · Riyadh</small></div></header><p>Thank you so much — it was a pleasure working with you guys. Thanks a lot for your efforts and your kind support 🙏🩵</p><footer>11:42 <i>✓✓</i></footer></article>
+            <article class="bubble bubble--ar" dir="rtl"><header><span class="bubble__avatar" style="--av:#8a67d8">ع</span><div><h4>عميل</h4><small>واتساب · السعودية</small></div></header><p>Perfecto 🤩 عاااااش</p><footer>09:15 <i>✓✓</i></footer></article>
+            <article class="bubble bubble--ar" dir="rtl"><header><span class="bubble__avatar" style="--av:#ff8a5c">س</span><div><h4>عميل</h4><small>واتساب · الرياض</small></div></header><p>الشغل دايماً قبل الموعد والجودة ثابتة. أحسن قرار خدناه السنة دي 🔥</p><footer>14:03 <i>✓✓</i></footer></article>
+            <article class="bubble"><header><span class="bubble__avatar" style="--av:#5ec9a8">B</span><div><h4>Brand manager</h4><small>WhatsApp · Jeddah</small></div></header><p>Our reels finally stopped getting skipped. Engagement doubled in two months 📈</p><footer>16:27 <i>✓✓</i></footer></article>
+          </div>
+        </div>
+        <div class="reviews__row">
+          <div class="reviews__track" id="reviewRowB">
+            <article class="bubble bubble--ar" dir="rtl"><header><span class="bubble__avatar" style="--av:#5ec9a8">ف</span><div><h4>صاحب مشروع</h4><small>واتساب · جدة</small></div></header><p>فريق فاهم السوق بجد، والموشن جرافيك بتاعهم مستوى تاني 🎬</p><footer>19:54 <i>✓✓</i></footer></article>
+            <article class="bubble"><header><span class="bubble__avatar" style="--av:#ff8a5c">S</span><div><h4>Startup founder</h4><small>WhatsApp · Riyadh</small></div></header><p>From strategy to media buying — one team, zero headaches. Numbers speak for themselves 🎯</p><footer>10:08 <i>✓✓</i></footer></article>
+            <article class="bubble bubble--ar" dir="rtl"><header><span class="bubble__avatar" style="--av:#f9b527">م</span><div><h4>مدير تسويق</h4><small>واتساب · الدمام</small></div></header><p>أول مرة نشتغل مع Agency بترد في نفس اليوم وتسلّم قبل الديدلاين ✨</p><footer>13:31 <i>✓✓</i></footer></article>
+            <article class="bubble"><header><span class="bubble__avatar" style="--av:#8a67d8">A</span><div><h4>Client</h4><small>WhatsApp · GCC</small></div></header><p>The brand reveal video got more shares than anything we ever posted 🚀</p><footer>20:46 <i>✓✓</i></footer></article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- ===================== STATS ===================== -->
+    <section class="stats" id="stats" data-shape="bars">
+      <p class="section-head__index" data-i18n="stats_index">04 — Signal strength</p>
+      <ul class="stats__grid">
+        <li><strong><span class="count" data-count="80">0</span>+</strong><span data-i18n="stat1">Brands trust us across KSA &amp; the GCC</span></li>
+        <li><strong><span class="count" data-count="200">0</span>+</strong><span data-i18n="stat2">Motion videos produced</span></li>
+        <li><strong><span class="count" data-count="150">0</span>+</strong><span data-i18n="stat3">Social media designs delivered</span></li>
+        <li><strong><span class="count" data-count="24">0</span>h</strong><span data-i18n="stat4">Response time on every brief</span></li>
+      </ul>
+    </section>
+
+    <!-- ===================== CONTACT CTA ===================== -->
+    <footer class="contact" id="contact" data-shape="sphere">
+      <p class="contact__kicker" data-i18n="contact_kicker">05 — Ready when you are</p>
+      <h2 class="contact__title" data-i18n="contact_title" data-i18n-html>
+        <span class="contact__line">LET'S MAKE</span>
+        <span class="contact__line contact__line--outline">NOISE</span>
+      </h2>
+      <p class="contact__sub" data-i18n="contact_sub">Tell us about your project — we reply within 24 hours.</p>
+      <a class="contact__cta magnetic" href="contact.html" data-cursor="go" data-i18n="contact_cta" data-i18n-html>Start a project <i>→</i></a>
+      <div class="contact__meta">
+        <div>
+          <span data-i18n="meta_talk">Talk now</span>
+          <a href="https://wa.me/966592661980" target="_blank" rel="noopener" data-cursor="hover">+966 59 266 1980</a>
+          <a href="https://wa.me/201093723960" target="_blank" rel="noopener" data-cursor="hover">+20 10 9372 3960</a>
+          <a href="mailto:toptechcompany51@gmail.com" data-cursor="hover">toptechcompany51@gmail.com</a>
+        </div>
+        <div>
+          <span data-i18n="meta_socials">Socials</span>
+          <a href="https://www.instagram.com/toptechstudio/" target="_blank" rel="noopener" data-cursor="hover">Instagram</a>
+          <a href="https://www.tiktok.com/@toptechcompany" target="_blank" rel="noopener" data-cursor="hover">TikTok</a>
+          <a href="https://www.behance.net/TopTechCompany" target="_blank" rel="noopener" data-cursor="hover">Behance</a>
+        </div>
+        <div>
+          <span data-i18n="meta_base">Offices</span>
+          <p data-i18n="meta_base_text" data-i18n-html>Riyadh, KSA · Cairo, Egypt<br>Sun–Thu · 9am–6pm</p>
+        </div>
+        <div>
+          <span data-i18n="meta_copy">© 2026</span>
+          <p data-i18n="meta_copy_text" data-i18n-html>Top Tech.<br>All signals reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+  <script src="lang.js"></script>
+  <script src="transition.js"></script>
+  <script src="main.js"></script>
+</body>
 </html>
