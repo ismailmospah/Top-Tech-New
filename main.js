@@ -183,14 +183,6 @@ const haloMat = new THREE.PointsMaterial({
 });
 points.add(new THREE.Points(geo, haloMat)); // child → shares the morph + transform
 
-/* ----- responsive scale: shapes are designed for 16:9, shrink on portrait ----- */
-function updateParticleScale() {
-  const aspect = window.innerWidth / window.innerHeight;
-  const s = Math.min(1, Math.max(0.42, aspect * 0.85));
-  points.scale.setScalar(s);
-}
-updateParticleScale();
-
 /* ----- mouse parallax ----- */
 const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
 window.addEventListener("pointermove", (e) => {
@@ -243,7 +235,6 @@ window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
-  updateParticleScale();
 });
 
 /* ----- morph driver: each section declares its shape ----- */
