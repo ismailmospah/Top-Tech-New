@@ -317,8 +317,8 @@ main { position: relative; z-index: 3; }
 .split { display: inline-block; }
 .split .char { display: inline-block; will-change: transform; }
 .split--outline .char {
-  color: transparent;
-  -webkit-text-stroke: 2px var(--accent);
+  color: var(--accent);
+  -webkit-text-stroke: 0;
 }
 .hero__dot { color: var(--accent); }
 .hero__foot {
