@@ -427,8 +427,8 @@ main { position: relative; z-index: 3; }
 }
 .section-head__title em {
   font-style: italic;
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--accent);
+  color: var(--accent);
+  -webkit-text-stroke: 0;
 }
 
 /* ---------- Story / Evolution ---------- */
@@ -458,8 +458,8 @@ main { position: relative; z-index: 3; }
   font-family: var(--font-display);
   font-weight: 850;
   font-size: 2.2rem;
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--accent);
+  color: var(--accent);
+  -webkit-text-stroke: 0;
   line-height: 1;
 }
 .phase__title {
@@ -643,8 +643,8 @@ main { position: relative; z-index: 3; }
 }
 .contact__line { display: block; overflow: hidden; }
 .contact__line--outline {
-  color: transparent;
-  -webkit-text-stroke: 2.5px var(--accent);
+  color: var(--accent);
+  -webkit-text-stroke: 0;
 }
 .contact__sub {
   color: var(--bone-dim);
@@ -734,7 +734,7 @@ main { position: relative; z-index: 3; }
   margin: 0.6rem 0 1.4rem;
 }
 .cform__line { display: block; overflow: hidden; }
-.cform__line--outline { color: transparent; -webkit-text-stroke: 2px var(--accent); }
+.cform__line--outline { color: var(--accent); -webkit-text-stroke: 0; }
 .cform__lead { color: var(--bone-dim); font-size: 1.05rem; line-height: 1.6; max-width: 38ch; }
 .cform__lead strong { color: var(--accent); }
 .cform__contacts {
