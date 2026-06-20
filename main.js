@@ -164,7 +164,7 @@ const mat = new THREE.PointsMaterial({
   map: dotTex,
   vertexColors: true,
   transparent: true,
-  opacity: isTouch ? 0.72 : 0.95,
+  opacity: 0.95,
   blending: THREE.AdditiveBlending,
   depthWrite: false,
 });
@@ -177,7 +177,7 @@ const haloMat = new THREE.PointsMaterial({
   map: dotTex,
   vertexColors: true,
   transparent: true,
-  opacity: isTouch ? 0.10 : 0.16,
+  opacity: 0.16,
   blending: THREE.AdditiveBlending,
   depthWrite: false,
 });
