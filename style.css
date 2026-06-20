@@ -363,10 +363,9 @@ main { position: relative; z-index: 3; }
   flex-direction: column;
   align-items: flex-start;
   gap: 0.6rem;
-  /* dark backdrop so the scrolling text stays readable over the particle cloud.
-     backdrop-filter is intentionally omitted — it causes iOS Safari to hide
-     child elements when combined with overflow:hidden + will-change:transform */
-  background: rgba(8, 4, 15, 0.75);
+  /* solid background (no alpha) — semi-transparent backgrounds combined with
+     overflow:hidden + will-change:transform on children hides rows on iOS Safari */
+  background: var(--void);
 }
 .marquee__row {
   display: flex;
