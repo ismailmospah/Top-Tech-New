@@ -363,6 +363,10 @@ main { position: relative; z-index: 3; }
   flex-direction: column;
   align-items: flex-start;
   gap: 0.6rem;
+  /* dark backdrop so the scrolling text stays readable over the particle cloud */
+  background: rgba(8, 4, 15, 0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .marquee__row {
   display: flex;
