@@ -219,7 +219,7 @@ function render() {
   }
   geo.attributes.position.needsUpdate = true;
 
-  if (!reducedMotion) {
+  if (!reducedMotion && !isTouch) {
     mouse.x += (mouse.tx - mouse.x) * 0.05;
     mouse.y += (mouse.ty - mouse.y) * 0.05;
     camera.position.x = mouse.x * 0.5;
