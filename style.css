@@ -530,7 +530,7 @@ main { position: relative; z-index: 3; }
 /* ---------- Reviews ---------- */
 .reviews {
   padding: clamp(5rem, 14vh, 9rem) 0;
-  overflow: hidden;
+  overflow: clip; /* clip avoids scroll-container compositor bug with will-change:transform children */
 }
 .section-head--center { text-align: center; padding: 0 clamp(1.2rem, 4vw, 3rem); margin-bottom: clamp(2.5rem, 6vh, 4rem); }
 .section-head--center .section-head__index { color: var(--accent); }
@@ -540,6 +540,7 @@ main { position: relative; z-index: 3; }
   gap: 1.2rem;
   width: max-content;
   will-change: transform;
+  direction: ltr; /* lock scroll direction — RTL page layout would reverse the flex and break the GSAP x-translation */
 }
 .bubble {
   width: clamp(260px, 30vw, 360px);
