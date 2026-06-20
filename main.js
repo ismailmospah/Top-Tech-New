@@ -341,7 +341,7 @@ gsap.to("#progressBar", {
 /* hero parallax fade-out */
 gsap.to(".hero__title, .hero__foot", {
   yPercent: -12,
-  opacity: 0.15,
+  opacity: isTouch ? 0.55 : 0.15,
   ease: "none",
   scrollTrigger: { trigger: ".hero", start: "bottom 90%", end: "bottom 30%", scrub: true },
 });
