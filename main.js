@@ -164,7 +164,7 @@ const mat = new THREE.PointsMaterial({
   map: dotTex,
   vertexColors: true,
   transparent: true,
-  opacity: 0.95,
+  opacity: isTouch ? 0.72 : 0.95,
   blending: THREE.AdditiveBlending,
   depthWrite: false,
 });
@@ -177,7 +177,7 @@ const haloMat = new THREE.PointsMaterial({
   map: dotTex,
   vertexColors: true,
   transparent: true,
-  opacity: 0.16,
+  opacity: isTouch ? 0.10 : 0.16,
   blending: THREE.AdditiveBlending,
   depthWrite: false,
 });
@@ -219,7 +219,7 @@ function render() {
   }
   geo.attributes.position.needsUpdate = true;
 
-  if (!reducedMotion) {
+  if (!reducedMotion && !isTouch) {
     mouse.x += (mouse.tx - mouse.x) * 0.05;
     mouse.y += (mouse.ty - mouse.y) * 0.05;
     camera.position.x = mouse.x * 0.5;
@@ -231,10 +231,17 @@ function render() {
 }
 render();
 
+let _rW = window.innerWidth;
 window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  const w = window.innerWidth, h = window.innerHeight;
+  // On touch devices, only respond to width changes (true orientation flip).
+  // Height-only changes are caused by the mobile browser chrome appearing /
+  // disappearing on scroll and would make the canvas visually zoom in/out.
+  if (isTouch && w === _rW) return;
+  _rW = w;
+  camera.aspect = w / h;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(w, h);
 });
 
 /* ----- morph driver: each section declares its shape ----- */
@@ -334,7 +341,7 @@ gsap.to("#progressBar", {
 /* hero parallax fade-out */
 gsap.to(".hero__title, .hero__foot", {
   yPercent: -12,
-  opacity: 0.15,
+  opacity: isTouch ? 0.55 : 0.15,
   ease: "none",
   scrollTrigger: { trigger: ".hero", start: "bottom 90%", end: "bottom 30%", scrub: true },
 });

@@ -112,21 +112,29 @@ if (window.emailjs && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
       geo.attributes.position.needsUpdate = true;
       points.rotation.y += 0.0014;
       points.rotation.x = Math.sin(t * 0.15) * 0.1;
-      mouse.x += (mouse.tx - mouse.x) * 0.05;
-      mouse.y += (mouse.ty - mouse.y) * 0.05;
-      camera.position.x = mouse.x * 0.8;
-      camera.position.y = -mouse.y * 0.6;
-      camera.lookAt(0, 0, 0);
+      if (!isTouch) {
+        mouse.x += (mouse.tx - mouse.x) * 0.05;
+        mouse.y += (mouse.ty - mouse.y) * 0.05;
+        camera.position.x = mouse.x * 0.8;
+        camera.position.y = -mouse.y * 0.6;
+        camera.lookAt(0, 0, 0);
+      }
     }
     renderer.render(scene, camera);
     requestAnimationFrame(render);
   }
   render();
 
+  let _rW = window.innerWidth;
   window.addEventListener("resize", () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    const w = window.innerWidth, h = window.innerHeight;
+    // On touch devices, ignore height-only changes (mobile browser chrome
+    // showing/hiding on scroll) to prevent a visual zoom on the canvas.
+    if (isTouch && w === _rW) return;
+    _rW = w;
+    camera.aspect = w / h;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(w, h);
   });
 })();
 
