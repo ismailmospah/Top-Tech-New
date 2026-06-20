@@ -231,10 +231,17 @@ function render() {
 }
 render();
 
+let _rW = window.innerWidth;
 window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  const w = window.innerWidth, h = window.innerHeight;
+  // On touch devices, only respond to width changes (true orientation flip).
+  // Height-only changes are caused by the mobile browser chrome appearing /
+  // disappearing on scroll and would make the canvas visually zoom in/out.
+  if (isTouch && w === _rW) return;
+  _rW = w;
+  camera.aspect = w / h;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(w, h);
 });
 
 /* ----- morph driver: each section declares its shape ----- */

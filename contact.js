@@ -123,10 +123,16 @@ if (window.emailjs && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
   }
   render();
 
+  let _rW = window.innerWidth;
   window.addEventListener("resize", () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    const w = window.innerWidth, h = window.innerHeight;
+    // On touch devices, ignore height-only changes (mobile browser chrome
+    // showing/hiding on scroll) to prevent a visual zoom on the canvas.
+    if (isTouch && w === _rW) return;
+    _rW = w;
+    camera.aspect = w / h;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(w, h);
   });
 })();
 
