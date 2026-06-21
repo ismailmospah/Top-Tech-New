@@ -757,30 +757,31 @@ main { position: relative; z-index: 3; }
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--line);
-  padding: 1.4rem 0 0.6rem;
+  border-bottom: 1px solid rgba(245, 242, 236, 0.3);
+  padding: 1.4rem 0 0.65rem;
   color: var(--bone);
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.05rem;
   outline: none;
   resize: vertical;
+  caret-color: var(--accent);
 }
 .field label {
   position: absolute;
   left: 0;
   top: 1.4rem;
-  color: var(--bone-dim);
-  font-size: 1rem;
+  color: rgba(245, 242, 236, 0.72);
+  font-size: 1.05rem;
   pointer-events: none;
   transition: transform 0.35s var(--ease-expo), color 0.35s, font-size 0.35s;
 }
-.field label em { font-style: normal; opacity: 0.6; font-size: 0.85em; }
+.field label em { font-style: normal; opacity: 0.65; font-size: 0.85em; }
 .field input:focus + label,
 .field input:not(:placeholder-shown) + label,
 .field textarea:focus + label,
 .field textarea:not(:placeholder-shown) + label {
-  transform: translateY(-1.5rem);
-  font-size: 0.72rem;
+  transform: translateY(-1.55rem);
+  font-size: 0.73rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
@@ -789,7 +790,7 @@ main { position: relative; z-index: 3; }
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 1px;
+  height: 2px;
   width: 100%;
   background: var(--accent);
   transform: scaleX(0);
@@ -798,38 +799,43 @@ main { position: relative; z-index: 3; }
 }
 .field input:focus ~ .field__bar,
 .field textarea:focus ~ .field__bar { transform: scaleX(1); }
+.field input:focus-visible, .field textarea:focus-visible { outline: none; }
 .field.is-invalid input, .field.is-invalid textarea { border-bottom-color: #ff6b6b; }
 .field.is-invalid label { color: #ff6b6b; }
 
 /* chips */
 .chips { border: none; }
 .chips legend {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--bone-dim);
-  margin-bottom: 0.9rem;
+  color: var(--bone);
+  margin-bottom: 1rem;
 }
-.chips__grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.chips__grid { display: flex; flex-wrap: wrap; gap: 0.65rem; }
 .chips__grid--budget .chip span { min-width: 5.5rem; text-align: center; }
-.chips__hint { font-size: 0.85rem; color: var(--bone-dim); opacity: 0.8; padding: 0.3rem 0; }
+.chips__hint { font-size: 0.87rem; color: rgba(245, 242, 236, 0.7); padding: 0.3rem 0; }
 .chip { position: relative; cursor: pointer; }
 .chip input { position: absolute; opacity: 0; pointer-events: none; }
 .chip span {
   display: inline-block;
-  padding: 0.6rem 1.1rem;
-  border: 1px solid var(--line);
+  padding: 0.65rem 1.2rem;
+  border: 1px solid rgba(245, 242, 236, 0.28);
   border-radius: 999px;
-  font-size: 0.85rem;
-  color: var(--bone-dim);
+  font-size: 0.9rem;
+  color: rgba(245, 242, 236, 0.82);
   transition: all 0.3s var(--ease-expo);
 }
-.chip:hover span { border-color: rgba(249, 181, 39, 0.5); color: var(--bone); }
+.chip:hover span { border-color: rgba(249, 181, 39, 0.55); color: var(--bone); }
 .chip input:checked + span {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--ink);
   font-weight: 600;
+}
+.chip input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .cform__submit {
@@ -847,6 +853,7 @@ main { position: relative; z-index: 3; }
 }
 .cform__submit i { font-style: normal; display: inline-block; transition: transform 0.4s var(--ease-expo); }
 .cform__submit:hover i { transform: translateX(6px); }
+.cform__submit:focus-visible { outline: 2px solid var(--bone); outline-offset: 3px; }
 .cform__submit:disabled { opacity: 0.6; cursor: wait; }
 .cform__note { font-size: 0.85rem; color: #ff6b6b; min-height: 1.2em; }
 
