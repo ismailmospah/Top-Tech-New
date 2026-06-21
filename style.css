@@ -731,20 +731,20 @@ main { position: relative; z-index: 3; }
 .cform__lead { color: var(--bone-dim); font-size: 1.05rem; line-height: 1.6; max-width: 38ch; }
 .cform__lead strong { color: var(--accent); }
 .cform__contacts {
-  margin-top: 2.5rem;
   display: grid;
-  gap: 1.1rem;
+  gap: 1.4rem;
   border-top: 1px solid var(--line);
-  padding-top: 1.8rem;
+  padding-top: 2rem;
+  align-self: start;
 }
-.cform__contacts li { display: flex; flex-direction: column; gap: 0.2rem; }
+.cform__contacts li { display: flex; flex-direction: column; gap: 0.35rem; }
 .cform__contacts span {
-  font-size: 0.66rem;
-  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
 }
-.cform__contacts a, .cform__contacts p { font-size: 0.98rem; color: var(--bone); }
+.cform__contacts a, .cform__contacts p { font-size: 1.12rem; color: var(--bone); }
 .cform__contacts a { transition: color 0.3s; }
 .cform__contacts a:hover { color: var(--accent); }
 
@@ -894,6 +894,7 @@ main { position: relative; z-index: 3; }
   .cform { grid-template-columns: 1fr; }
   .cform__intro { position: static; }
   .field-row { grid-template-columns: 1fr; gap: 1.8rem; }
+  .cform__contacts { margin-top: 1rem; }
 }
 
 /* ---------- Mobile ---------- */
