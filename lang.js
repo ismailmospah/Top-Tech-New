@@ -16,8 +16,8 @@ const I18N = {
   /* ---------- hero ---------- */
   hero_kicker: { en: "Marketing Agency — KSA & Egypt", ar: "وكالة تسويق — السعودية ومصر" },
   hero_title: {
-    en: '<span class="hero__line"><span class="split" data-split>WE</span>&nbsp;<span class="split" data-split>MAKE</span></span><span class="hero__line hero__line--accent"><span class="split" data-split>BRANDS</span>&nbsp;<span class="split split--outline" data-split>GROW</span><span class="split hero__dot" data-split>.</span></span>',
-    ar: '<span class="hero__line"><span class="split" data-split>نُنمّي</span></span><span class="hero__line hero__line--accent"><span class="split split--outline" data-split>العلامات</span><span class="split hero__dot" data-split>.</span></span>',
+    en: '<span class="hero__line"><span class="split" data-split>WE</span>&nbsp;<span class="split" data-split>MAKE</span></span> <span class="hero__line hero__line--accent"><span class="split" data-split>BRANDS</span>&nbsp;<span class="split split--outline" data-split>GROW</span><span class="split hero__dot" data-split>.</span></span>',
+    ar: '<span class="hero__line"><span class="split" data-split>نُنمّي</span></span> <span class="hero__line hero__line--accent"><span class="split split--outline" data-split>العلامات</span><span class="split hero__dot" data-split>.</span></span>',
   },
   hero_blurb: {
     en: "Top Tech is a full-service marketing agency born from motion.<br>We combine creativity with strategy to deliver content that<br>doesn't just look good — it actually performs.",
@@ -85,8 +85,8 @@ const I18N = {
   /* ---------- contact (homepage footer) ---------- */
   contact_kicker: { en: "05 — Ready when you are", ar: "05 — جاهزون وقتما تشاء" },
   contact_title: {
-    en: '<span class="contact__line">LET\'S MAKE</span><span class="contact__line contact__line--outline">NOISE</span>',
-    ar: '<span class="contact__line">لنُحدث</span><span class="contact__line contact__line--outline">ضجّة.</span>',
+    en: '<span class="contact__line">LET\'S MAKE</span> <span class="contact__line contact__line--outline">NOISE</span>',
+    ar: '<span class="contact__line">لنُحدث</span> <span class="contact__line contact__line--outline">ضجّة.</span>',
   },
   contact_sub: { en: "Tell us about your project — we reply within 24 hours.", ar: "احكِ لنا عن مشروعك — نرد خلال 24 ساعة." },
   contact_cta: { en: 'Start a project <i>→</i>', ar: 'ابدأ مشروعك <i>→</i>' },
@@ -101,8 +101,8 @@ const I18N = {
   back_home:    { en: "Back home", ar: "العودة للرئيسية" },
   cform_index:  { en: "Transmission open", ar: "القناة مفتوحة" },
   cform_title: {
-    en: '<span class="cform__line">LET\'S BUILD</span><span class="cform__line cform__line--outline">SOMETHING.</span>',
-    ar: '<span class="cform__line">لنبنِ</span><span class="cform__line cform__line--outline">شيئًا معًا.</span>',
+    en: '<span class="cform__line">LET\'S BUILD</span> <span class="cform__line cform__line--outline">SOMETHING.</span>',
+    ar: '<span class="cform__line">لنبنِ</span> <span class="cform__line cform__line--outline">شيئًا معًا.</span>',
   },
   cform_lead: {
     en: "Tell us about your brand and what you're trying to move. We reply within <strong>24 hours</strong>.",
@@ -142,9 +142,26 @@ const I18N = {
 
 const LANG_KEY = "toptech-lang";
 
-/* current language — exposed for other scripts (contact.js) */
-window.TT_LANG = localStorage.getItem(LANG_KEY) || "en";
+/* ------------------------------------------------------------
+   Language is decided by the URL, not by JavaScript.
+   Every page ships its own language in the markup:
+     /            /contact           →  <html lang="en" dir="ltr">
+     /ar          /ar/contact        →  <html lang="ar" dir="rtl">
+   That makes both languages crawlable and independently indexable.
+   This file keeps the shared dictionary (contact.js reads it through
+   window.TT_T), splits headings for the animations, and turns the
+   toggle into a link to the current page's translated counterpart.
+   ------------------------------------------------------------ */
+
+window.TT_LANG = (document.documentElement.lang || "en").toLowerCase().startsWith("ar") ? "ar" : "en";
 window.TT_T = (key) => (I18N[key] ? I18N[key][window.TT_LANG] : "");
+
+/* the counterpart URL comes from the page's own hreflang annotations,
+   so the toggle can never drift out of sync with the SEO markup */
+function alternateUrl(lang) {
+  const link = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`);
+  return link ? link.href : null;
+}
 
 /* split a heading's data-split spans into animatable .char pieces.
    Arabic splits by word (preserves cursive joining); Latin by character. */
@@ -161,22 +178,11 @@ function splitNode(el, lang) {
     .join("");
 }
 
-function applyLang(lang) {
-  window.TT_LANG = lang;
-  const root = document.documentElement;
-  root.lang = lang;
-  root.dir = lang === "ar" ? "rtl" : "ltr";
-  document.body.classList.toggle("is-ar", lang === "ar");
+/* prepare the page that was already rendered in its own language */
+function hydrateLang() {
+  const lang = window.TT_LANG;
 
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const entry = I18N[el.dataset.i18n];
-    if (!entry) return;
-    const val = entry[lang];
-    if (el.hasAttribute("data-i18n-html")) el.innerHTML = val;
-    else el.textContent = val;
-  });
-
-  // (re)build animated headings
+  // build animated headings
   document.querySelectorAll("[data-split]").forEach((el) => splitNode(el, lang));
 
   // (re)build marquees — repeat the phrase enough to always overflow the
@@ -184,9 +190,6 @@ function applyLang(lang) {
   document.querySelectorAll("[data-marquee]").forEach((el) => {
     const entry = I18N[el.dataset.marquee];
     if (!entry) return;
-    // repeat the phrase so one group comfortably exceeds the widest viewport,
-    // then duplicate the group so the loop is seamless (each row sizes to its
-    // own content — the .marquee is flex-column, not grid)
     const group = (entry[lang] + " ✳ ").repeat(4);
     el.innerHTML = `<span>${group}</span><span>${group}</span>`;
   });
@@ -196,29 +199,34 @@ function applyLang(lang) {
     s.classList.toggle("is-active", s.dataset.lang === lang);
   });
 
-  localStorage.setItem(LANG_KEY, lang);
-
-  // let other scripts (e.g. the contact form's dynamic budget chips) re-render
+  // let other scripts (e.g. the contact form's budget chips) render in this language
   window.dispatchEvent(new CustomEvent("tt-lang", { detail: lang }));
 }
 
-/* apply stored/default language immediately (before main.js animates) */
-applyLang(window.TT_LANG);
+hydrateLang();
 
-/* wire the toggle */
+/* ------------------------------------------------------------
+   The toggle is a real navigation to the translated URL.
+   It is rendered as a <button> in the markup, so we upgrade it to an
+   anchor-like control and remember the choice for the next visit.
+   ------------------------------------------------------------ */
 const langToggle = document.getElementById("langToggle");
 if (langToggle) {
-  langToggle.addEventListener("click", () => {
-    const next = window.TT_LANG === "en" ? "ar" : "en";
-    applyLang(next);
+  const other = window.TT_LANG === "en" ? "ar" : "en";
+  const href = alternateUrl(other);
 
-    // gentle re-reveal of the hero/title chars on switch
-    if (window.gsap && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      gsap.fromTo("[data-split] .char",
-        { yPercent: 70, opacity: 0 },
-        { yPercent: 0, opacity: 1, duration: 0.6, ease: "expo.out", stagger: 0.02 });
-    }
-    // layout shifted (RTL) — let ScrollTrigger recompute
-    if (window.ScrollTrigger) ScrollTrigger.refresh();
-  });
+  if (href) {
+    langToggle.setAttribute("aria-label", other === "ar" ? "التبديل إلى العربية" : "Switch to English");
+    langToggle.addEventListener("click", () => {
+      try { localStorage.setItem(LANG_KEY, other); } catch (e) { /* private mode */ }
+      // transition.js only intercepts <a> clicks, so navigate directly
+      window.location.href = href;
+    });
+  } else {
+    langToggle.hidden = true; // no translated counterpart for this page
+  }
 }
+
+/* remember the language of the page actually being viewed, so the
+   homepage can send a returning visitor straight back to it */
+try { localStorage.setItem(LANG_KEY, window.TT_LANG); } catch (e) { /* private mode */ }

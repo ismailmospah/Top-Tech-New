@@ -1,0 +1,46 @@
+# Top Tech — marketing agency, Saudi Arabia & Egypt
+# https://www.toptech.studio/
+
+# Everything on this site is public and meant to be found.
+User-agent: *
+Allow: /
+
+# The crawlers that put Top Tech in front of people are listed
+# explicitly, so a future blanket rule can never hide the site from
+# classic search or from AI answer engines by accident.
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Google AI surfaces (Gemini, AI Mode grounding)
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Bing and Copilot
+User-agent: Bingbot
+Allow: /
+
+# ChatGPT Search — indexes pages so they can be cited in answers
+User-agent: OAI-SearchBot
+Allow: /
+
+# ChatGPT fetching a page because a user asked for it
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Apple (Siri, Spotlight)
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+Sitemap: https://www.toptech.studio/sitemap.xml
