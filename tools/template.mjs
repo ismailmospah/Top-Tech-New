@@ -106,6 +106,7 @@ export const paths = (lang) => ({
   home: lang === "ar" ? "/ar" : "/",
   contact: lang === "ar" ? "/ar/contact" : "/contact",
   services: lang === "ar" ? "/ar/services" : "/services",
+  insights: lang === "ar" ? "/ar/insights" : "/insights",
 });
 
 export function renderBodyOpen(lang, shape, extraClass = "") {
@@ -141,6 +142,7 @@ export function renderHeader(lang) {
       <a href="${p.home}#story" data-cursor="hover">${esc(t("nav_story", lang))}</a>
       <a href="${p.services}" data-cursor="hover">${esc(t("nav_services", lang))}</a>
       <a href="${p.home}#reviews" data-cursor="hover">${esc(t("nav_clients", lang))}</a>
+      <a href="${p.insights}" data-cursor="hover">${esc(t("nav_insights", lang))}</a>
       <a href="${p.contact}" data-cursor="hover">${esc(t("nav_contact", lang))}</a>
     </nav>
     <div class="header__actions">

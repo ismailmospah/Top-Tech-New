@@ -12,6 +12,7 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { SERVICES } from "./content/services/index.mjs";
+import { ARTICLES } from "./content/insights/index.mjs";
 import { SITE, url as abs } from "./routes.mjs";
 import { ROOT, t } from "./i18n.mjs";
 import {
@@ -26,6 +27,7 @@ const UI = {
   en: {
     home: "Home", services: "Services", related: "Related services",
     allServices: "All services", indexKicker: "Services",
+    reading: "Related reading",
     faqIndex: "Questions", processIndex: "Process", deliverIndex: "Deliverables",
     solvesIndex: "Problems", offerIndex: "Scope",
     audienceIndex: "Audience", defIndex: "Overview",
@@ -33,6 +35,7 @@ const UI = {
   ar: {
     home: "الرئيسية", services: "الخدمات", related: "خدمات ذات صلة",
     allServices: "كل الخدمات", indexKicker: "الخدمات",
+    reading: "اقرأ أيضًا",
     faqIndex: "الأسئلة", processIndex: "المراحل", deliverIndex: "المخرجات",
     solvesIndex: "المشكلات", offerIndex: "النطاق",
     audienceIndex: "الجمهور", defIndex: "نظرة عامة",
@@ -136,6 +139,13 @@ function renderService(svc, lang) {
     )
     .join("\n");
 
+  const articlePath = (slug) => (lang === "ar" ? `/ar/insights/${slug}` : `/insights/${slug}`);
+  const reading = ARTICLES.filter((a) => a.services.includes(svc.slug))
+    .map((a) => `        <a href="${articlePath(a.slug)}" data-cursor="view">
+          <span>${esc(a[lang].h1)}</span><i aria-hidden="true">→</i>
+        </a>`)
+    .join("\n");
+
   const jsonld = graph([
     organization(lang),
     website(),
@@ -180,6 +190,13 @@ ${block(u.faqIndex, c.sections.faq.h, faqBlock(c.sections.faq.items))}
 ${related}
       </div>
     </section>
+${reading ? `
+    <section class="block">
+      <p class="block__index">${esc(u.reading)}</p>
+      <div class="related">
+${reading}
+      </div>
+    </section>` : ""}
   </main>
 ${renderFooter(lang)}
 ${SCRIPTS}`;

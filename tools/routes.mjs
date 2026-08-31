@@ -14,6 +14,7 @@
    ============================================================ */
 
 import { SERVICES } from "./content/services/index.mjs";
+import { ARTICLES } from "./content/insights/index.mjs";
 
 export const SITE = "https://www.toptech.studio";
 
@@ -65,6 +66,22 @@ const PAGES = [
     changefreq: "monthly",
     en: { path: `/services/${s.slug}` },
     ar: { path: `/ar/services/${s.slug}` },
+  })),
+  {
+    id: "insights",
+    generator: "insights",
+    priority: "0.7",
+    changefreq: "weekly",
+    en: { path: "/insights" },
+    ar: { path: "/ar/insights" },
+  },
+  ...ARTICLES.map((a) => ({
+    id: `article:${a.slug}`,
+    generator: "insights",
+    priority: "0.6",
+    changefreq: "yearly",
+    en: { path: `/insights/${a.slug}` },
+    ar: { path: `/ar/insights/${a.slug}` },
   })),
 ];
 

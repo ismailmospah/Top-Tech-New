@@ -163,4 +163,76 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.toptech.studio/insights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.toptech.studio/insights" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.toptech.studio/ar/insights" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.toptech.studio/insights" />
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.toptech.studio/ar/insights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.toptech.studio/insights" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.toptech.studio/ar/insights" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.toptech.studio/insights" />
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.toptech.studio/insights/digital-marketing-agency-cost-saudi-arabia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.toptech.studio/insights/digital-marketing-agency-cost-saudi-arabia" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.toptech.studio/ar/insights/digital-marketing-agency-cost-saudi-arabia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.toptech.studio/insights/digital-marketing-agency-cost-saudi-arabia" />
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.toptech.studio/ar/insights/digital-marketing-agency-cost-saudi-arabia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.toptech.studio/insights/digital-marketing-agency-cost-saudi-arabia" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.toptech.studio/ar/insights/digital-marketing-agency-cost-saudi-arabia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.toptech.studio/insights/digital-marketing-agency-cost-saudi-arabia" />
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.toptech.studio/insights/how-to-choose-a-marketing-agency</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.toptech.studio/insights/how-to-choose-a-marketing-agency" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.toptech.studio/ar/insights/how-to-choose-a-marketing-agency" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.toptech.studio/insights/how-to-choose-a-marketing-agency" />
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.toptech.studio/ar/insights/how-to-choose-a-marketing-agency</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.toptech.studio/insights/how-to-choose-a-marketing-agency" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.toptech.studio/ar/insights/how-to-choose-a-marketing-agency" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.toptech.studio/insights/how-to-choose-a-marketing-agency" />
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.toptech.studio/insights/agency-vs-freelancer</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.toptech.studio/insights/agency-vs-freelancer" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.toptech.studio/ar/insights/agency-vs-freelancer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.toptech.studio/insights/agency-vs-freelancer" />
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.toptech.studio/ar/insights/agency-vs-freelancer</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.toptech.studio/insights/agency-vs-freelancer" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.toptech.studio/ar/insights/agency-vs-freelancer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.toptech.studio/insights/agency-vs-freelancer" />
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

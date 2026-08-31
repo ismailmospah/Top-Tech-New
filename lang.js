@@ -9,6 +9,7 @@ const I18N = {
   nav_story:    { en: "Story",            ar: "قصتنا" },
   nav_services: { en: "Services",         ar: "خدماتنا" },
   nav_clients:  { en: "Clients",          ar: "عملاؤنا" },
+  nav_insights: { en: "Insights",         ar: "مقالات" },
   nav_contact:  { en: "Contact",          ar: "تواصل" },
   nav_cta:      { en: "Start a project",  ar: "ابدأ مشروعك" },
   loader_label: { en: "Engineering attention", ar: "نهندس الانتباه" },
