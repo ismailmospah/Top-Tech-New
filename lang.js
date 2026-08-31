@@ -66,6 +66,7 @@ const I18N = {
   svc5_name: { en: "Motion & Video", ar: "الموشن والفيديو" },
   svc5_desc: { en: "Our origin craft — motion graphics, video editing and videography with cinematic polish.", ar: "حرفتنا الأصلية — موشن جرافيك ومونتاج وتصوير بلمسة سينمائية." },
   svc6_name: { en: "Media Buying", ar: "إعلانات ممولة" },
+  services_all: { en: 'All services <i aria-hidden="true">&rarr;</i>', ar: 'كل الخدمات <i aria-hidden="true">&rarr;</i>' },
   svc6_desc: { en: "Paid campaigns planned, placed and optimised — turning ad spend into measurable growth.", ar: "حملات مدفوعة مخططة ومُدارة ومُحسّنة — تحوّل الإنفاق إلى نمو ملموس." },
 
   /* ---------- reviews ---------- */

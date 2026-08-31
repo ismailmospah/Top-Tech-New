@@ -1063,3 +1063,315 @@ main { position: relative; z-index: 3; }
   .marquee__row, .marquee__row--alt { animation: none; }
   * { transition-duration: 0.01ms !important; }
 }
+
+/* ============================================================
+   CONTENT PAGES (services, and anything built on the same shell)
+   Reuses the existing tokens, card treatment and display type.
+   Written with logical properties so Arabic RTL mirrors correctly.
+   ============================================================ */
+/* Sits between the particle canvas (z-index 0 / vignette 1) and the content
+   (z-index 3). Only generated content pages include it, so the homepage hero
+   keeps the particles at full strength. */
+.page-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 100% 70% at 50% 45%, rgba(8, 4, 15, 0.72) 0%, rgba(8, 4, 15, 0.5) 60%, rgba(8, 4, 15, 0.42) 100%);
+}
+
+.page {
+  position: relative;
+  z-index: 3;
+  padding: clamp(6.5rem, 15vh, 9rem) clamp(1.2rem, 4vw, 3rem) 0;
+  max-width: 1180px;
+  margin-inline: auto;
+}
+
+/* ---------- breadcrumb ---------- */
+.crumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  margin-bottom: clamp(1.6rem, 4vh, 2.6rem);
+}
+.crumb a { transition: color 0.3s; }
+.crumb a:hover { color: var(--accent); }
+.crumb span[aria-current] { color: var(--bone); }
+.crumb li { display: flex; align-items: center; gap: 0.5rem; }
+.crumb ol { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; list-style: none; }
+.crumb__sep { color: var(--line); }
+
+/* ---------- page hero ---------- */
+.phero { margin-bottom: clamp(3rem, 8vh, 5rem); }
+.phero__title {
+  font-family: var(--font-display);
+  font-weight: 850;
+  font-size: clamp(2.4rem, 6.5vw, 4.6rem);
+  line-height: 1.02;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.4rem;
+}
+.phero__lead {
+  color: var(--bone);
+  font-size: clamp(1.02rem, 1.6vw, 1.22rem);
+  line-height: 1.65;
+  max-width: 62ch;
+  text-shadow: 0 1px 12px rgba(8, 4, 15, 0.8);
+}
+.phero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.2rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  transition: transform 0.4s var(--ease-expo), border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+.btn i { font-style: normal; transition: transform 0.4s var(--ease-expo); }
+.btn:hover i { transform: translateX(6px); }
+.is-ar .btn:hover i { transform: translateX(-6px); }
+.btn--solid { background: var(--accent); color: var(--ink); border-color: var(--accent); }
+.btn--solid:hover { transform: translateY(-2px); }
+.btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
+.btn:focus-visible { outline: 2px solid var(--bone); outline-offset: 3px; }
+
+/* ---------- generic content section ---------- */
+.block { margin-bottom: clamp(3.2rem, 9vh, 5.5rem); }
+.block__index {
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.block__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3.4vw, 2.5rem);
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.4rem;
+}
+.block__title em { font-style: italic; color: var(--accent); }
+.prose p {
+  color: var(--bone-dim);
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 68ch;
+}
+.prose p + p { margin-top: 1rem; }
+.prose strong { color: var(--bone); font-weight: 600; }
+.prose a { color: var(--accent); border-bottom: 1px solid rgba(249, 181, 39, 0.35); }
+.prose a:hover { border-bottom-color: var(--accent); }
+
+/* ---------- card grid (same treatment as .phase) ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: clamp(1rem, 2.4vw, 1.6rem);
+}
+.card {
+  padding: clamp(1.4rem, 2.6vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(28, 17, 51, 0.35);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  transition: transform 0.5s var(--ease-expo), border-color 0.5s, background-color 0.5s;
+}
+.card:hover { transform: translateY(-6px); border-color: rgba(249, 181, 39, 0.45); background: rgba(69, 44, 123, 0.26); }
+.card__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.12rem;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+.card__text { color: var(--bone-dim); font-size: 0.93rem; line-height: 1.65; }
+
+/* ---------- marker list ---------- */
+.ticks { display: grid; gap: 0.85rem; max-width: 72ch; }
+.ticks li {
+  position: relative;
+  padding-inline-start: 1.7rem;
+  color: var(--bone-dim);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+.ticks li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.ticks strong { color: var(--bone); font-weight: 600; }
+
+/* ---------- numbered process ---------- */
+.steps { counter-reset: step; display: grid; gap: 1px; border-top: 1px solid var(--line); }
+.steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: clamp(0.8rem, 2vw, 1.6rem);
+  align-items: start;
+  padding: clamp(1.2rem, 2.6vw, 1.8rem) 0;
+  border-bottom: 1px solid var(--line);
+}
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-weight: 850;
+  font-size: 1.5rem;
+  color: var(--accent);
+  line-height: 1;
+}
+.steps h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.08rem;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+}
+.steps p { color: var(--bone-dim); font-size: 0.95rem; line-height: 1.65; max-width: 62ch; }
+
+/* ---------- FAQ ---------- */
+.faq { border-top: 1px solid var(--line); max-width: 82ch; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.02rem;
+  transition: color 0.3s;
+}
+.faq summary::-webkit-details-marker { display: none; }
+/* the question is a real heading; it should not look like one */
+.faq summary h3 { font: inherit; letter-spacing: inherit; text-transform: none; margin: 0; }
+.faq summary:hover { color: var(--accent); }
+.faq summary:focus-visible { outline: 2px solid var(--bone); outline-offset: 3px; }
+.faq summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--accent);
+  flex: none;
+  transition: transform 0.35s var(--ease-expo);
+}
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq__answer { padding: 0 0 1.35rem; color: var(--bone-dim); font-size: 0.97rem; line-height: 1.72; max-width: 68ch; }
+.faq__answer p + p { margin-top: 0.8rem; }
+.faq__answer a { color: var(--accent); border-bottom: 1px solid rgba(249, 181, 39, 0.35); }
+
+/* ---------- related links ---------- */
+.related { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+.related a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(28, 17, 51, 0.3);
+  font-weight: 600;
+  transition: border-color 0.35s, color 0.35s, transform 0.45s var(--ease-expo);
+}
+.related a:hover { border-color: rgba(249, 181, 39, 0.5); color: var(--accent); transform: translateY(-4px); }
+.related i { font-style: normal; color: var(--accent); }
+.is-ar .related i { transform: scaleX(-1); }
+
+/* ---------- service index rows ---------- */
+.svclist { border-top: 1px solid var(--line); }
+.svclist__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.4rem 1fr auto;
+  gap: clamp(0.8rem, 2.4vw, 2rem);
+  align-items: center;
+  padding: clamp(1.5rem, 3.4vw, 2.4rem) 0;
+  border-bottom: 1px solid var(--line);
+  transition: background-color 0.4s, padding-inline-start 0.4s var(--ease-expo);
+}
+.svclist__row:hover { background: rgba(69, 44, 123, 0.14); padding-inline-start: clamp(0.8rem, 2vw, 1.6rem); }
+.svclist__num { font-family: var(--font-display); font-weight: 850; font-size: 0.85rem; color: var(--accent); }
+.svclist__name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.25rem, 3.4vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  transition: color 0.35s;
+}
+.svclist__row:hover .svclist__name { color: var(--accent); }
+.svclist__desc { color: var(--bone-dim); font-size: 0.93rem; line-height: 1.6; margin-top: 0.4rem; max-width: 60ch; }
+.svclist__arrow { color: var(--accent); opacity: 0; transition: opacity 0.35s, transform 0.45s var(--ease-expo); }
+.svclist__row:hover .svclist__arrow { opacity: 1; }
+.is-ar .svclist__arrow { transform: scaleX(-1); }
+/* stretched link: the whole row is clickable, the anchor text stays the name */
+.svclist__link::after { content: ""; position: absolute; inset: 0; }
+.svclist__link:focus-visible { outline: 2px solid var(--bone); outline-offset: 4px; }
+
+/* the homepage service rows become links the same way */
+.service { position: relative; }
+.service__link::after { content: ""; position: absolute; inset: 0; }
+.service__link:focus-visible { outline: 2px solid var(--bone); outline-offset: 4px; }
+
+/* ---------- content pages: Arabic typography ---------- */
+.is-ar .phero__title,
+.is-ar .block__title,
+.is-ar .card__title,
+.is-ar .steps h3,
+.is-ar .svclist__name,
+.is-ar .faq summary,
+.is-ar .btn { font-family: var(--font-ar); }
+.is-ar .phero__title { line-height: 1.22; font-weight: 700; letter-spacing: 0; }
+.is-ar .block__title,
+.is-ar .svclist__name { line-height: 1.35; font-weight: 700; letter-spacing: 0; }
+.is-ar .card__title,
+.is-ar .steps h3 { letter-spacing: 0; }
+.is-ar .crumb,
+.is-ar .block__index { letter-spacing: 0; }
+.is-ar .steps li::before { font-family: var(--font-display); }
+
+@media (max-width: 640px) {
+  .page { padding-top: clamp(5.5rem, 13vh, 7rem); }
+  .steps li { grid-template-columns: 2.6rem 1fr; }
+  .svclist__row { grid-template-columns: 2.4rem 1fr auto; }
+  .phero__actions .btn { width: 100%; justify-content: center; }
+}
+
+/* link from the homepage services section to the full service index */
+.services__more { margin-top: clamp(1.8rem, 4vh, 2.8rem); }
+.services__more .btn i { display: inline-block; }

@@ -18,7 +18,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { ROUTES, SITE, url } from "./routes.mjs";
+import { ROUTES, mirrorRoutes, SITE, url } from "./routes.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -238,9 +238,10 @@ function build(page) {
   );
 
   // 5 — keep internal navigation inside the Arabic site
-  html = html
-    .split('href="/contact"').join('href="/ar/contact"')
-    .split('href="/"').join('href="/ar"');
+  for (const r of ROUTES) {
+    html = html.split(`href="${r.en.path}"`).join(`href="${r.ar.path}"`);
+    html = html.split(`href="${r.en.path}#`).join(`href="${r.ar.path}#`);
+  }
 
   const out = resolve(ROOT, page.out);
   mkdirSync(dirname(out), { recursive: true });
@@ -254,7 +255,7 @@ function build(page) {
   console.log(`built ${page.out}`);
 }
 
-for (const route of ROUTES) {
+for (const route of mirrorRoutes()) {
   build({
     source: route.en.source,
     out: route.ar.out,

@@ -2,19 +2,25 @@
    TOP TECH — route table
    ------------------------------------------------------------
    The single source of truth for every indexable URL and its
-   translated counterpart. Both build tools read this file:
+   translated counterpart. The build tools read this file:
 
-     tools/build-ar.mjs       generates the Arabic pages
-     tools/build-sitemap.mjs  generates sitemap.xml
+     tools/build-ar.mjs        mirrors the hand-written pages into Arabic
+     tools/build-services.mjs  renders the service pages
+     tools/build-sitemap.mjs   renders sitemap.xml
 
-   Adding a page means adding one entry here, then re-running both.
+   `generator` says who owns a route:
+     "ar-mirror" — a hand-written English page mirrored into /ar
+     "services"  — rendered from tools/content/services
    ============================================================ */
+
+import { SERVICES } from "./content/services/index.mjs";
 
 export const SITE = "https://www.toptech.studio";
 
-export const ROUTES = [
+const PAGES = [
   {
     id: "home",
+    generator: "ar-mirror",
     priority: "1.0",
     changefreq: "monthly",
     en: { path: "/", source: "index.html" },
@@ -28,6 +34,7 @@ export const ROUTES = [
   },
   {
     id: "contact",
+    generator: "ar-mirror",
     priority: "0.8",
     changefreq: "yearly",
     en: { path: "/contact", source: "contact.html" },
@@ -43,6 +50,25 @@ export const ROUTES = [
       ],
     },
   },
+  {
+    id: "services",
+    generator: "services",
+    priority: "0.9",
+    changefreq: "monthly",
+    en: { path: "/services" },
+    ar: { path: "/ar/services" },
+  },
+  ...SERVICES.map((s) => ({
+    id: `service:${s.slug}`,
+    generator: "services",
+    priority: "0.8",
+    changefreq: "monthly",
+    en: { path: `/services/${s.slug}` },
+    ar: { path: `/ar/services/${s.slug}` },
+  })),
 ];
+
+export const ROUTES = PAGES;
+export const mirrorRoutes = () => PAGES.filter((r) => r.generator === "ar-mirror");
 
 export const url = (path) => SITE + (path === "/" ? "/" : path);
