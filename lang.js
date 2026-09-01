@@ -162,7 +162,13 @@ window.TT_T = (key) => (I18N[key] ? I18N[key][window.TT_LANG] : "");
    so the toggle can never drift out of sync with the SEO markup */
 function alternateUrl(lang) {
   const link = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`);
-  return link ? link.href : null;
+  if (!link) return null;
+  // hreflang carries an absolute production URL, which is what search engines
+  // need. For navigation we take only the path and stay on the origin the
+  // visitor is actually on — otherwise a preview or a local build would send
+  // them to the live domain, where the page may not exist yet.
+  const target = new URL(link.getAttribute("href"), location.href);
+  return target.pathname + target.search + target.hash;
 }
 
 /* split a heading's data-split spans into animatable .char pieces.
