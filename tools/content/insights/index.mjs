@@ -1,16 +1,42 @@
-/* Insights articles, newest first is decided at render time by `published`. */
+/* Insights articles. Order in the index is decided at render time by `published`. */
 
 import cost from "./digital-marketing-cost-saudi-arabia.mjs";
 import choose from "./how-to-choose-a-marketing-agency.mjs";
 import freelancer from "./agency-vs-freelancer.mjs";
+import socialCost from "./social-media-management-cost.mjs";
+import videoCost from "./video-production-cost.mjs";
+import adsWorking from "./is-your-advertising-working.mjs";
+import motion from "./what-is-motion-graphics.mjs";
+import brandingVsMarketing from "./branding-vs-marketing.mjs";
+import mistakes from "./common-marketing-mistakes.mjs";
+import fullService from "./when-you-need-a-full-service-agency.mjs";
+import startup from "./startup-marketing-strategy.mjs";
+import realEstate from "./real-estate-marketing.mjs";
 
-export const ARTICLES = [cost, choose, freelancer];
+export const ARTICLES = [
+  cost,
+  choose,
+  socialCost,
+  videoCost,
+  adsWorking,
+  motion,
+  brandingVsMarketing,
+  freelancer,
+  mistakes,
+  fullService,
+  startup,
+  realEstate,
+];
 
 /* fail loudly rather than shipping a half-written article */
+const slugs = new Set();
 for (const a of ARTICLES) {
   for (const key of ["slug", "published", "services", "related"]) {
     if (a[key] === undefined) throw new Error(`${a.slug}: missing ${key}`);
   }
+  if (slugs.has(a.slug)) throw new Error(`duplicate slug: ${a.slug}`);
+  slugs.add(a.slug);
+
   for (const lang of ["en", "ar"]) {
     const c = a[lang];
     if (!c) throw new Error(`${a.slug}: missing ${lang}`);
@@ -26,6 +52,7 @@ for (const a of ARTICLES) {
     }
     if (c.faq?.length && !c.faqTitle) throw new Error(`${a.slug}.${lang}: faq without faqTitle`);
   }
+
   for (const slug of a.related) {
     if (!ARTICLES.some((x) => x.slug === slug)) throw new Error(`${a.slug}: unknown related article ${slug}`);
   }
