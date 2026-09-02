@@ -12,7 +12,7 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { SERVICES } from "./content/services/index.mjs";
-import { ARTICLES } from "./content/insights/index.mjs";
+import { ARTICLES } from "./content/articles/index.mjs";
 import { SITE, url as abs } from "./routes.mjs";
 import { ROOT, t } from "./i18n.mjs";
 import {
@@ -139,7 +139,7 @@ function renderService(svc, lang) {
     )
     .join("\n");
 
-  const articlePath = (slug) => (lang === "ar" ? `/ar/insights/${slug}` : `/insights/${slug}`);
+  const articlePath = (slug) => (lang === "ar" ? `/ar/articles/${slug}` : `/articles/${slug}`);
   const reading = ARTICLES.filter((a) => a.services.includes(svc.slug))
     .map((a) => `        <a href="${articlePath(a.slug)}" data-cursor="view">
           <span>${esc(a[lang].h1)}</span><i aria-hidden="true">→</i>

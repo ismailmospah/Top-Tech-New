@@ -106,7 +106,7 @@ export const paths = (lang) => ({
   home: lang === "ar" ? "/ar" : "/",
   contact: lang === "ar" ? "/ar/contact" : "/contact",
   services: lang === "ar" ? "/ar/services" : "/services",
-  insights: lang === "ar" ? "/ar/insights" : "/insights",
+  insights: lang === "ar" ? "/ar/articles" : "/articles",
 });
 
 export function renderBodyOpen(lang, shape, extraClass = "") {

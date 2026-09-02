@@ -24,6 +24,16 @@
       "source": "/ar/contact/index.html",
       "destination": "/ar/contact",
       "permanent": true
+    },
+    {
+      "source": "/articles/index.html",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/ar/articles/index.html",
+      "destination": "/ar/articles",
+      "permanent": true
     }
   ],
   "rewrites": [
