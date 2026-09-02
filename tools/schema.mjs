@@ -36,8 +36,9 @@ export function organization(lang) {
       { "@type": "Country", name: "Egypt" },
     ],
     sameAs: [
-      "https://www.instagram.com/toptechstudio/",
-      "https://www.tiktok.com/@toptechcompany",
+      "https://www.instagram.com/toptechagency/",
+      "https://www.tiktok.com/@toptechagency1",
+      "https://x.com/toptechstudio1",
       "https://www.behance.net/TopTechCompany",
     ],
     contactPoint: [
