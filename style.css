@@ -613,6 +613,9 @@ main { position: relative; z-index: 3; }
 /* ---------- Contact ---------- */
 .contact {
   position: relative;
+  /* On generated pages this footer sits outside <main>, so it needs the same
+     stacking level — otherwise the content-page scrim (z-index 2) dims it. */
+  z-index: 3;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
