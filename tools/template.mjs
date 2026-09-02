@@ -172,8 +172,9 @@ export function renderFooter(lang) {
       </div>
       <div>
         <span>${esc(t("meta_socials", lang))}</span>
-        <a href="https://www.instagram.com/toptechstudio/" target="_blank" rel="noopener" data-cursor="hover">Instagram</a>
-        <a href="https://www.tiktok.com/@toptechcompany" target="_blank" rel="noopener" data-cursor="hover">TikTok</a>
+        <a href="https://www.instagram.com/toptechagency/" target="_blank" rel="noopener" data-cursor="hover">Instagram</a>
+        <a href="https://www.tiktok.com/@toptechagency1" target="_blank" rel="noopener" data-cursor="hover">TikTok</a>
+        <a href="https://x.com/toptechstudio1" target="_blank" rel="noopener" data-cursor="hover">X</a>
         <a href="https://www.behance.net/TopTechCompany" target="_blank" rel="noopener" data-cursor="hover">Behance</a>
       </div>
       <div>
