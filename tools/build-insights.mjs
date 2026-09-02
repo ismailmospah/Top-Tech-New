@@ -25,13 +25,13 @@ import {
 
 const UI = {
   en: {
-    home: "Home", insights: "Insights", kicker: "Insights",
+    home: "Home", insights: "Articles", kicker: "Articles",
     published: "Published", updated: "Updated", readTime: "min read",
     author: "Top Tech", inThis: "In this article",
     relatedServices: "Related services", relatedReading: "Related reading",
     faqIndex: "Questions", ctaTitle: "Talk it through with us",
     ctaText: "Tell us what you are trying to move. We reply within 24 hours.",
-    all: "All insights",
+    all: "All articles",
   },
   ar: {
     home: "الرئيسية", insights: "المقالات", kicker: "المقالات",
@@ -235,10 +235,10 @@ ${SCRIPTS}`;
 /* ---------- index ---------- */
 const INDEX_COPY = {
   en: {
-    title: "Insights on Marketing in Saudi Arabia & Egypt — Top Tech",
+    title: "Marketing Articles for Saudi Arabia & Egypt — Top Tech",
     description:
       "Practical answers to the questions businesses in Saudi Arabia and Egypt actually ask about marketing agencies, social media, video production, budgets and results.",
-    h1: "Insights",
+    h1: "Articles",
     lead: "Straight answers to the questions clients ask us before they hire anyone — what things cost, how to judge an agency, and how to tell whether marketing is working.",
   },
   ar: {
