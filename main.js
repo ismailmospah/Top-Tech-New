@@ -300,6 +300,11 @@ const pct = document.getElementById("loaderPct");
 const bar = document.getElementById("loaderBar");
 const counter = { v: 0 };
 
+/* Only the homepage carries the preloader. Content pages share this file, so
+   the intro timeline is skipped there rather than animating missing nodes. */
+const hasPreloader = !!(document.getElementById("loader") && pct && bar);
+if (hasPreloader) {
+
 /* logo slides up → counter fills → amber curtain wipes up → hero types in
    (the entrance from concept 1, ported to the Orbit build) */
 const intro = gsap.timeline();
@@ -328,6 +333,7 @@ intro
     yPercent: 110, duration: 0.9, stagger: 0.08, ease: "expo.out",
   }, "-=0.7")
   .from(".header, .hero__scroll, .concepts", { opacity: 0, duration: 0.7 }, "-=0.5");
+}
 
 /* ============================================================
    SCROLL CHOREOGRAPHY
@@ -369,6 +375,29 @@ gsap.from(".service", {
   ease: "expo.out",
   stagger: 0.08,
   scrollTrigger: { trigger: ".services__list", start: "top 82%" },
+});
+
+/* Content pages carry the text we want read and indexed, so their reveal
+   moves elements without ever fading them out. Anything below the fold stays
+   fully visible and merely slides into place — nothing sits at opacity 0
+   waiting for a scroll that a crawler or a keyboard user may never make. */
+document.querySelectorAll(".cards, .steps, .ticks, .related").forEach((group) => {
+  gsap.from(group.children, {
+    y: 34,
+    duration: 0.85,
+    ease: "expo.out",
+    stagger: 0.06,
+    scrollTrigger: { trigger: group, start: "top 88%" },
+  });
+});
+
+document.querySelectorAll(".phero__title, .block__title").forEach((el) => {
+  gsap.from(el, {
+    y: 40,
+    duration: 0.9,
+    ease: "expo.out",
+    scrollTrigger: { trigger: el, start: "top 90%" },
+  });
 });
 
 /* story phases cascade in */

@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Returning visitors who chose Arabic go straight to the Arabic site.
-       Crawlers have no localStorage, so they always get the English page.
-       Skipped on back/forward so the Arabic page never becomes a history trap. -->
-  <script>
-    try {
-      var nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
-      var fresh = !nav || nav.type === "navigate";
-      if (fresh && location.pathname === "/" && localStorage.getItem("toptech-lang") === "ar") {
-        location.replace("/ar");
-      }
-    } catch (e) { /* private mode — stay on English */ }
-  </script>
-
-  <title>Marketing Agency in Saudi Arabia &amp; Egypt — Top Tech</title>
-  <meta name="description" content="Top Tech is a full-service marketing agency in Saudi Arabia and Egypt. Marketing strategy, social media, content, branding, motion &amp; video and media buying — built by a studio born in motion." />
+  <title>وكالة تسويق في السعودية ومصر — توب تك</title>
+  <meta name="description" content="توب تك وكالة تسويق رقمي متكاملة في السعودية ومصر. استراتيجية تسويق، إدارة حسابات التواصل الاجتماعي، صناعة المحتوى، الهوية البصرية، الموشن جرافيك وإنتاج الفيديو، والإعلانات المدفوعة." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-  <link rel="canonical" href="https://www.toptech.studio/" />
-  <link rel="alternate" hreflang="en" href="https://www.toptech.studio/" />
+  <link rel="canonical" href="https://www.toptech.studio/ar" />
   <link rel="alternate" hreflang="ar" href="https://www.toptech.studio/ar" />
+  <link rel="alternate" hreflang="en" href="https://www.toptech.studio/" />
   <link rel="alternate" hreflang="x-default" href="https://www.toptech.studio/" />
 
   <!-- Facebook Domain Verification -->
@@ -34,22 +21,22 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Top Tech" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="ar_AR" />
-  <meta property="og:url" content="https://www.toptech.studio/" />
-  <meta property="og:title" content="Marketing Agency in Saudi Arabia &amp; Egypt — Top Tech" />
-  <meta property="og:description" content="Top Tech is a full-service marketing agency in Saudi Arabia and Egypt. Strategy, social media, content, branding, motion and media buying under one roof." />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:url" content="https://www.toptech.studio/ar" />
+  <meta property="og:title" content="وكالة تسويق في السعودية ومصر — توب تك" />
+  <meta property="og:description" content="توب تك وكالة تسويق رقمي متكاملة في السعودية ومصر. استراتيجية تسويق، إدارة حسابات التواصل الاجتماعي، صناعة المحتوى، الهوية البصرية، الموشن جرافيك وإنتاج الفيديو، والإعلانات المدفوعة." />
   <meta property="og:image" content="https://www.toptech.studio/assets/og-image.jpg" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
-  <meta property="og:image:alt" content="Top Tech — marketing agency in Saudi Arabia and Egypt" />
+  <meta property="og:image:alt" content="توب تك — وكالة تسويق في السعودية ومصر" />
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Marketing Agency in Saudi Arabia &amp; Egypt — Top Tech" />
-  <meta name="twitter:description" content="Full-service marketing agency in Saudi Arabia and Egypt — strategy, social media, content, branding, motion and media buying." />
+  <meta name="twitter:title" content="وكالة تسويق في السعودية ومصر — توب تك" />
+  <meta name="twitter:description" content="توب تك وكالة تسويق رقمي متكاملة في السعودية ومصر. استراتيجية تسويق، إدارة حسابات التواصل الاجتماعي، صناعة المحتوى، الهوية البصرية، الموشن جرافيك وإنتاج الفيديو، والإعلانات المدفوعة." />
   <meta name="twitter:image" content="https://www.toptech.studio/assets/og-image.jpg" />
-  <meta name="twitter:image:alt" content="Top Tech — marketing agency in Saudi Arabia and Egypt" />
+  <meta name="twitter:image:alt" content="توب تك — وكالة تسويق في السعودية ومصر" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -107,7 +94,7 @@
           "url": "https://www.toptech.studio/assets/logo-original.svg"
         },
         "image": "https://www.toptech.studio/assets/og-image.jpg",
-        "description": "Top Tech is a full-service marketing agency serving Saudi Arabia and Egypt. It began as a motion graphics studio and now delivers marketing strategy, social media marketing, content management, branding and design, motion and video production, and media buying.",
+        "description": "توب تك وكالة تسويق متكاملة تخدم السعودية ومصر. بدأت كاستوديو موشن جرافيك، وتقدّم اليوم استراتيجية التسويق والتسويق عبر وسائل التواصل الاجتماعي وإدارة المحتوى والهوية البصرية والتصميم وإنتاج الفيديو والموشن جرافيك والإعلانات المدفوعة.",
         "email": "toptechcompany51@gmail.com",
         "telephone": "+966592661980",
         "knowsLanguage": [
@@ -155,13 +142,13 @@
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Marketing services",
+          "name": "خدمات التسويق",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Marketing Strategy",
+                "name": "استراتيجية التسويق",
                 "provider": {
                   "@id": "https://www.toptech.studio/#organization"
                 },
@@ -172,7 +159,7 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Social Media Marketing",
+                "name": "التسويق عبر وسائل التواصل الاجتماعي",
                 "provider": {
                   "@id": "https://www.toptech.studio/#organization"
                 },
@@ -183,7 +170,7 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Content Management",
+                "name": "إدارة المحتوى وصناعته",
                 "provider": {
                   "@id": "https://www.toptech.studio/#organization"
                 },
@@ -194,7 +181,7 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Branding & Design",
+                "name": "الهوية البصرية والتصميم",
                 "provider": {
                   "@id": "https://www.toptech.studio/#organization"
                 },
@@ -205,7 +192,7 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Motion & Video",
+                "name": "الموشن جرافيك وإنتاج الفيديو",
                 "provider": {
                   "@id": "https://www.toptech.studio/#organization"
                 },
@@ -216,7 +203,7 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Media Buying",
+                "name": "الإعلانات المدفوعة وشراء المساحات",
                 "provider": {
                   "@id": "https://www.toptech.studio/#organization"
                 },
@@ -241,17 +228,17 @@
       },
       {
         "@type": "WebPage",
-        "@id": "https://www.toptech.studio/#webpage",
-        "url": "https://www.toptech.studio/",
-        "name": "Marketing Agency in Saudi Arabia & Egypt — Top Tech",
-        "description": "Top Tech is a full-service marketing agency in Saudi Arabia and Egypt.",
+        "@id": "https://www.toptech.studio/ar#webpage",
+        "url": "https://www.toptech.studio/ar",
+        "name": "وكالة تسويق في السعودية ومصر — توب تك",
+        "description": "توب تك وكالة تسويق رقمي متكاملة في السعودية ومصر. استراتيجية تسويق، إدارة حسابات التواصل الاجتماعي، صناعة المحتوى، الهوية البصرية، الموشن جرافيك وإنتاج الفيديو، والإعلانات المدفوعة.",
         "isPartOf": {
           "@id": "https://www.toptech.studio/#website"
         },
         "about": {
           "@id": "https://www.toptech.studio/#organization"
         },
-        "inLanguage": "en",
+        "inLanguage": "ar",
         "primaryImageOfPage": {
           "@type": "ImageObject",
           "url": "https://www.toptech.studio/assets/og-image.jpg"
@@ -261,7 +248,7 @@
   }
   </script>
 </head>
-<body data-shape="play">
+<body data-shape="play" class="is-ar">
 
   <!-- ===================== PRELOADER ===================== -->
   <div class="loader" id="loader" aria-hidden="true">
@@ -289,22 +276,22 @@
   </div>
 
   <header class="header">
-    <a class="header__logo" href="#top" data-cursor="hover" aria-label="Top Tech home">
+    <a class="header__logo" href="#top" data-cursor="hover" aria-label="توب تك — الصفحة الرئيسية">
       <img src="/assets/logo-white.svg" alt="Top Tech" />
     </a>
-    <nav class="header__nav" aria-label="Primary">
-      <a href="#story" data-cursor="hover" data-i18n="nav_story">Story</a>
-      <a href="#services" data-cursor="hover" data-i18n="nav_services">Services</a>
-      <a href="#reviews" data-cursor="hover" data-i18n="nav_clients">Clients</a>
-      <a href="/articles" data-cursor="hover" data-i18n="nav_insights">Articles</a>
-      <a href="/contact" data-cursor="hover" data-i18n="nav_contact">Contact</a>
+    <nav class="header__nav" aria-label="التنقل الرئيسي">
+      <a href="#story" data-cursor="hover" data-i18n="nav_story">قصتنا</a>
+      <a href="#services" data-cursor="hover" data-i18n="nav_services">خدماتنا</a>
+      <a href="#reviews" data-cursor="hover" data-i18n="nav_clients">عملاؤنا</a>
+      <a href="/ar/articles" data-cursor="hover" data-i18n="nav_insights">مقالات</a>
+      <a href="/ar/contact" data-cursor="hover" data-i18n="nav_contact">تواصل</a>
     </nav>
     <div class="header__actions">
-      <button class="langtoggle" id="langToggle" data-cursor="hover" aria-label="Switch language">
+      <button class="langtoggle" id="langToggle" data-cursor="hover" aria-label="تغيير اللغة">
         <span data-lang="en">EN</span>
         <span data-lang="ar">ع</span>
       </button>
-      <a class="header__cta magnetic" href="/contact" data-cursor="go" data-i18n="nav_cta">Start a project</a>
+      <a class="header__cta magnetic" href="/ar/contact" data-cursor="go" data-i18n="nav_cta">ابدأ مشروعك</a>
     </div>
   </header>
 
@@ -312,16 +299,13 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="hero" data-shape="play">
-      <p class="hero__kicker reveal-line"><span class="hero__kicker-dot"></span><span data-i18n="hero_kicker">Marketing Agency — KSA &amp; Egypt</span></p>
-      <h1 class="hero__title" id="heroTitle" data-i18n="hero_title" data-i18n-html aria-label="We make brands grow.">
-        <span class="hero__line"><span class="split" data-split>WE</span>&nbsp;<span class="split" data-split>MAKE</span></span>
-        <span class="hero__line hero__line--accent"><span class="split" data-split>BRANDS</span>&nbsp;<span class="split split--outline" data-split>GROW</span><span class="split hero__dot" data-split>.</span></span>
-      </h1>
+      <p class="hero__kicker reveal-line"><span class="hero__kicker-dot"></span><span data-i18n="hero_kicker">وكالة تسويق — السعودية ومصر</span></p>
+      <h1 class="hero__title" id="heroTitle" data-i18n="hero_title" data-i18n-html aria-label="نُنمّي العلامات."><span class="hero__line"><span class="split" data-split>نُنمّي</span></span> <span class="hero__line hero__line--accent"><span class="split split--outline" data-split>العلامات</span><span class="split hero__dot" data-split>.</span></span></h1>
       <div class="hero__foot">
-        <p class="hero__blurb reveal-line"><span data-i18n="hero_blurb" data-i18n-html>Top Tech is a full-service marketing agency born from motion.<br>We combine creativity with strategy to deliver content that<br>doesn't just look good — it actually performs.</span></p>
+        <p class="hero__blurb reveal-line"><span data-i18n="hero_blurb" data-i18n-html>توب تك وكالة تسويق متكاملة وُلدت من رحم الموشن جرافيك.<br>نمزج الإبداع بالاستراتيجية لنصنع محتوى لا يبدو رائعًا فحسب<br>— بل يحقق نتائج حقيقية.</span></p>
         <div class="hero__scroll" aria-hidden="true">
           <span class="hero__scroll-track"><span class="hero__scroll-thumb"></span></span>
-          <span data-i18n="hero_scroll">Scroll</span>
+          <span data-i18n="hero_scroll">مرّر</span>
         </div>
       </div>
     </section>
@@ -329,32 +313,32 @@
     <!-- ===================== MARQUEE (filled + translated by lang.js) ===================== -->
     <!-- Pre-populated with English so CSS animations start with content even if scripts load slowly -->
     <div class="marquee" aria-hidden="true">
-      <div class="marquee__row" id="marqueeA" data-marquee="marquee_a"><span>Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ </span><span>Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ </span></div>
-      <div class="marquee__row marquee__row--alt" id="marqueeB" data-marquee="marquee_b"><span>80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ </span><span>80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ </span></div>
+      <div class="marquee__row" id="marqueeA" data-marquee="marquee_a"><span>استراتيجية ✳ سوشيال ميديا ✳ شراء إعلانات ✳ موشن جرافيك ✳ حرّك علامتك ✳ ريلز ✳ استراتيجية ✳ سوشيال ميديا ✳ شراء إعلانات ✳ موشن جرافيك ✳ حرّك علامتك ✳ ريلز ✳ استراتيجية ✳ سوشيال ميديا ✳ شراء إعلانات ✳ موشن جرافيك ✳ حرّك علامتك ✳ ريلز ✳ استراتيجية ✳ سوشيال ميديا ✳ شراء إعلانات ✳ موشن جرافيك ✳ حرّك علامتك ✳ ريلز ✳ </span><span>استراتيجية ✳ سوشيال ميديا ✳ شراء إعلانات ✳ موشن جرافيك ✳ حرّك علامتك ✳ ريلز ✳ استراتيجية ✳ سوشيال ميديا ✳ شراء إعلانات ✳ موشن جرافيك ✳ حرّك علامتك ✳ ريلز ✳ استراتيجية ✳ سوشيال ميديا ✳ شراء إعلانات ✳ موشن جرافيك ✳ حرّك علامتك ✳ ريلز ✳ استراتيجية ✳ سوشيال ميديا ✳ شراء إعلانات ✳ موشن جرافيك ✳ حرّك علامتك ✳ ريلز ✳ </span></div>
+      <div class="marquee__row marquee__row--alt" id="marqueeB" data-marquee="marquee_b"><span>80+ علامة ✳ 200+ فيديو موشن ✳ 150+ تصميم ✳ هوسٌ واحد ✳ 80+ علامة ✳ 200+ فيديو موشن ✳ 150+ تصميم ✳ هوسٌ واحد ✳ 80+ علامة ✳ 200+ فيديو موشن ✳ 150+ تصميم ✳ هوسٌ واحد ✳ 80+ علامة ✳ 200+ فيديو موشن ✳ 150+ تصميم ✳ هوسٌ واحد ✳ </span><span>80+ علامة ✳ 200+ فيديو موشن ✳ 150+ تصميم ✳ هوسٌ واحد ✳ 80+ علامة ✳ 200+ فيديو موشن ✳ 150+ تصميم ✳ هوسٌ واحد ✳ 80+ علامة ✳ 200+ فيديو موشن ✳ 150+ تصميم ✳ هوسٌ واحد ✳ 80+ علامة ✳ 200+ فيديو موشن ✳ 150+ تصميم ✳ هوسٌ واحد ✳ </span></div>
     </div>
 
     <!-- ===================== STORY / EVOLUTION ===================== -->
     <section class="story" id="story" data-shape="wave">
-      <p class="manifesto__index" data-i18n="story_index">01 — The evolution</p>
-      <h2 class="story__headline section-head__title" data-i18n="story_headline" data-i18n-html>Born in motion.<br><em>Built for marketing.</em></h2>
+      <p class="manifesto__index" data-i18n="story_index">01 — رحلتنا</p>
+      <h2 class="story__headline section-head__title" data-i18n="story_headline" data-i18n-html>وُلدنا من الحركة.<br><em>بُنينا للتسويق.</em></h2>
       <div class="story__phases">
         <article class="phase">
           <span class="phase__num">01</span>
-          <h3 class="phase__title" data-i18n="phase1_title">The Studio Era</h3>
-          <p class="phase__desc" data-i18n="phase1_desc">We started as Saudi Arabia's premier motion graphics studio — crafting animation, video and visual stories that made brands unforgettable.</p>
-          <span class="phase__label" data-i18n="phase1_label">Motion Graphics</span>
+          <h3 class="phase__title" data-i18n="phase1_title">زمن الاستوديو</h3>
+          <p class="phase__desc" data-i18n="phase1_desc">بدأنا كأبرز استوديو موشن جرافيك في السعودية — نصنع الأنميشن والفيديو والقصص البصرية التي تجعل العلامات لا تُنسى.</p>
+          <span class="phase__label" data-i18n="phase1_label">موشن جرافيك</span>
         </article>
         <article class="phase">
           <span class="phase__num">02</span>
-          <h3 class="phase__title" data-i18n="phase2_title">The Content Years</h3>
-          <p class="phase__desc" data-i18n="phase2_desc">Brands didn't just want videos. They wanted audiences. So we built full content engines — planning, producing and publishing across every platform.</p>
-          <span class="phase__label" data-i18n="phase2_label">Content &amp; Social</span>
+          <h3 class="phase__title" data-i18n="phase2_title">سنوات المحتوى</h3>
+          <p class="phase__desc" data-i18n="phase2_desc">العلامات لم تكتفِ بالفيديوهات. أرادت جمهورًا. فبنينا محركات محتوى متكاملة — تخطيط وإنتاج ونشر على كل منصة.</p>
+          <span class="phase__label" data-i18n="phase2_label">محتوى وسوشيال</span>
         </article>
         <article class="phase">
           <span class="phase__num">03</span>
-          <h3 class="phase__title" data-i18n="phase3_title">The Agency. Now.</h3>
-          <p class="phase__desc" data-i18n="phase3_desc">Today Top Tech is a full-stack marketing agency. Strategy, campaigns, performance and creative under one roof. The craft stayed. The mission grew.</p>
-          <span class="phase__label" data-i18n="phase3_label">Full-Service Marketing</span>
+          <h3 class="phase__title" data-i18n="phase3_title">الوكالة. الآن.</h3>
+          <p class="phase__desc" data-i18n="phase3_desc">اليوم توب تك وكالة تسويق متكاملة. استراتيجية وحملات وأداء وإبداع تحت سقف واحد. الحِرفة باقية، والرسالة أكبر.</p>
+          <span class="phase__label" data-i18n="phase3_label">تسويق متكامل</span>
         </article>
       </div>
     </section>
@@ -362,57 +346,57 @@
     <!-- ===================== SERVICES ===================== -->
     <section class="services" id="services" data-shape="ring">
       <div class="section-head">
-        <p class="section-head__index" data-i18n="services_index">02 — What we do</p>
-        <h2 class="section-head__title" data-i18n="services_title" data-i18n-html>Everything your brand needs<br><em>to grow loud.</em></h2>
+        <p class="section-head__index" data-i18n="services_index">02 — ماذا نقدّم</p>
+        <h2 class="section-head__title" data-i18n="services_title" data-i18n-html>كل ما تحتاجه علامتك<br><em>لتنمو بصوتٍ عالٍ.</em></h2>
       </div>
       <ul class="services__list">
         <li class="service" data-cursor="view" data-hue="265">
           <span class="service__num">01</span>
-          <h3 class="service__name"><a class="service__link" href="/services/marketing-strategy" data-i18n="svc1_name">Marketing Strategy</a></h3>
-          <p class="service__desc" data-i18n="svc1_desc">Positioning, market research and go-to-market plans built on data — not guesswork.</p>
+          <h3 class="service__name"><a class="service__link" href="/ar/services/marketing-strategy" data-i18n="svc1_name">استراتيجية التسويق</a></h3>
+          <p class="service__desc" data-i18n="svc1_desc">تموضع وأبحاث سوق وخطط انطلاق مبنية على البيانات — لا على التخمين.</p>
           <span class="service__arrow" aria-hidden="true">→</span>
         </li>
         <li class="service" data-cursor="view" data-hue="300">
           <span class="service__num">02</span>
-          <h3 class="service__name"><a class="service__link" href="/services/social-media-marketing" data-i18n="svc2_name">Social Media Marketing</a></h3>
-          <p class="service__desc" data-i18n="svc2_desc">Organic and paid campaigns across every platform your audience lives on.</p>
+          <h3 class="service__name"><a class="service__link" href="/ar/services/social-media-marketing" data-i18n="svc2_name">تسويق السوشيال ميديا</a></h3>
+          <p class="service__desc" data-i18n="svc2_desc">حملات عضوية ومدفوعة على كل منصة يعيش فيها جمهورك.</p>
           <span class="service__arrow" aria-hidden="true">→</span>
         </li>
         <li class="service" data-cursor="view" data-hue="200">
           <span class="service__num">03</span>
-          <h3 class="service__name"><a class="service__link" href="/services/content-management" data-i18n="svc3_name">Content Management</a></h3>
-          <p class="service__desc" data-i18n="svc3_desc">End-to-end social content — graphics, videos and reels, planned and produced for your brand.</p>
+          <h3 class="service__name"><a class="service__link" href="/ar/services/content-management" data-i18n="svc3_name">إدارة المحتوى</a></h3>
+          <p class="service__desc" data-i18n="svc3_desc">محتوى سوشيال متكامل — جرافيك وفيديوهات وريلز، مخطّط ومُنتَج لعلامتك.</p>
           <span class="service__arrow" aria-hidden="true">→</span>
         </li>
         <li class="service" data-cursor="view" data-hue="160">
           <span class="service__num">04</span>
-          <h3 class="service__name"><a class="service__link" href="/services/branding-design" data-i18n="svc4_name">Branding &amp; Design</a></h3>
-          <p class="service__desc" data-i18n="svc4_desc">Identities, systems and graphic design that make brands recognisable at a glance.</p>
+          <h3 class="service__name"><a class="service__link" href="/ar/services/branding-design" data-i18n="svc4_name">الهوية والتصميم</a></h3>
+          <p class="service__desc" data-i18n="svc4_desc">هويات وأنظمة وتصميم جرافيك تجعل علامتك مميّزة من النظرة الأولى.</p>
           <span class="service__arrow" aria-hidden="true">→</span>
         </li>
         <li class="service" data-cursor="view" data-hue="38">
           <span class="service__num">05</span>
-          <h3 class="service__name"><a class="service__link" href="/services/motion-video" data-i18n="svc5_name">Motion &amp; Video</a></h3>
-          <p class="service__desc" data-i18n="svc5_desc">Our origin craft — motion graphics, video editing and videography with cinematic polish.</p>
+          <h3 class="service__name"><a class="service__link" href="/ar/services/motion-video" data-i18n="svc5_name">الموشن والفيديو</a></h3>
+          <p class="service__desc" data-i18n="svc5_desc">حرفتنا الأصلية — موشن جرافيك ومونتاج وتصوير بلمسة سينمائية.</p>
           <span class="service__arrow" aria-hidden="true">→</span>
         </li>
         <li class="service" data-cursor="view" data-hue="20">
           <span class="service__num">06</span>
-          <h3 class="service__name"><a class="service__link" href="/services/media-buying" data-i18n="svc6_name">Media Buying</a></h3>
-          <p class="service__desc" data-i18n="svc6_desc">Paid campaigns planned, placed and optimised — turning ad spend into measurable growth.</p>
+          <h3 class="service__name"><a class="service__link" href="/ar/services/media-buying" data-i18n="svc6_name">إعلانات ممولة</a></h3>
+          <p class="service__desc" data-i18n="svc6_desc">حملات مدفوعة مخططة ومُدارة ومُحسّنة — تحوّل الإنفاق إلى نمو ملموس.</p>
           <span class="service__arrow" aria-hidden="true">→</span>
         </li>
       </ul>
       <p class="services__more">
-        <a class="btn btn--ghost" href="/services" data-cursor="hover" data-i18n="services_all" data-i18n-html>All services <i aria-hidden="true">&rarr;</i></a>
+        <a class="btn btn--ghost" href="/ar/services" data-cursor="hover" data-i18n="services_all" data-i18n-html>كل الخدمات <i aria-hidden="true">&rarr;</i></a>
       </p>
     </section>
 
     <!-- ===================== REVIEWS (replaces Work) ===================== -->
     <section class="reviews" id="reviews" data-shape="scatter">
       <div class="section-head section-head--center">
-        <p class="section-head__index" data-i18n="reviews_index">03 — Client love</p>
-        <h2 class="section-head__title" data-i18n="reviews_title" data-i18n-html>Straight from our<br><em>clients' chats.</em></h2>
+        <p class="section-head__index" data-i18n="reviews_index">03 — رأي عملائنا</p>
+        <h2 class="section-head__title" data-i18n="reviews_title" data-i18n-html>مباشرةً من<br><em>محادثات عملائنا.</em></h2>
       </div>
       <div class="reviews__rows">
         <div class="reviews__row">
@@ -436,44 +420,41 @@
 
     <!-- ===================== STATS ===================== -->
     <section class="stats" id="stats" data-shape="bars">
-      <p class="section-head__index" data-i18n="stats_index">04 — Signal strength</p>
+      <p class="section-head__index" data-i18n="stats_index">04 — قوة الإشارة</p>
       <ul class="stats__grid">
-        <li><strong><span class="count" data-count="80">0</span>+</strong><span data-i18n="stat1">Brands trust us across KSA &amp; the GCC</span></li>
-        <li><strong><span class="count" data-count="200">0</span>+</strong><span data-i18n="stat2">Motion videos produced</span></li>
-        <li><strong><span class="count" data-count="150">0</span>+</strong><span data-i18n="stat3">Social media designs delivered</span></li>
-        <li><strong><span class="count" data-count="24">0</span>h</strong><span data-i18n="stat4">Response time on every brief</span></li>
+        <li><strong><span class="count" data-count="80">0</span>+</strong><span data-i18n="stat1">علامة تثق بنا في السعودية والخليج</span></li>
+        <li><strong><span class="count" data-count="200">0</span>+</strong><span data-i18n="stat2">فيديو موشن أنتجناه</span></li>
+        <li><strong><span class="count" data-count="150">0</span>+</strong><span data-i18n="stat3">تصميم سوشيال سلّمناه</span></li>
+        <li><strong><span class="count" data-count="24">0</span>h</strong><span data-i18n="stat4">وقت الرد على كل طلب</span></li>
       </ul>
     </section>
 
     <!-- ===================== CONTACT CTA ===================== -->
     <footer class="contact" id="contact" data-shape="sphere">
-      <p class="contact__kicker" data-i18n="contact_kicker">05 — Ready when you are</p>
-      <h2 class="contact__title" data-i18n="contact_title" data-i18n-html>
-        <span class="contact__line">LET'S MAKE</span>
-        <span class="contact__line contact__line--outline">NOISE</span>
-      </h2>
-      <p class="contact__sub" data-i18n="contact_sub">Tell us about your project — we reply within 24 hours.</p>
-      <a class="contact__cta magnetic" href="/contact" data-cursor="go" data-i18n="contact_cta" data-i18n-html>Start a project <i>→</i></a>
+      <p class="contact__kicker" data-i18n="contact_kicker">05 — جاهزون وقتما تشاء</p>
+      <h2 class="contact__title" data-i18n="contact_title" data-i18n-html><span class="contact__line">لنُحدث</span> <span class="contact__line contact__line--outline">ضجّة.</span></h2>
+      <p class="contact__sub" data-i18n="contact_sub">احكِ لنا عن مشروعك — نرد خلال 24 ساعة.</p>
+      <a class="contact__cta magnetic" href="/ar/contact" data-cursor="go" data-i18n="contact_cta" data-i18n-html>ابدأ مشروعك <i>→</i></a>
       <div class="contact__meta">
         <div>
-          <span data-i18n="meta_talk">Talk now</span>
+          <span data-i18n="meta_talk">تواصل الآن</span>
           <a href="https://wa.me/966592661980" target="_blank" rel="noopener" data-cursor="hover">+966 59 266 1980</a>
           <a href="https://wa.me/201093723960" target="_blank" rel="noopener" data-cursor="hover">+20 10 9372 3960</a>
           <a href="mailto:toptechcompany51@gmail.com" data-cursor="hover">toptechcompany51@gmail.com</a>
         </div>
         <div>
-          <span data-i18n="meta_socials">Socials</span>
+          <span data-i18n="meta_socials">السوشيال</span>
           <a href="https://www.instagram.com/toptechstudio/" target="_blank" rel="noopener" data-cursor="hover">Instagram</a>
           <a href="https://www.tiktok.com/@toptechcompany" target="_blank" rel="noopener" data-cursor="hover">TikTok</a>
           <a href="https://www.behance.net/TopTechCompany" target="_blank" rel="noopener" data-cursor="hover">Behance</a>
         </div>
         <div>
-          <span data-i18n="meta_base">Offices</span>
-          <p data-i18n="meta_base_text" data-i18n-html>Riyadh, KSA · Cairo, Egypt<br>Sun–Thu · 9am–6pm</p>
+          <span data-i18n="meta_base">مكاتبنا</span>
+          <p data-i18n="meta_base_text" data-i18n-html>الرياض، السعودية · القاهرة، مصر<br>الأحد–الخميس · 9ص–6م</p>
         </div>
         <div>
           <span data-i18n="meta_copy">© 2026</span>
-          <p data-i18n="meta_copy_text" data-i18n-html>Top Tech.<br>All signals reserved.</p>
+          <p data-i18n="meta_copy_text" data-i18n-html>توب تك.<br>جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>

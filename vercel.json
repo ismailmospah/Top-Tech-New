@@ -5,10 +5,42 @@
   "buildCommand": "echo \"static site — no build\"",
   "outputDirectory": ".",
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/contact.html", "destination": "/contact", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/ar/index.html",
+      "destination": "/ar",
+      "permanent": true
+    },
+    {
+      "source": "/ar/contact/index.html",
+      "destination": "/ar/contact",
+      "permanent": true
+    },
+    {
+      "source": "/articles/index.html",
+      "destination": "/articles",
+      "permanent": true
+    },
+    {
+      "source": "/ar/articles/index.html",
+      "destination": "/ar/articles",
+      "permanent": true
+    }
   ],
   "rewrites": [
-    { "source": "/contact", "destination": "/contact.html" }
-  ]
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    }
+  ],
+  "trailingSlash": false
 }
