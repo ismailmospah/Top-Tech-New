@@ -7,7 +7,10 @@ This folder is the source of **toptech.studio/ar**. It is not deployed (see `.ve
 cd ar-src
 python3 build.py --deploy ../ar   # regenerates /ar with clean /ar/... links
 ```
-then commit `ar/` and push to `main` (Vercel deploys automatically).
+then check it and commit `ar/`, and push to `main` (Vercel deploys automatically):
+```bash
+python3 tools/check_deploy.py ../ar   # every link/image must resolve under /ar
+```
 
 Static site, Arabic (RTL) first. Local preview (relative links) — videos only play inside the page when it's served, not on `file://`:
 
