@@ -1,3 +1,6 @@
 # Internal working documents and local authoring tools — never deployed.
 docs/
 tools/
+
+# source of the Arabic site (build output is ar/)
+ar-src/

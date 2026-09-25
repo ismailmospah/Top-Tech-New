@@ -1,0 +1,356 @@
+{
+  "title": "أعمال ونتائج نفخر بها",
+  "lead": "نتائج حقيقية من حملات ممولة أدرناها لعملائنا، ومختارات من أعمالنا الإبداعية لعلامات في السعودية ومصر.",
+  "behance": "https://www.behance.net/TopTechCompany",
+  "cases": [
+    {
+      "id": "new-idea",
+      "client": "New Idea",
+      "industry": "متجر لوحات جدارية على منصة سلة",
+      "country": "السعودية",
+      "value": "43",
+      "unit": "ألف ريال",
+      "label": "مبيعات خلال فترة الحملة",
+      "facts": [
+        "عائد على الإنفاق الإعلاني (ROAS) نحو 6 أضعاف",
+        "138 طلبًا على المتجر",
+        "الفترة: 19 أغسطس – 27 سبتمبر 2025"
+      ],
+      "platforms": [
+        "إنستغرام",
+        "تيك توك",
+        "سلة"
+      ],
+      "shots": [
+        {
+          "src": "new-idea-salla",
+          "alt": "لوحة مبيعات متجر New Idea على سلة: 43.2 ألف ريال و138 طلبًا",
+          "w": 1200,
+          "h": 565
+        },
+        {
+          "src": "new-idea-meta",
+          "alt": "نتائج حملات New Idea على إنستغرام (ميتا)",
+          "w": 1200,
+          "h": 399
+        },
+        {
+          "src": "new-idea-tiktok",
+          "alt": "نتائج حملات New Idea على تيك توك",
+          "w": 1200,
+          "h": 399
+        }
+      ]
+    },
+    {
+      "id": "falcon-wings",
+      "client": "Falcon Wings",
+      "industry": "أكاديمية دورات مرحّل جوي وطيران",
+      "country": "السعودية",
+      "value": "6",
+      "unit": "مجموعات",
+      "label": "دورات محجوزة بالكامل",
+      "facts": [
+        "كل مجموعة 5 أشخاص على الأقل",
+        "حملات رسائل موجّهة للرياض وجدة"
+      ],
+      "platforms": [
+        "فيسبوك",
+        "إنستغرام"
+      ],
+      "shots": [
+        {
+          "src": "falcon-wings-ads",
+          "alt": "نتائج المجموعات الإعلانية لحملات Falcon Wings على ميتا",
+          "w": 1200,
+          "h": 396
+        },
+        {
+          "src": "falcon-wings-ads-2",
+          "alt": "نتائج الحملات لـ Falcon Wings",
+          "w": 1200,
+          "h": 392
+        },
+        {
+          "src": "falcon-wings-ads-3",
+          "alt": "نتائج إعلانات جدة والرياض لـ Falcon Wings",
+          "w": 1200,
+          "h": 396
+        }
+      ],
+      "badge": {
+        "label": "سعر الكورس",
+        "value": "25 ألف ريال تقريبًا"
+      }
+    },
+    {
+      "id": "beauty-valley",
+      "client": "Beauty Valley",
+      "industry": "عيادة تجميل",
+      "country": "القاهرة، مصر",
+      "value": "5",
+      "unit": "جنيه",
+      "label": "تكلفة الرسالة الواحدة",
+      "facts": [
+        "متوسط سعر الرسالة في القاهرة بين 10 و15 جنيهًا",
+        "حملات رسائل لعروض العيادة وخدماتها"
+      ],
+      "platforms": [
+        "فيسبوك",
+        "إنستغرام"
+      ],
+      "shots": [
+        {
+          "src": "beauty-valley-ads",
+          "alt": "نتائج حملات الرسائل لـ Beauty Valley على ميتا",
+          "w": 1200,
+          "h": 1047
+        }
+      ]
+    }
+  ],
+  "specialties": [
+    {
+      "key": "ads",
+      "name": "إعلانات ممولة",
+      "icon": "trend",
+      "lead": "حملات ممولة بنتائج قابلة للقياس — مبيعات وحجوزات ورسائل بتكلفة أقل."
+    },
+    {
+      "key": "motion",
+      "name": "موشن جرافيك",
+      "icon": "play",
+      "lead": "فيديوهات تعريفية وإعلانية بالموشن جرافيك لعلامات في السعودية ومصر."
+    },
+    {
+      "key": "reels",
+      "name": "ريلز ومونتاج",
+      "icon": "reel",
+      "lead": "تصوير ومونتاج وريلز قصيرة بإيقاع سريع مصمّم ليوقف التمرير."
+    },
+    {
+      "key": "social",
+      "name": "تصاميم سوشيال ميديا",
+      "icon": "grid",
+      "lead": "تصاميم منشورات وحملات تحافظ على هوية العلامة في كل منصة."
+    }
+  ],
+  "works": {
+    "motion": [
+      {
+        "type": "video",
+        "yt": "hevKv9xpOCg",
+        "title": "فيديو موشن جرافيك لشركة وفي",
+        "client": "شركة وفي"
+      },
+      {
+        "type": "video",
+        "yt": "tiKTDsf82G8",
+        "title": "فيديو موشن جرافيك لشركة وطن كير",
+        "client": "وطن كير"
+      },
+      {
+        "type": "video",
+        "yt": "t5N26saL8dc",
+        "title": "فيديو موشن جرافيك لمطعم مدمن شاورما",
+        "client": "مطعم مدمن شاورما · الرياض"
+      },
+      {
+        "type": "video",
+        "yt": "b2WLA9hoXiI",
+        "title": "فيديو موشن جرافيك لمنصة كاسر",
+        "client": "منصة كاسر"
+      },
+      {
+        "type": "video",
+        "yt": "0AqcwMhAob0",
+        "title": "فيديو موشن جرافيك لشركة مبدع",
+        "client": "مبدع للدعاية والإعلان"
+      },
+      {
+        "type": "video",
+        "yt": "TG2UrFxxmfA",
+        "title": "إعلان عروض اليوم الوطني",
+        "client": "حملة موسمية"
+      },
+      {
+        "type": "video",
+        "yt": "YuJk54MZmik",
+        "title": "إعلان منتجات المتاجر الإلكترونية",
+        "client": "فيديو إعلاني"
+      },
+      {
+        "type": "link",
+        "img": "251965643",
+        "title": "فيديو تعريفي لمنصة nowcap.ai",
+        "client": "nowcap.ai",
+        "url": "https://www.behance.net/gallery/251965643/Sass-Animation-Video-%28-motion-graphic-%29-%28-Sass-Style-%29",
+        "folder": "projects",
+        "ratio": "808/632"
+      },
+      {
+        "type": "link",
+        "img": "247374211",
+        "title": "فيديو تعريفي لمنصة SellZaki",
+        "client": "SellZaki",
+        "url": "https://www.behance.net/gallery/247374211/-SellZaki",
+        "folder": "projects",
+        "ratio": "808/632"
+      }
+    ],
+    "reels": [
+      {
+        "type": "insta",
+        "ig": "Dc_YkkPtb3n",
+        "title": "ريل «الـ Break-even ROAS»",
+        "client": "توب تك · إنستغرام"
+      },
+      {
+        "type": "insta",
+        "ig": "DcyZugvNx1u",
+        "title": "ريل «إزاي تزوّد مبيعاتك»",
+        "client": "توب تك · إنستغرام"
+      },
+      {
+        "type": "insta",
+        "ig": "Dcn0PzXMWlY",
+        "title": "ريل «لو بتبدأ براند جديد»",
+        "client": "توب تك · إنستغرام"
+      },
+      {
+        "type": "insta",
+        "ig": "Dap-Gf6sTDF",
+        "title": "ريل «مرحلة جديدة لتوب تك»",
+        "client": "توب تك · إنستغرام"
+      },
+      {
+        "type": "insta",
+        "ig": "DT3IXc4DF6B",
+        "title": "ريل «تميّز عن منافسينك دلوقتي»",
+        "client": "توب تك · إنستغرام"
+      },
+      {
+        "type": "link",
+        "img": "reel-3",
+        "title": "ريل «حد يعرف يتكلم قدام الكاميرا؟»",
+        "client": "توب تك",
+        "url": "https://www.instagram.com/toptechagency/",
+        "ratio": "9/16",
+        "folder": "projects"
+      },
+      {
+        "type": "link",
+        "img": "reel-1",
+        "title": "ريل «شركة أو مشروع»",
+        "client": "توب تك",
+        "url": "https://www.instagram.com/toptechagency/",
+        "ratio": "9/16",
+        "folder": "projects"
+      }
+    ],
+    "social": [
+      {
+        "type": "image",
+        "img": "ig-DbvjCvPM9gC",
+        "title": "توب تك بتبدأ مرحلة جديدة",
+        "client": "توب تك · إنستغرام"
+      },
+      {
+        "type": "image",
+        "img": "ig-DdgNuAwiQaU",
+        "title": "«بتصرف آلاف على الإعلانات والمبيعات لسه ثابتة؟»",
+        "client": "توب تك · إنستغرام"
+      },
+      {
+        "type": "image",
+        "img": "ig-Ddlr59Pjd4k",
+        "title": "«مش كل لايك عميل»",
+        "client": "توب تك · إنستغرام"
+      },
+      {
+        "type": "image",
+        "img": "ig-DdoeffSidqz",
+        "title": "«إزاي تبيع عطر والعميل مش قادر يشمّه؟»",
+        "client": "توب تك · إنستغرام"
+      },
+      {
+        "type": "image",
+        "img": "ig-DdjHGUnG8vl",
+        "title": "«المحتوى الجميل مش دايمًا بيبيع»",
+        "client": "توب تك · إنستغرام"
+      },
+      {
+        "type": "image",
+        "img": "ig-Ddrex1JAYp-",
+        "title": "«العميل مش بيدوّر على منتج»",
+        "client": "توب تك · إنستغرام"
+      },
+      {
+        "type": "image",
+        "img": "musafer-dubai",
+        "title": "عرض رحلة دبي",
+        "client": "مسافر للسفر والسياحة"
+      },
+      {
+        "type": "image",
+        "img": "bld-launch",
+        "title": "إطلاق شركة BLD Labs",
+        "client": "BLD Labs"
+      },
+      {
+        "type": "image",
+        "img": "qashtouta",
+        "title": "بوست حلويات قشطوطة",
+        "client": "قشطوطة"
+      },
+      {
+        "type": "image",
+        "img": "musafer-turkey",
+        "title": "عرض رحلة تركيا",
+        "client": "مسافر للسفر والسياحة"
+      },
+      {
+        "type": "image",
+        "img": "prince-app",
+        "title": "إعلان تطبيق برنس اللمة",
+        "client": "برنس اللمة"
+      },
+      {
+        "type": "image",
+        "img": "musafer-umrah",
+        "title": "عرض عمرة رمضان",
+        "client": "مسافر للسفر والسياحة"
+      },
+      {
+        "type": "image",
+        "img": "social-bld",
+        "title": "بوست BLD Labs",
+        "client": "BLD Labs"
+      },
+      {
+        "type": "image",
+        "img": "musafer-sharm",
+        "title": "عرض رحلة شرم الشيخ",
+        "client": "مسافر للسفر والسياحة"
+      },
+      {
+        "type": "image",
+        "img": "social-prince",
+        "title": "بوست «برنس اللمة هيحلي لمة الإجازة»",
+        "client": "برنس اللمة"
+      },
+      {
+        "type": "image",
+        "img": "musafer-eid",
+        "title": "بوست «وين راح تقضي عطلة عيدك؟»",
+        "client": "مسافر للسفر والسياحة"
+      },
+      {
+        "type": "image",
+        "img": "musafer-dubai-eid",
+        "title": "عرض دبي في إجازة العيد",
+        "client": "مسافر للسفر والسياحة"
+      }
+    ]
+  }
+}

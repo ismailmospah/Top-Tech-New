@@ -1,0 +1,137 @@
+    <section class="page-hero page-hero--contact">
+      <div class="container ph-contact">
+        <div>
+        <nav class="breadcrumb" aria-label="مسار التنقل">
+          <a href="@/index.html">الرئيسية</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">تواصل معنا</span>
+        </nav>
+        <h1>لنبدأ <span class="hl">مشروعك</span>.</h1>
+        <p class="page-lead">احكِ لنا عن علامتك وما تحتاجه، ونرد عليك خلال 24 ساعة بتصوّر واضح للخطوة التالية.</p>
+        </div>
+        <div class="ph-mascot" aria-hidden="true">
+          <img class="ph-mascot-asterisk" src="@/assets/img/asterisk.webp" alt="" width="70" height="70">
+          <img class="ph-mascot-img" src="@/assets/img/mascot-sit.webp" alt="" width="525" height="1193">
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-page" id="contact" aria-label="نموذج التواصل">
+      <div class="container contact-layout">
+        <form class="brief-form" id="brief-form" novalidate>
+          <div class="form-main">
+            <h2>أرسل تفاصيل مشروعك</h2>
+            <p class="form-hint">املأ التفاصيل وسنرد عليك خلال 24 ساعة. الحقول المعلّمة بـ <span class="req">*</span> مطلوبة.</p>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="f-name">الاسم <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="مثال: محمد العتيبي">
+                <p class="field-error" id="err-name" hidden>فضلًا اكتب اسمك.</p>
+              </div>
+              <div class="field">
+                <label for="f-brand">اسم العلامة أو الشركة</label>
+                <input id="f-brand" name="brand" type="text" autocomplete="organization" placeholder="اختياري">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-phone">رقم الواتساب <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-phone" name="phone" type="tel" dir="ltr" autocomplete="tel" inputmode="tel" required placeholder="+20 1X XXXX XXXX">
+              <p class="field-error" id="err-phone" hidden>فضلًا اكتب رقم واتساب صحيح.</p>
+            </div>
+
+            <fieldset class="field">
+              <legend>ما الخدمات التي تحتاجها؟</legend>
+              <div class="chips" id="service-chips">
+                <label class="chip"><input type="checkbox" name="services" value="استراتيجية التسويق"><span>استراتيجية</span></label>
+                <label class="chip"><input type="checkbox" name="services" value="تسويق السوشيال ميديا"><span>سوشيال ميديا</span></label>
+                <label class="chip"><input type="checkbox" name="services" value="إعلانات ممولة"><span>إعلانات ممولة</span></label>
+                <label class="chip"><input type="checkbox" name="services" value="إدارة المحتوى"><span>إدارة المحتوى</span></label>
+                <label class="chip"><input type="checkbox" name="services" value="الهوية والتصميم"><span>هوية وتصميم</span></label>
+                <label class="chip"><input type="checkbox" name="services" value="الفيديو والموشن"><span>فيديو وموشن</span></label>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <h3 class="form-group-title">تفاصيل المشروع</h3>
+
+              <fieldset class="field">
+                <legend>أين يقع مشروعك؟</legend>
+                <div class="seg">
+                  <label><input type="radio" name="market" value="201501030214" data-market="eg" data-label="مصر" checked><span>مصر</span></label>
+                  <label><input type="radio" name="market" value="966592661980" data-market="ksa" data-label="السعودية والخليج"><span>السعودية والخليج</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="field">
+                <legend>الميزانية التقريبية <span class="legend-note" id="budget-currency">(جنيه مصري)</span></legend>
+                <div class="chips budget-group" data-market="ksa" hidden>
+                  <label class="chip"><input type="radio" name="budget" value="5 – 15 ألف ريال سعودي"><span dir="ltr">5k – 15k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="15 – 50 ألف ريال سعودي"><span dir="ltr">15k – 50k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="أكثر من 50 ألف ريال سعودي"><span dir="ltr">+50k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="لم تُحدَّد بعد"><span>لم أحدّد بعد</span></label>
+                </div>
+                <div class="chips budget-group" data-market="eg">
+                  <label class="chip"><input type="radio" name="budget" value="30 – 75 ألف جنيه مصري"><span dir="ltr">30k – 75k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="75 – 200 ألف جنيه مصري"><span dir="ltr">75k – 200k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="أكثر من 200 ألف جنيه مصري"><span dir="ltr">+200k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="لم تُحدَّد بعد"><span>لم أحدّد بعد</span></label>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label for="f-msg">نبذة عن المشروع <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="f-msg" name="message" rows="5" required placeholder="ما الهدف؟ ومتى تريد البدء؟"></textarea>
+                <p class="field-error" id="err-msg" hidden>فضلًا اكتب نبذة قصيرة عن مشروعك.</p>
+              </div>
+            </div>
+
+            <p class="form-note" id="form-note" role="alert" hidden></p>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" id="form-submit">
+              <span class="btn-label">إرسال</span>
+              <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+            <p class="form-alt">تفضّل واتساب؟ <a href="https://wa.me/966592661980" id="wa-alt" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg> تواصل معنا عبر واتساب</a></p>
+          </div>
+
+          <div class="form-success" id="form-success" tabindex="-1" hidden>
+            <img src="@/assets/img/face-smile.webp" alt="" width="96" height="120">
+            <h2>شكرًا <span id="success-name"></span>!</h2>
+            <p>وصلنا طلبك، وسيتواصل معك فريقنا خلال 24 ساعة.</p>
+            <div class="form-success-actions">
+              <a class="btn btn-whatsapp" id="success-wa" href="https://wa.me/966592661980" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg> تابع معنا على واتساب</a>
+              <button class="btn btn-ghost" type="button" id="success-reset">إرسال طلب آخر</button>
+            </div>
+          </div>
+        </form>
+
+        <aside class="contact-aside">
+          <div class="aside-card">
+            <h2>تواصل مباشر</h2>
+            <ul class="aside-contacts">
+              <li>
+                <a href="https://wa.me/966592661980" target="_blank" rel="noopener">
+                  <span class="cc-icon"><svg class="i"><use href="#i-whatsapp"/></svg></span>
+                  <span><small>واتساب السعودية</small><b dir="ltr">+966 59 266 1980</b></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/201501030214" target="_blank" rel="noopener">
+                  <span class="cc-icon"><svg class="i"><use href="#i-whatsapp"/></svg></span>
+                  <span><small>واتساب مصر</small><b dir="ltr">+20 15 0103 0214</b></span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:toptechcompany51@gmail.com">
+                  <span class="cc-icon"><svg class="i"><use href="#i-mail"/></svg></span>
+                  <span><small>البريد الإلكتروني</small><b dir="ltr">toptechcompany51@gmail.com</b></span>
+                </a>
+              </li>
+            </ul>
+            <p class="aside-hours"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg> الأحد – الخميس · 9ص – 6م · الرياض والقاهرة</p>
+          </div>
+
+        </aside>
+      </div>
+    </section>
