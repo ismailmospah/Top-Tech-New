@@ -1,33 +1,42 @@
-# Top Tech — Arabic site (source)
+# Top Tech — site source (Arabic + English)
 
-This folder is the source of **toptech.studio/ar**. It is not deployed (see `.vercelignore`).
+This folder (`ar-src/` in the repo) is the source of **toptech.studio** — the Arabic site at `/ar`
+and the English site at `/`. It is not deployed itself (see `.vercelignore`).
 
 ## Publish
 ```bash
 cd ar-src
-python3 build.py --deploy ../ar   # regenerates /ar with clean /ar/... links
+python3 build.py --deploy ../ar                 # Arabic  -> /ar/...
+python3 build.py --lang en --deploy ..          # English -> /...
+python3 tools/check_deploy.py ../ar             # every link/image must resolve under /ar
+python3 tools/check_deploy.py .. --en           # ...and at the root for English
 ```
-then check it and commit `ar/`, and push to `main` (Vercel deploys automatically):
-```bash
-python3 tools/check_deploy.py ../ar   # every link/image must resolve under /ar
-```
+then commit the regenerated `ar/`, `index.html`, `services/`, `articles/`, `projects/`, `contact/`, `assets/`
+and push to `main` (Vercel deploys automatically).
 
-Static site, Arabic (RTL) first. Local preview (relative links) — videos only play inside the page when it's served, not on `file://`:
+> The old site's generators in the repo's root `tools/` folder (`build-*.mjs`) produce the **previous** design —
+> don't run them, they would overwrite the new English pages.
 
+## Local preview
+Videos only play inside the page when it's served, not on `file://`:
 ```bash
-python3 build.py && python3 -m http.server 8321
+python3 build.py && python3 build.py --lang en && python3 -m http.server 8321
 ```
+Arabic at `http://localhost:8321/`, English at `http://localhost:8321/en/`.
 
 ## Editing
-- **Service / article text:** edit the JSON in `content/`, then run `python3 build.py`.
-- **Projects:** `content/projects.json` (covers in `assets/img/projects/`, named by Behance id); `featured` = the 3 shown on the homepage.
-- **Homepage / contact page:** edit `src/pages/home.html` / `src/pages/contact.html`, then run `python3 build.py`.
-- **Header, footer, service order, article categories:** in `build.py`.
-- **Styles / behaviour:** `assets/css/style.css`, `assets/js/main.js` (no build needed).
+| What | Arabic | English |
+|---|---|---|
+| Homepage / contact page | `src/pages/home.html`, `contact.html` | `src/pages/en/home.html`, `contact.html` |
+| Service / article text | `content/services/`, `content/articles/` | `content/en/services/`, `content/en/articles/` |
+| Work & results | `content/projects.json` | `content/en/projects.json` |
+| Header, footer, service names, article categories | `build.py` — every string is `L("عربي", "English")` | same |
 
-Don't edit the generated `index.html`, `contact.html`, `services/*.html`, `articles/*.html`, `projects/*.html` — they're overwritten by the build.
-
-After building, `python3 tools/check_links.py` confirms every link works when the files are opened from disk.
+- **Styles / behaviour:** `assets/css/style.css`, `assets/js/main.js` (shared by both languages; no build needed).
+- Image paths in `src/pages` must start with `@/assets/…`.
+- Don't edit the generated pages (`index.html`, `contact.html`, `services/`, `articles/`, `projects/`, `en/`) — the build overwrites them.
+- After a local build, `python3 tools/check_links.py` confirms every link works from disk.
 
 ## Contact form
-Sends through EmailJS with the same account/template as the live toptech.studio form (keys at the bottom of `assets/js/main.js`). If EmailJS restricts allowed domains, add the new domain in the EmailJS dashboard.
+Sends through EmailJS with the same account/template as the previous toptech.studio form (keys in `assets/js/main.js`).
+The Arabic form sends Arabic values, the English form English values; both require a WhatsApp number (no email field).

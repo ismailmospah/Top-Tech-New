@@ -1129,6 +1129,44 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .js .reveal.is-in { opacity: 1; transform: none; }
 
+
+/* ==========================================================================
+   English (LTR) — the same design, mirrored where direction matters
+   ========================================================================== */
+html[lang="en"] {
+  --font-display: "IBM Plex Sans", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", "IBM Plex Sans Arabic", system-ui, sans-serif;
+}
+html[lang="en"] body { line-height: 1.65; }
+html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3 { letter-spacing: -.015em; line-height: 1.2; }
+html[lang="en"] .hero-title { line-height: 1.08; letter-spacing: -.03em; }
+html[lang="en"] .section-head h2, html[lang="en"] .cta h2, html[lang="en"] .clients h2 { letter-spacing: -.025em; }
+html[lang="en"] .hero-lead, html[lang="en"] .section-lead, html[lang="en"] .page-lead { line-height: 1.6; }
+html[lang="en"] .prose p, html[lang="en"] .art-section > p { line-height: 1.75; }
+html[lang="en"] .ticks li, html[lang="en"] .steps-list p, html[lang="en"] .info-card p { line-height: 1.65; }
+html[lang="en"] .eyebrow { letter-spacing: .01em; }
+/* Arabic quotes shown on the English page keep an Arabic font and rhythm */
+html[lang="en"] [lang="ar"] { font-family: "IBM Plex Sans Arabic", system-ui, sans-serif; }
+html[lang="en"] .bubble[lang="ar"] p { line-height: 1.75; }
+
+/* "forward" nudges move right in LTR */
+[dir="ltr"] .btn-primary:hover .i, [dir="ltr"] .link-arrow:hover .i, [dir="ltr"] .service-pick:hover .i,
+[dir="ltr"] .article-card a:hover .article-more .i, [dir="ltr"] .btn-yellow:hover .i,
+[dir="ltr"] .read-list a:hover .i { transform: translateX(4px); }
+[dir="ltr"] .svc-card:hover .go-circle, [dir="ltr"] .svc-card:focus-within .go-circle,
+[dir="ltr"] .svc-row a:hover .svc-arrow { transform: translateX(6px); }
+
+/* the purple fill grows from the icon, which sits on the left in LTR */
+[dir="ltr"] .svc-card::before { clip-path: circle(0% at 16% 14%); background: radial-gradient(120% 120% at 15% 0%, var(--purple) 0%, var(--purple-800) 70%); }
+[dir="ltr"] .svc-card:hover::before, [dir="ltr"] .svc-card:focus-within::before { clip-path: circle(150% at 16% 14%); }
+
+/* marquee reads left-to-right and scrolls left */
+[dir="ltr"] .marquee-track { direction: ltr; animation-name: marquee-ltr; }
+@keyframes marquee-ltr { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+[dir="ltr"] .field input[dir="ltr"], [dir="ltr"] .field input[dir="ltr"]::placeholder { text-align: left; }
+[dir="ltr"] .read-progress span { transform-origin: left; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }

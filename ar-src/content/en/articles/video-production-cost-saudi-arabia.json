@@ -1,0 +1,217 @@
+{
+  "slug": "video-production-cost-saudi-arabia",
+  "meta_title": "How Much Does Video Production Cost in Saudi Arabia? — Top Tech",
+  "meta_description": "What determines the cost of advertising video production in Saudi Arabia: motion graphics versus filming, length, script, voice-over, post-production and the number of versions.",
+  "title": "How much does video production cost?",
+  "lead": "Video is the line where price moves more than anywhere else in marketing. Two thirty-second videos can be ten times apart in cost — and the difference is not necessarily quality, but <strong>the type of production</strong>.",
+  "label": "Articles",
+  "date": "2026-08-31",
+  "date_display": "31 August 2026",
+  "author": "Top Tech",
+  "read_time": "3 min read",
+  "toc": [
+    {
+      "id": "two-families",
+      "text": "First: two completely different families"
+    },
+    {
+      "id": "cost-drivers",
+      "text": "What moves the cost"
+    },
+    {
+      "id": "where-money-goes",
+      "text": "Where the money actually goes"
+    },
+    {
+      "id": "save-smart",
+      "text": "Where to save without losing"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "two-families",
+      "label": null,
+      "title": "First: two completely different families",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "Before discussing price, two things need separating, because they are not comparable:"
+          ]
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "title": "Motion graphics and animation",
+              "text": "Animated design: type, shapes, illustration, data. No location, no crew, no shoot day. The cost is design and animation time, and it can be controlled precisely by the level of detail."
+            },
+            {
+              "title": "Filmed video",
+              "text": "Real people, places and products. It brings in lines that do not exist in motion: location, equipment, crew, lighting, talent, travel and sometimes permits. A single shoot day moves the cost into a different bracket."
+            }
+          ]
+        },
+        {
+          "kind": "prose",
+          "paras": [
+            "This is why we do not price per minute. A minute of simple motion and a minute of crewed filmed production are not the same order of work, and a per-minute rate hides that rather than clarifying it."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cost-drivers",
+      "label": null,
+      "title": "What moves the cost",
+      "content": [
+        {
+          "kind": "ticks",
+          "items": [
+            "<strong>Is there filming?</strong> The single biggest factor. A shoot day changes the whole cost structure.",
+            "<strong>Length and complexity.</strong> Not the number of seconds but the number of scenes and the density of movement. Ten heavily animated seconds cost more than thirty simple ones.",
+            "<strong>Original illustration and design.</strong> A video built from your existing brand assets is cheaper than one needing characters and artwork made from scratch.",
+            "<strong>The script.</strong> A small line on the invoice and the largest line in impact. Weak videos are usually weak because the writing was skipped.",
+            "<strong>Voice-over.</strong> Varies with language, dialect and the artist's experience. Modern Standard Arabic and regional dialects are not necessarily the same price.",
+            "<strong>Music.</strong> A licensed library track is cheap; a known piece or original composition is another matter entirely.",
+            "<strong>Number of versions.</strong> Arabic and English, three aspect ratios, short cutdowns for social — each version is additional work even when it is less than the original.",
+            "<strong>Revision rounds.</strong> Ask how many are included. Changing direction after storyboard approval is far cheaper than changing it after animation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-money-goes",
+      "label": null,
+      "title": "Where the money actually goes",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "It surprises most clients that filming itself is not always the largest line. The stages that consume time are usually the ones before and after it."
+          ]
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "title": "Pre-production",
+              "text": "Concept, script, storyboard and style frames. The cheapest stage to change, and the most expensive one to skip."
+            },
+            {
+              "title": "Production",
+              "text": "The shoot day, or the animation days. Concentrated and relatively short, but the highest daily cost when filming is involved."
+            },
+            {
+              "title": "Post-production",
+              "text": "Editing, colour, sound, subtitles and versioning. Often longer than production itself, and the most commonly underestimated at quoting time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "save-smart",
+      "label": null,
+      "title": "Where to save without losing",
+      "content": [
+        {
+          "kind": "ticks",
+          "items": [
+            "<strong>Shoot once, produce many.</strong> A well-planned shoot day can feed two months of content.",
+            "<strong>Build a brand motion system.</strong> Reusable animated templates make every subsequent video cheaper and faster.",
+            "<strong>Use the footage you have.</strong> Plenty of companies paid for shoots that were never edited — editing that is cheaper than filming again.",
+            "<strong>Combine motion with filming.</strong> Simple footage carrying animated graphics that do the explaining beats an expensive production of either alone.",
+            "<strong>Settle the script early.</strong> The most expensive revision is the one that arrives after animation has started."
+          ]
+        },
+        {
+          "kind": "prose",
+          "paras": [
+            "Where not to save: the script, and the audio. Audiences forgive mediocre picture; bad audio closes the video within two seconds."
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Questions",
+      "title": "Frequently asked",
+      "content": [
+        {
+          "kind": "faq",
+          "items": [
+            {
+              "q": "Why don't you quote a fixed price per minute?",
+              "a": [
+                "Because it is a misleading number. A minute of motion graphics built from existing assets can cost a fraction of a minute of crewed filmed production. Per-minute pricing invites clients to compare things that are not alike, then surprises them later. We price from the brief."
+              ]
+            },
+            {
+              "q": "Which is better for ads: motion or filming?",
+              "a": [
+                "Whichever serves the message. Physical products, testimonials and places need real footage. Ideas, services, processes and numbers are explained faster and more clearly by motion, at lower cost. Many of the most effective ads combine both — more detail on the <a href=\"@/services/motion-video.html\">motion and video page</a>."
+              ]
+            },
+            {
+              "q": "How long does a video take?",
+              "a": [
+                "The stage that sets the schedule is not animation but approval. Once the script and style frames are signed off, the rest is largely predictable. That is why we agree timelines against approval milestones rather than a single delivery date."
+              ]
+            },
+            {
+              "q": "Do you produce versions in different dialects?",
+              "a": [
+                "Yes — Modern Standard Arabic, or Saudi or Egyptian dialect depending on the target audience. Dialect is a marketing decision rather than a linguistic one: MSA travels wider and reads more formal, dialect feels closer and more familiar. Sometimes a campaign justifies both."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related services",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/services/motion-video.html",
+              "text": "Motion & Video"
+            },
+            {
+              "href": "@/services/content-management.html",
+              "text": "Content Management"
+            },
+            {
+              "href": "@/services/media-buying.html",
+              "text": "Media Buying"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related reading",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/articles/what-is-motion-graphics.html",
+              "text": "What is motion graphics, and when do you need it?"
+            },
+            {
+              "href": "@/articles/digital-marketing-agency-cost-saudi-arabia.html",
+              "text": "How much does a digital marketing agency cost in Saudi Arabia?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

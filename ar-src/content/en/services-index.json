@@ -1,0 +1,36 @@
+{
+  "title": "What we do",
+  "lead": "Six services that work as one system. Strategy sets the direction, content and creative give it a voice, and paid media puts it in front of the right people — run by one team, so nothing gets lost between briefs.",
+  "services": [
+    {
+      "slug": "marketing-strategy",
+      "name": "Marketing Strategy",
+      "desc": "Positioning, audience and channel decisions made before anyone opens a design file."
+    },
+    {
+      "slug": "social-media-marketing",
+      "name": "Social Media Marketing",
+      "desc": "Account management, content and paid campaigns on the platforms your audience actually uses."
+    },
+    {
+      "slug": "content-management",
+      "name": "Content Management",
+      "desc": "Planning, producing and publishing the content a brand needs every month."
+    },
+    {
+      "slug": "branding-design",
+      "name": "Branding & Design",
+      "desc": "Visual identity and design systems that make a brand recognisable at a glance."
+    },
+    {
+      "slug": "motion-video",
+      "name": "Motion & Video",
+      "desc": "Ad videos, motion graphics and editing, produced to serve your campaigns and your brand message."
+    },
+    {
+      "slug": "media-buying",
+      "name": "Media Buying",
+      "desc": "Paid campaigns planned, placed and optimised against a number that matters."
+    }
+  ]
+}

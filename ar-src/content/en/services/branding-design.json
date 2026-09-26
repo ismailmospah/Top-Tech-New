@@ -1,0 +1,265 @@
+{
+  "slug": "branding-design",
+  "meta_title": "Branding & Visual Identity Agency — Top Tech, KSA & Egypt",
+  "meta_description": "Branding and visual identity design for companies in Saudi Arabia and Egypt: logo systems, typography, colour, brand guidelines and the design system your content is built on.",
+  "title": "Branding & design",
+  "lead": "A brand is what people remember when you are not in the room. Design is how you decide what that memory looks like — and a system, rather than a logo, is what keeps it consistent across every post, deck and shopfront.",
+  "label": "Services — 04",
+  "blocks": [
+    {
+      "id": null,
+      "label": "Overview",
+      "title": "What branding and design covers",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "Branding is the decision about how a company looks, sounds and feels. Design is how that decision becomes usable: a logo that works at every size, a typographic scale, a colour system, and rules that let anyone produce on-brand work without asking.",
+            "A logo on its own is not a brand. The value is in the <strong>system</strong> — because the logo appears rarely, while the type, colour and layout appear in everything. When those are undefined, every designer solves them again from scratch and the brand looks different every month.",
+            "Working across Arabic and English adds a real constraint that gets skipped often. Arabic type has different rhythm, weight and vertical proportions than Latin. A brand that only chose a Latin typeface will look borrowed in Arabic — so we pair the scripts deliberately rather than defaulting to whatever the software offers."
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Audience",
+      "title": "Who this is for",
+      "content": [
+        {
+          "kind": "ticks",
+          "items": [
+            "<strong>New companies</strong> that need an identity before they start publishing anything.",
+            "<strong>Brands that have outgrown their original look</strong> — usually made quickly at launch and never revisited.",
+            "<strong>Companies whose materials no longer match</strong> — the deck, the website and the social feed each look like different businesses.",
+            "<strong>Bilingual brands</strong> whose Arabic materials look like an afterthought next to the English.",
+            "<strong>Businesses entering a new market</strong> that need the identity to work in Saudi Arabia and Egypt alike.",
+            "<strong>Brands with a logo but no rules</strong>, where every new piece of design is a negotiation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Problems",
+      "title": "The problems it solves",
+      "content": [
+        {
+          "kind": "cards",
+          "items": [
+            {
+              "title": "Nothing looks like it belongs together",
+              "text": "Without a system, each asset is designed in isolation and the brand never accumulates recognition."
+            },
+            {
+              "title": "The logo breaks",
+              "text": "It was drawn for one size and one background, then fails as a profile picture, a sign, or in one colour."
+            },
+            {
+              "title": "Arabic looks like an afterthought",
+              "text": "A Latin typeface chosen carefully, an Arabic one chosen by default — and the mismatch is visible immediately."
+            },
+            {
+              "title": "Design decisions get re-argued",
+              "text": "Every project reopens the same questions about colour, type and spacing because nothing was written down."
+            },
+            {
+              "title": "Looking smaller than you are",
+              "text": "Inconsistent design reads as a small or careless operation, regardless of the quality of the actual product."
+            },
+            {
+              "title": "Slow production",
+              "text": "Content takes longer to make when every piece starts with undefined basics."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Scope",
+      "title": "What we do",
+      "content": [
+        {
+          "kind": "cards",
+          "items": [
+            {
+              "title": "Brand discovery",
+              "text": "What the company is, who it serves, and how it should feel different from the alternatives."
+            },
+            {
+              "title": "Logo and identity",
+              "text": "A primary mark with the variations real use requires — small sizes, single colour, dark and light backgrounds."
+            },
+            {
+              "title": "Bilingual typography",
+              "text": "Arabic and Latin typefaces chosen to sit together, with a scale that works in both directions."
+            },
+            {
+              "title": "Colour system",
+              "text": "A palette with defined roles and contrast that holds up in print, on screen and in dark interfaces."
+            },
+            {
+              "title": "Design system",
+              "text": "Layout principles, spacing, iconography and the recurring templates content is actually produced from."
+            },
+            {
+              "title": "Brand guidelines",
+              "text": "Written rules covering usage, don'ts and examples — short enough that people actually read them."
+            },
+            {
+              "title": "Applications",
+              "text": "The pieces the brand needs first: social templates, presentations, print, packaging or signage as required."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Process",
+      "title": "How we work",
+      "content": [
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "title": "Discovery",
+              "text": "Business, audience, competitors and the impression the brand needs to leave — in both markets it serves."
+            },
+            {
+              "title": "Direction",
+              "text": "We present distinct visual directions rather than variations of one idea, so the choice is a real one."
+            },
+            {
+              "title": "Identity design",
+              "text": "The chosen direction developed into the mark, type, colour and the rules that hold them together."
+            },
+            {
+              "title": "Bilingual testing",
+              "text": "Every element checked in Arabic and English, in RTL and LTR layouts, before anything is signed off."
+            },
+            {
+              "title": "System and guidelines",
+              "text": "Templates and written rules, so the brand can be produced by people who were not in the room."
+            },
+            {
+              "title": "Rollout",
+              "text": "Applying the identity to what matters first, and staying available while the team starts using it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Deliverables",
+      "title": "What you get",
+      "content": [
+        {
+          "kind": "ticks",
+          "items": [
+            "Primary logo with the variations real use requires",
+            "Logo files in vector and raster formats for print and screen",
+            "Arabic and Latin typography pairing with a defined scale",
+            "Colour palette with roles and contrast guidance",
+            "Design system: layout, spacing and iconography principles",
+            "Written brand guidelines with usage rules and examples",
+            "Editable templates for social, presentations and key applications"
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Questions",
+      "title": "Common questions",
+      "content": [
+        {
+          "kind": "faq",
+          "items": [
+            {
+              "q": "What is the difference between branding and marketing?",
+              "a": [
+                "Branding decides what you stand for and how you look and sound. Marketing is the activity that puts that in front of people and asks them to act.",
+                "They fail without each other. Strong branding with no marketing is a well-dressed secret; heavy marketing with weak branding spends money making an impression that does not stick. In practice branding sets the direction and <a href=\"@/services/marketing-strategy.html\">marketing strategy</a> decides where to spend it."
+              ]
+            },
+            {
+              "q": "Do we need a full rebrand or just a refresh?",
+              "a": [
+                "Usually less than clients expect. If the name and core mark still fit the business, a refresh — type, colour, system and templates — solves most consistency problems at a fraction of the effort. A full rebrand makes sense when the business has genuinely changed: new market, new audience, or a positioning the current identity contradicts."
+              ]
+            },
+            {
+              "q": "How do you handle Arabic and English identity together?",
+              "a": [
+                "We treat Arabic as a first-class part of the identity, not a translation of it. That means choosing typefaces that share a visual character across both scripts, testing every layout in RTL as well as LTR, and defining how the logo behaves in Arabic contexts. It is a decision made at the start, because retrofitting Arabic into a Latin-only system rarely looks right."
+              ]
+            },
+            {
+              "q": "Will we own the files?",
+              "a": [
+                "Yes. You receive the working files and the exported formats, and the identity is yours to use and to hand to other suppliers."
+              ]
+            },
+            {
+              "q": "Can you design just a logo?",
+              "a": [
+                "We can, but we will usually say what a logo alone will and will not fix. If the underlying problem is inconsistent content, a new logo will not solve it — the system and templates will. We would rather scope the smaller, more useful piece of work than sell the bigger one."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related services",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/services/marketing-strategy.html",
+              "text": "Marketing Strategy"
+            },
+            {
+              "href": "@/services/content-management.html",
+              "text": "Content Management"
+            },
+            {
+              "href": "@/services/motion-video.html",
+              "text": "Motion & Video"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related reading",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/articles/what-is-motion-graphics.html",
+              "text": "What is motion graphics, and when do you need it?"
+            },
+            {
+              "href": "@/articles/branding-vs-marketing.html",
+              "text": "Branding vs marketing: what's the difference?"
+            },
+            {
+              "href": "@/articles/startup-marketing-strategy.html",
+              "text": "How to build a digital marketing strategy for a startup"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

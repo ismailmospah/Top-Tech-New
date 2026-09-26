@@ -1,13 +1,13 @@
 """One-off: convert the live toptech.studio/ar service + article pages into content/*.json.
 
-Usage: python3 tools/extract_live.py <dir with services/*.html, articles/*.html, articles-index.html>
+Usage: python3 tools/extract_live.py <dir with services/*.html, articles/*.html> [--lang en]
 Internal links are stored as "@/services/x.html" / "@/articles/x.html" / "@/contact.html" / "@/index.html";
 build.py rewrites the "@/" prefix to the right relative path for each page.
 """
 import json
 import re
 import sys
-from html import escape
+from html import escape, unescape
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -71,16 +71,20 @@ def by_tag(name):
 
 
 def link(href):
-    m = re.fullmatch(r"/ar/(services|articles)/([\w-]+)/?", href)
+    """Internal links (Arabic /ar/... or English /...) -> "@/..." so build.py can make them relative."""
+    href, _, frag = href.partition("#")
+    frag = f"#{frag}" if frag else ""
+    m = re.fullmatch(r"(?:/ar)?/(services|articles)/([\w-]+)/?", href)
     if m:
-        return f"@/{m.group(1)}/{m.group(2)}.html"
-    if re.fullmatch(r"/ar/(services|articles)/?", href):
-        return f"@/{href.strip('/').split('/')[1]}/index.html"
-    if href.rstrip("/") == "/ar/contact":
-        return "@/contact.html"
-    if href.rstrip("/") in ("/ar", ""):
-        return "@/index.html"
-    return href
+        return f"@/{m.group(1)}/{m.group(2)}.html{frag}"
+    m = re.fullmatch(r"(?:/ar)?/(services|articles)/?", href)
+    if m:
+        return f"@/{m.group(1)}/index.html{frag}"
+    if re.fullmatch(r"(?:/ar)?/contact/?", href):
+        return f"@/contact.html{frag}"
+    if href in ("/ar", "/ar/", "/", ""):
+        return f"@/index.html{frag}"
+    return href + frag
 
 
 def inline(node):
@@ -144,8 +148,8 @@ def parse_page(path, kind):
     hero = main.find(by_class("phero"))
     page = {
         "slug": path.stem,
-        "meta_title": re.search(r"<title>(.*?)</title>", raw, re.S).group(1).strip(),
-        "meta_description": re.search(r'<meta name="description" content="([^"]*)"', raw).group(1),
+        "meta_title": unescape(re.search(r"<title>(.*?)</title>", raw, re.S).group(1).strip()),
+        "meta_description": unescape(re.search(r'<meta name="description" content="([^"]*)"', raw).group(1)),
         "title": hero.find(by_tag("h1")).text(),
         "lead": inline(hero.find(by_class("phero__lead"))),
     }
@@ -192,6 +196,8 @@ def parse_services_index(path):
 def main():
     src = Path(sys.argv[1])
     out = Path(__file__).resolve().parent.parent / "content"
+    if "--lang" in sys.argv and sys.argv[sys.argv.index("--lang") + 1] == "en":
+        out = out / "en"
     for kind, folder in (("service", "services"), ("article", "articles")):
         (out / folder).mkdir(parents=True, exist_ok=True)
         for f in sorted((src / folder).glob("*.html")):

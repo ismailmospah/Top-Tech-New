@@ -1,0 +1,284 @@
+{
+  "slug": "startup-marketing-strategy",
+  "meta_title": "How to Build a Digital Marketing Strategy for a Startup — Top Tech",
+  "meta_description": "How to build a digital marketing strategy for an early-stage company: goals, audience, positioning, channel choice, content, paid advertising, measurement and iteration.",
+  "title": "How to build a digital marketing strategy for a startup",
+  "lead": "Strategy at an early stage is not an annual plan. It is <strong>a series of small bets you learn from quickly</strong>. A startup that writes a forty-page plan before speaking to ten customers has guessed forty pages.",
+  "label": "Articles",
+  "date": "2026-08-31",
+  "date_display": "31 August 2026",
+  "author": "Top Tech",
+  "read_time": "3 min read",
+  "toc": [
+    {
+      "id": "one-goal",
+      "text": "Start with one objective"
+    },
+    {
+      "id": "audience",
+      "text": "Define the audience from reality, not imagination"
+    },
+    {
+      "id": "positioning",
+      "text": "Positioning: what you will not be"
+    },
+    {
+      "id": "channels",
+      "text": "Choose one channel, not five"
+    },
+    {
+      "id": "minimum-brand",
+      "text": "The minimum viable brand"
+    },
+    {
+      "id": "measure",
+      "text": "Measurement before spending"
+    },
+    {
+      "id": "iterate",
+      "text": "Iteration: change one thing"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "one-goal",
+      "label": null,
+      "title": "Start with one objective",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "The most common early-stage mistake is having several objectives at once: brand awareness, downloads, sign-ups, sales and followers — simultaneously, on one budget.",
+            "Choose one objective for this period and one metric measuring it. Not because the rest do not matter, but because limited resources split across five objectives produce a signal in none of them.",
+            "And in most early situations the right objective is not growth but <strong>learning</strong>: finding out who buys and why, as fast and as cheaply as possible."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audience",
+      "label": null,
+      "title": "Define the audience from reality, not imagination",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "A customer persona written in an internal meeting is a collective guess. The useful definition comes from real conversations."
+          ]
+        },
+        {
+          "kind": "ticks",
+          "items": [
+            "Who has actually bought from you so far, and what do they have in common?",
+            "What problem made them start looking for a solution at all?",
+            "What alternative were they using before you — including doing nothing?",
+            "What objection nearly stopped them buying?",
+            "What words do they use to describe the problem? (these become your ad copy)"
+          ]
+        },
+        {
+          "kind": "prose",
+          "paras": [
+            "Ten conversations here are worth more than ten hours of planning. And the words they use are what should appear in your ads and website — not your internal terminology."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "positioning",
+      "label": null,
+      "title": "Positioning: what you will not be",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "Positioning is fundamentally a decision about exclusion. When you try to be best for everyone, you become the obvious choice for nobody.",
+            "A practical formulation is enough at the start: <em>we help [a specific segment] achieve [a specific outcome] through [what makes you different], unlike [the alternative they use today].</em>",
+            "That last clause is the most important and the most skipped. If you cannot name the alternative you compete against — including \"doing nothing\" — you do not yet know why anyone would choose you. More on separating this from campaigns in <a href=\"@/articles/branding-vs-marketing.html\">branding vs marketing</a>."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "channels",
+      "label": null,
+      "title": "Choose one channel, not five",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "The early instinct is to be everywhere so nothing is missed. The practical result is being everywhere faintly."
+          ]
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "title": "Ask where your audience actually is",
+              "text": "Not where the largest audiences are. A small platform where your customers gather beats a huge one containing everyone except them."
+            },
+            {
+              "title": "Ask what you can produce consistently",
+              "text": "A channel demanding daily video you cannot produce is not a channel — it is a source of guilt."
+            },
+            {
+              "title": "Ask how fast it teaches you",
+              "text": "Paid advertising returns data in days; organic content and search take months. In a learning phase, speed has real value."
+            }
+          ]
+        },
+        {
+          "kind": "prose",
+          "paras": [
+            "One channel done well gives you a signal you can build on. Five done thinly give you noise you cannot conclude anything from."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "minimum-brand",
+      "label": null,
+      "title": "The minimum viable brand",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "You do not need a sixty-page guideline document before starting. But you do need to stop contradicting yourself:"
+          ]
+        },
+        {
+          "kind": "ticks",
+          "items": [
+            "One typeface and three colours you actually stick to",
+            "One way of describing what you do — the same sentence on the site, the ad and the deck",
+            "A defined tone: formal or close? Modern Standard Arabic or dialect?",
+            "Two or three post templates instead of designing every post from scratch"
+          ]
+        },
+        {
+          "kind": "prose",
+          "paras": [
+            "These are decisions of days rather than months, and they save you redesigning everything a year later. Waiting for an identity to be \"finished\" before marketing delays you for nothing."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "label": null,
+      "title": "Measurement before spending",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "Set up tracking before the first advertising riyal, not after. Startups lose more here than anyone, because small budgets produce little data to begin with — corrupting it with broken measurement means a whole month lost."
+          ]
+        },
+        {
+          "kind": "ticks",
+          "items": [
+            "Verify conversion events register on the correct pages",
+            "Connect what ends on WhatsApp or a phone call — otherwise your campaigns will look worse than they are",
+            "Log the source of every customer manually at first; a simple sheet beats any dashboard early on",
+            "Know what cost per acquisition your model can bear before you start, not two months in"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iterate",
+      "label": null,
+      "title": "Iteration: change one thing",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "The companies that make progress do something boring: change one variable, wait for enough data, record the result, repeat.",
+            "Changing targeting, creative and offer at once produces an improvement or a decline you cannot attribute — which makes the following month a fresh guess.",
+            "And keep a record of what was tried and what happened. After three months that record is the most valuable thing you own — it is what separates a company that learned from one that merely spent."
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Questions",
+      "title": "Frequently asked",
+      "content": [
+        {
+          "kind": "faq",
+          "items": [
+            {
+              "q": "When should we start marketing — before or after launch?",
+              "a": [
+                "Start talking to your audience long before launch; start spending on ads when you have something worth clicking. Pre-launch conversations and content cost time rather than money, and they give you the language and objections you will need later."
+              ]
+            },
+            {
+              "q": "How much budget do we need to start?",
+              "a": [
+                "We will not give you a figure we have no data for — it varies by category and competition. But the principle holds: the budget must be enough to gather meaningful data within a reasonable period. A small amount concentrated on one channel and one objective teaches you something; the same amount spread across four teaches you nothing."
+              ]
+            },
+            {
+              "q": "Do we need an agency at an early stage?",
+              "a": [
+                "Not necessarily. Early on you usually need clarity rather than production capacity — and clarity can come from a focused strategy session or a positioning project rather than a full monthly retainer. See <a href=\"@/articles/when-you-need-a-full-service-agency.html\">when you need a full-service agency</a>."
+              ]
+            },
+            {
+              "q": "What's the most common startup mistake you see?",
+              "a": [
+                "Spreading too early. Trying to be on every platform, serve every segment and speak in every tone, out of fear of missing something. The result is that budget, team and attention fragment, and no channel reaches the point where it produces a signal worth building on."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related services",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/services/marketing-strategy.html",
+              "text": "Marketing Strategy"
+            },
+            {
+              "href": "@/services/branding-design.html",
+              "text": "Branding & Design"
+            },
+            {
+              "href": "@/services/media-buying.html",
+              "text": "Media Buying"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related reading",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/articles/branding-vs-marketing.html",
+              "text": "Branding vs marketing: what's the difference?"
+            },
+            {
+              "href": "@/articles/common-marketing-mistakes.html",
+              "text": "Common mistakes that make companies spend without results"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "title": "Work and results we're proud of",
+  "lead": "Real results from paid campaigns we ran for our clients, plus a selection of our creative work for brands in Saudi Arabia and Egypt.",
+  "behance": "https://www.behance.net/TopTechCompany",
+  "cases": [
+    {
+      "id": "new-idea",
+      "client": "New Idea",
+      "industry": "Wall-art store on Salla",
+      "country": "Saudi Arabia",
+      "value": "43k",
+      "unit": "SAR",
+      "label": "in sales during the campaign",
+      "facts": [
+        "Return on ad spend (ROAS) of about 6×",
+        "138 orders on the store",
+        "Period: 19 August – 27 September 2025"
+      ],
+      "platforms": [
+        "Instagram",
+        "TikTok",
+        "Salla"
+      ],
+      "shots": [
+        {
+          "src": "new-idea-salla",
+          "alt": "New Idea's Salla sales dashboard: SAR 43.2k and 138 orders",
+          "w": 1200,
+          "h": 565
+        },
+        {
+          "src": "new-idea-meta",
+          "alt": "New Idea campaign results on Instagram (Meta)",
+          "w": 1200,
+          "h": 399
+        },
+        {
+          "src": "new-idea-tiktok",
+          "alt": "New Idea campaign results on TikTok",
+          "w": 1200,
+          "h": 399
+        }
+      ]
+    },
+    {
+      "id": "falcon-wings",
+      "client": "Falcon Wings",
+      "industry": "Flight dispatch & aviation training academy",
+      "country": "Saudi Arabia",
+      "value": "6",
+      "unit": "groups",
+      "label": "courses fully booked",
+      "facts": [
+        "At least 5 people per group",
+        "Messaging campaigns targeting Riyadh and Jeddah"
+      ],
+      "platforms": [
+        "Facebook",
+        "Instagram"
+      ],
+      "shots": [
+        {
+          "src": "falcon-wings-ads",
+          "alt": "Falcon Wings ad set results on Meta",
+          "w": 1200,
+          "h": 396
+        },
+        {
+          "src": "falcon-wings-ads-2",
+          "alt": "Falcon Wings campaign results",
+          "w": 1200,
+          "h": 392
+        },
+        {
+          "src": "falcon-wings-ads-3",
+          "alt": "Falcon Wings Jeddah and Riyadh ad results",
+          "w": 1200,
+          "h": 396
+        }
+      ],
+      "badge": {
+        "label": "Course price",
+        "value": "about SAR 25k"
+      }
+    },
+    {
+      "id": "beauty-valley",
+      "client": "Beauty Valley",
+      "industry": "Cosmetic clinic",
+      "country": "Cairo, Egypt",
+      "value": "5",
+      "unit": "EGP",
+      "label": "cost per message",
+      "facts": [
+        "The typical cost per message in Cairo is EGP 10–15",
+        "Messaging campaigns for the clinic's offers and services"
+      ],
+      "platforms": [
+        "Facebook",
+        "Instagram"
+      ],
+      "shots": [
+        {
+          "src": "beauty-valley-ads",
+          "alt": "Beauty Valley messaging campaign results on Meta",
+          "w": 1200,
+          "h": 1047
+        }
+      ]
+    }
+  ],
+  "specialties": [
+    {
+      "key": "ads",
+      "name": "Media buying",
+      "icon": "trend",
+      "lead": "Paid campaigns with measurable results — sales, bookings and messages at a lower cost."
+    },
+    {
+      "key": "motion",
+      "name": "Motion graphics",
+      "icon": "play",
+      "lead": "Explainer and ad videos in motion graphics for brands in Saudi Arabia and Egypt."
+    },
+    {
+      "key": "reels",
+      "name": "Reels & editing",
+      "icon": "reel",
+      "lead": "Filming, editing and short reels with a fast pace built to stop the scroll."
+    },
+    {
+      "key": "social",
+      "name": "Social media design",
+      "icon": "grid",
+      "lead": "Post and campaign designs that keep the brand consistent on every platform."
+    }
+  ],
+  "works": {
+    "motion": [
+      {
+        "type": "video",
+        "yt": "hevKv9xpOCg",
+        "title": "Motion graphics video for Wafi",
+        "client": "Wafi"
+      },
+      {
+        "type": "video",
+        "yt": "tiKTDsf82G8",
+        "title": "Motion graphics video for Watan Care",
+        "client": "Watan Care"
+      },
+      {
+        "type": "video",
+        "yt": "t5N26saL8dc",
+        "title": "Motion graphics video for Modmen Shawarma",
+        "client": "Modmen Shawarma · Riyadh"
+      },
+      {
+        "type": "video",
+        "yt": "b2WLA9hoXiI",
+        "title": "Motion graphics video for Kaser",
+        "client": "Kaser platform"
+      },
+      {
+        "type": "video",
+        "yt": "0AqcwMhAob0",
+        "title": "Motion graphics video for Mobdea",
+        "client": "Mobdea Advertising"
+      },
+      {
+        "type": "video",
+        "yt": "TG2UrFxxmfA",
+        "title": "Saudi National Day offers ad",
+        "client": "Seasonal campaign"
+      },
+      {
+        "type": "video",
+        "yt": "YuJk54MZmik",
+        "title": "Product ad for online stores",
+        "client": "Ad video"
+      },
+      {
+        "type": "link",
+        "img": "251965643",
+        "title": "Explainer video for nowcap.ai",
+        "client": "nowcap.ai",
+        "url": "https://www.behance.net/gallery/251965643/Sass-Animation-Video-%28-motion-graphic-%29-%28-Sass-Style-%29",
+        "folder": "projects",
+        "ratio": "808/632"
+      },
+      {
+        "type": "link",
+        "img": "247374211",
+        "title": "Explainer video for SellZaki",
+        "client": "SellZaki",
+        "url": "https://www.behance.net/gallery/247374211/-SellZaki",
+        "folder": "projects",
+        "ratio": "808/632"
+      }
+    ],
+    "reels": [
+      {
+        "type": "insta",
+        "ig": "Dc_YkkPtb3n",
+        "title": "Reel: “Break-even ROAS”",
+        "client": "Top Tech · Instagram"
+      },
+      {
+        "type": "insta",
+        "ig": "DcyZugvNx1u",
+        "title": "Reel: “How to increase your sales”",
+        "client": "Top Tech · Instagram"
+      },
+      {
+        "type": "insta",
+        "ig": "Dcn0PzXMWlY",
+        "title": "Reel: “Starting a new brand?”",
+        "client": "Top Tech · Instagram"
+      },
+      {
+        "type": "insta",
+        "ig": "Dap-Gf6sTDF",
+        "title": "Reel: “A new era for Top Tech”",
+        "client": "Top Tech · Instagram"
+      },
+      {
+        "type": "insta",
+        "ig": "DT3IXc4DF6B",
+        "title": "Reel: “Stand out from your competitors”",
+        "client": "Top Tech · Instagram"
+      },
+      {
+        "type": "link",
+        "img": "reel-3",
+        "title": "Reel: “Can anyone talk to the camera?”",
+        "client": "Top Tech",
+        "url": "https://www.instagram.com/toptechagency/",
+        "ratio": "9/16",
+        "folder": "projects"
+      },
+      {
+        "type": "link",
+        "img": "reel-1",
+        "title": "Reel: “A company or a project”",
+        "client": "Top Tech",
+        "url": "https://www.instagram.com/toptechagency/",
+        "ratio": "9/16",
+        "folder": "projects"
+      }
+    ],
+    "social": [
+      {
+        "type": "image",
+        "img": "ig-DbvjCvPM9gC",
+        "title": "Top Tech starts a new chapter",
+        "client": "Top Tech · Instagram"
+      },
+      {
+        "type": "image",
+        "img": "ig-DdgNuAwiQaU",
+        "title": "“Spending thousands on ads and sales are flat?”",
+        "client": "Top Tech · Instagram"
+      },
+      {
+        "type": "image",
+        "img": "ig-Ddlr59Pjd4k",
+        "title": "“Not every like is a customer”",
+        "client": "Top Tech · Instagram"
+      },
+      {
+        "type": "image",
+        "img": "ig-DdoeffSidqz",
+        "title": "“How do you sell a perfume the customer can't smell?”",
+        "client": "Top Tech · Instagram"
+      },
+      {
+        "type": "image",
+        "img": "ig-DdjHGUnG8vl",
+        "title": "“Beautiful content doesn't always sell”",
+        "client": "Top Tech · Instagram"
+      },
+      {
+        "type": "image",
+        "img": "ig-Ddrex1JAYp-",
+        "title": "“Customers aren't looking for a product”",
+        "client": "Top Tech · Instagram"
+      },
+      {
+        "type": "image",
+        "img": "musafer-dubai",
+        "title": "Dubai trip offer",
+        "client": "Musafer Travel & Tourism"
+      },
+      {
+        "type": "image",
+        "img": "bld-launch",
+        "title": "BLD Labs launch",
+        "client": "BLD Labs"
+      },
+      {
+        "type": "image",
+        "img": "qashtouta",
+        "title": "Qashtouta sweets post",
+        "client": "Qashtouta"
+      },
+      {
+        "type": "image",
+        "img": "musafer-turkey",
+        "title": "Turkey trip offer",
+        "client": "Musafer Travel & Tourism"
+      },
+      {
+        "type": "image",
+        "img": "prince-app",
+        "title": "Prince Al-Lamma app ad",
+        "client": "Prince Al-Lamma"
+      },
+      {
+        "type": "image",
+        "img": "musafer-umrah",
+        "title": "Ramadan Umrah offer",
+        "client": "Musafer Travel & Tourism"
+      },
+      {
+        "type": "image",
+        "img": "social-bld",
+        "title": "BLD Labs post",
+        "client": "BLD Labs"
+      },
+      {
+        "type": "image",
+        "img": "musafer-sharm",
+        "title": "Sharm El-Sheikh trip offer",
+        "client": "Musafer Travel & Tourism"
+      },
+      {
+        "type": "image",
+        "img": "social-prince",
+        "title": "Prince Al-Lamma holiday post",
+        "client": "Prince Al-Lamma"
+      },
+      {
+        "type": "image",
+        "img": "musafer-eid",
+        "title": "“Where will you spend your Eid holiday?”",
+        "client": "Musafer Travel & Tourism"
+      },
+      {
+        "type": "image",
+        "img": "musafer-dubai-eid",
+        "title": "Dubai Eid holiday offer",
+        "client": "Musafer Travel & Tourism"
+      }
+    ]
+  }
+}

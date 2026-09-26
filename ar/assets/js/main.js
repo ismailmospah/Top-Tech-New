@@ -2,6 +2,9 @@
   const root = document.documentElement;
   root.classList.add('js');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // the same script serves the Arabic (/ar) and English (/) sites
+  const EN = root.lang === 'en';
+  const t = (ar, en) => (EN ? en : ar);
 
   /* ---------- Header shadow ---------- */
   const header = document.querySelector('.site-header');
@@ -14,7 +17,7 @@
   const nav = document.getElementById('main-nav');
   const setMenu = (open) => {
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+    toggle.setAttribute('aria-label', open ? t('إغلاق القائمة', 'Close menu') : t('فتح القائمة', 'Open menu'));
     nav.classList.toggle('is-open', open);
   };
   toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
@@ -152,8 +155,8 @@
     tabs.forEach((tab, i) => {
       tab.addEventListener('click', () => select(tab));
       tab.addEventListener('keydown', (e) => {
-        // RTL: the next tab sits to the left
-        const step = { ArrowLeft: 1, ArrowRight: -1 }[e.key];
+        // the next tab sits to the left in Arabic (RTL) and to the right in English
+        const step = (EN ? { ArrowRight: 1, ArrowLeft: -1 } : { ArrowLeft: 1, ArrowRight: -1 })[e.key];
         if (step) { e.preventDefault(); select(tabs[(i + step + tabs.length) % tabs.length], true); }
         if (e.key === 'Home') { e.preventDefault(); select(tabs[0], true); }
         if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1], true); }
@@ -167,6 +170,7 @@
     const frame = document.getElementById('media-frame');
     const title = document.getElementById('media-title');
     const ext = document.getElementById('media-ext');
+    const extLabel = ext.querySelector('.media-ext-label');
     let opener = null;
     const close = () => modal.close();
     modal.addEventListener('close', () => {
@@ -196,11 +200,11 @@
         // Instagram's own embed player — the reel plays inside the page
         const iframe = document.createElement('iframe');
         iframe.src = `https://www.instagram.com/reel/${btn.dataset.insta}/embed/`;
-        iframe.title = btn.dataset.title || 'ريل';
+        iframe.title = btn.dataset.title || t('ريل', 'Reel');
         iframe.allow = 'autoplay; encrypted-media; fullscreen';
         frame.replaceChildren(iframe);
         ext.href = `https://www.instagram.com/reel/${btn.dataset.insta}/`;
-        ext.innerHTML = ext.innerHTML.replace('YouTube', 'إنستغرام');
+        extLabel.textContent = t('افتح على إنستغرام', 'Open on Instagram');
         ext.hidden = false;
         modal.classList.add('is-insta');
       } else if (btn.dataset.video) {
@@ -209,12 +213,12 @@
         // YouTube needs to know which site embeds it (else "Error 153"), so send the origin explicitly
         iframe.referrerPolicy = 'strict-origin-when-cross-origin';
         iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&playsinline=1&enablejsapi=0&origin=${encodeURIComponent(location.origin)}`;
-        iframe.title = btn.dataset.title || 'فيديو';
+        iframe.title = btn.dataset.title || t('فيديو', 'Video');
         iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
         iframe.allowFullscreen = true;
         frame.replaceChildren(iframe);
         ext.href = `https://www.youtube.com/watch?v=${id}`;
-        ext.innerHTML = ext.innerHTML.replace('إنستغرام', 'YouTube');
+        extLabel.textContent = t('افتح على YouTube', 'Open on YouTube');
         ext.hidden = false;
         modal.classList.add('is-video');
       } else {
@@ -241,7 +245,7 @@
   const val = (name) => (form.elements[name].value || '').trim();
   const market = () => form.querySelector('input[name="market"]:checked');
 
-  // "اطلب هذه الخدمة" links here with ?service=… — tick that service
+  // "request this service" links here with ?service=… — tick that service
   const requested = new URLSearchParams(location.search).get('service');
   if (requested) {
     const box = [...form.querySelectorAll('input[name="services"]')].find((b) => b.value === requested);
@@ -256,7 +260,7 @@
       g.hidden = !on;
       if (!on) g.querySelectorAll('input').forEach((i) => { i.checked = false; });
     });
-    $('budget-currency').textContent = key === 'eg' ? '(جنيه مصري)' : '(ريال سعودي)';
+    $('budget-currency').textContent = key === 'eg' ? t('(جنيه مصري)', '(EGP)') : t('(ريال سعودي)', '(SAR)');
     $('f-phone').placeholder = key === 'eg' ? '+20 1X XXXX XXXX' : '+966 5X XXX XXXX';
   };
   form.querySelectorAll('input[name="market"]').forEach((r) => r.addEventListener('change', syncBudget));
@@ -284,20 +288,20 @@
   const summary = () => {
     const services = [...form.querySelectorAll('input[name="services"]:checked')].map((c) => c.value);
     const budget = form.querySelector('input[name="budget"]:checked');
-    const lines = ['مرحبًا توب تك 👋', 'أرغب في بدء مشروع معكم.'];
+    const lines = [t('مرحبًا توب تك 👋', 'Hi Top Tech 👋'), t('أرغب في بدء مشروع معكم.', "I'd like to start a project with you.")];
     const add = (label, v) => { if (v) lines.push(`${label}: ${v}`); };
     if (val('name') || val('brand') || services.length || val('message')) lines.push('');
-    add('الاسم', val('name'));
-    add('العلامة / الشركة', val('brand'));
-    add('الخدمات', services.join('، '));
-    add('السوق', val('name') || services.length ? market().dataset.label : '');
-    add('الميزانية', budget && budget.value);
-    if (val('message')) lines.push('', 'تفاصيل المشروع:', val('message'));
+    add(t('الاسم', 'Name'), val('name'));
+    add(t('العلامة / الشركة', 'Brand / company'), val('brand'));
+    add(t('الخدمات', 'Services'), services.join(t('، ', ', ')));
+    add(t('السوق', 'Market'), val('name') || services.length ? market().dataset.label : '');
+    add(t('الميزانية', 'Budget'), budget && budget.value);
+    if (val('message')) lines.push('', t('تفاصيل المشروع:', 'Project details:'), val('message'));
     return lines.join('\n');
   };
   const waUrl = () => `https://wa.me/${market().value}?text=${encodeURIComponent(summary())}`;
 
-  // "تواصل معنا عبر واتساب" carries whatever has been typed so far — no validation needed
+  // the WhatsApp link carries whatever has been typed so far — no validation needed
   const waAlt = $('wa-alt');
   const refreshWa = () => { waAlt.href = waUrl(); $('success-wa').href = waUrl(); };
   form.addEventListener('input', refreshWa);
@@ -311,7 +315,7 @@
   const setBusy = (busy) => {
     btn.disabled = busy;
     btn.classList.toggle('is-busy', busy);
-    btnLabel.textContent = busy ? 'جارٍ الإرسال…' : 'إرسال';
+    btnLabel.textContent = busy ? t('جارٍ الإرسال…', 'Sending…') : t('إرسال', 'Send');
   };
   const showNote = (msg) => { note.textContent = msg; note.hidden = !msg; };
 
@@ -332,7 +336,7 @@
       return;
     }
     if (!window.emailjs) {
-      showNote('تعذّر الإرسال الآن. تواصل معنا عبر واتساب وسنرد عليك فورًا.');
+      showNote(t('تعذّر الإرسال الآن. تواصل معنا عبر واتساب وسنرد عليك فورًا.', "We couldn't send right now. Message us on WhatsApp and we'll reply right away."));
       return;
     }
     const services = [...form.querySelectorAll('input[name="services"]:checked')].map((c) => c.value);
@@ -343,11 +347,11 @@
       from_email: '', // the form asks for WhatsApp instead of email
       whatsapp_number: val('phone'),
       country: market().dataset.label,
-      company_name: val('brand') || 'غير مذكور',
-      budget: budget ? budget.value : 'غير محدد',
-      service: services.length ? services.join('، ') : 'غير محدد',
-      industry: 'غير محدد',
-      video_duration: 'غير محدد',
+      company_name: val('brand') || t('غير مذكور', 'Not provided'),
+      budget: budget ? budget.value : t('غير محدد', 'Not specified'),
+      service: services.length ? services.join(t('، ', ', ')) : t('غير محدد', 'Not specified'),
+      industry: t('غير محدد', 'Not specified'),
+      video_duration: t('غير محدد', 'Not specified'),
       message: val('message'),
       to_email: TO_EMAIL,
     };
@@ -356,7 +360,7 @@
       .then(showSuccess)
       .catch((err) => {
         console.error(err);
-        showNote('تعذّر الإرسال. حاول مرة أخرى، أو تواصل معنا عبر واتساب.');
+        showNote(t('تعذّر الإرسال. حاول مرة أخرى، أو تواصل معنا عبر واتساب.', "Couldn't send. Please try again, or message us on WhatsApp."));
       })
       .finally(() => setBusy(false));
   });

@@ -1,493 +1,643 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Top Tech — Full-Service Marketing Agency in Saudi Arabia &amp; Egypt</title>
+  <meta name="description" content="Top Tech is a full-service marketing agency in Riyadh and Cairo: marketing strategy, social media, media buying, content, branding and video. We reply within 24 hours.">
+  <meta name="theme-color" content="#452C7B">
+  <link rel="canonical" href="https://www.toptech.studio/">
+  <link rel="alternate" hreflang="ar" href="https://www.toptech.studio/ar">
+  <link rel="alternate" hreflang="en" href="https://www.toptech.studio/">
+  <link rel="alternate" hreflang="x-default" href="https://www.toptech.studio/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Top Tech — We help your business grow">
+  <meta property="og:description" content="Top Tech is a full-service marketing agency in Riyadh and Cairo: marketing strategy, social media, media buying, content, branding and video. We reply within 24 hours.">
+  <meta property="og:image" content="https://www.toptech.studio/assets/img/logo.png">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
-  <!-- Returning visitors who chose Arabic go straight to the Arabic site.
-       Crawlers have no localStorage, so they always get the English page.
-       Skipped on back/forward so the Arabic page never becomes a history trap. -->
-  <script>
-    try {
-      var nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
-      var fresh = !nav || nav.type === "navigate";
-      if (fresh && location.pathname === "/" && localStorage.getItem("toptech-lang") === "ar") {
-        location.replace("/ar");
-      }
-    } catch (e) { /* private mode — stay on English */ }
-  </script>
-
-  <title>Marketing Agency in Saudi Arabia &amp; Egypt — Top Tech</title>
-  <meta name="description" content="Top Tech is a full-service marketing agency in Saudi Arabia and Egypt. Marketing strategy, social media, content, branding, motion &amp; video and media buying — built by a studio born in motion." />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-
-  <link rel="canonical" href="https://www.toptech.studio/" />
-  <link rel="alternate" hreflang="en" href="https://www.toptech.studio/" />
-  <link rel="alternate" hreflang="ar" href="https://www.toptech.studio/ar" />
-  <link rel="alternate" hreflang="x-default" href="https://www.toptech.studio/" />
-
-  <!-- Facebook Domain Verification -->
-  <meta name="facebook-domain-verification" content="jgs5un48jog44hoh5u0pxr8ckapcc9" />
-
-  <link rel="icon" href="/assets/logo-original.svg" type="image/svg+xml" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Top Tech" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="ar_AR" />
-  <meta property="og:url" content="https://www.toptech.studio/" />
-  <meta property="og:title" content="Marketing Agency in Saudi Arabia &amp; Egypt — Top Tech" />
-  <meta property="og:description" content="Top Tech is a full-service marketing agency in Saudi Arabia and Egypt. Strategy, social media, content, branding, motion and media buying under one roof." />
-  <meta property="og:image" content="https://www.toptech.studio/assets/og-image.jpg" />
-  <meta property="og:image:width" content="1280" />
-  <meta property="og:image:height" content="720" />
-  <meta property="og:image:alt" content="Top Tech — marketing agency in Saudi Arabia and Egypt" />
-
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Marketing Agency in Saudi Arabia &amp; Egypt — Top Tech" />
-  <meta name="twitter:description" content="Full-service marketing agency in Saudi Arabia and Egypt — strategy, social media, content, branding, motion and media buying." />
-  <meta name="twitter:image" content="https://www.toptech.studio/assets/og-image.jpg" />
-  <meta name="twitter:image:alt" content="Top Tech — marketing agency in Saudi Arabia and Egypt" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="/style.css" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXWC3SFZJ2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NXWC3SFZJ2');
-  </script>
-
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2116622618904017');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2116622618904017&ev=PageView&noscript=1"/></noscript>
-
-  <!-- TikTok Pixel -->
-  <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-      ttq.load('D7FF5L3C77U41JIS43T0');
-      ttq.page();
-    }(window, document, 'ttq');
-  </script>
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.toptech.studio/#organization",
-        "name": "Top Tech",
-        "alternateName": "توب تك",
-        "url": "https://www.toptech.studio/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.toptech.studio/assets/logo-original.svg"
-        },
-        "image": "https://www.toptech.studio/assets/og-image.jpg",
-        "description": "Top Tech is a full-service marketing agency serving Saudi Arabia and Egypt. It began as a motion graphics studio and now delivers marketing strategy, social media marketing, content management, branding and design, motion and video production, and media buying.",
-        "email": "toptechcompany51@gmail.com",
-        "telephone": "+966592661980",
-        "knowsLanguage": [
-          "ar",
-          "en"
-        ],
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "Saudi Arabia"
-          },
-          {
-            "@type": "Country",
-            "name": "Egypt"
-          }
-        ],
-        "sameAs": [
-          "https://www.instagram.com/toptechagency/",
-          "https://www.tiktok.com/@toptechagency1",
-          "https://x.com/toptechstudio1",
-          "https://www.behance.net/TopTechCompany"
-        ],
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "contactType": "sales",
-            "telephone": "+966592661980",
-            "email": "toptechcompany51@gmail.com",
-            "areaServed": "SA",
-            "availableLanguage": [
-              "ar",
-              "en"
-            ]
-          },
-          {
-            "@type": "ContactPoint",
-            "contactType": "sales",
-            "telephone": "+201093723960",
-            "email": "toptechcompany51@gmail.com",
-            "areaServed": "EG",
-            "availableLanguage": [
-              "ar",
-              "en"
-            ]
-          }
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Marketing services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Marketing Strategy",
-                "provider": {
-                  "@id": "https://www.toptech.studio/#organization"
-                },
-                "url": "https://www.toptech.studio/services/marketing-strategy"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Social Media Marketing",
-                "provider": {
-                  "@id": "https://www.toptech.studio/#organization"
-                },
-                "url": "https://www.toptech.studio/services/social-media-marketing"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Content Management",
-                "provider": {
-                  "@id": "https://www.toptech.studio/#organization"
-                },
-                "url": "https://www.toptech.studio/services/content-management"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Branding & Design",
-                "provider": {
-                  "@id": "https://www.toptech.studio/#organization"
-                },
-                "url": "https://www.toptech.studio/services/branding-design"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Motion & Video",
-                "provider": {
-                  "@id": "https://www.toptech.studio/#organization"
-                },
-                "url": "https://www.toptech.studio/services/motion-video"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Media Buying",
-                "provider": {
-                  "@id": "https://www.toptech.studio/#organization"
-                },
-                "url": "https://www.toptech.studio/services/media-buying"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.toptech.studio/#website",
-        "url": "https://www.toptech.studio/",
-        "name": "Top Tech",
-        "publisher": {
-          "@id": "https://www.toptech.studio/#organization"
-        },
-        "inLanguage": [
-          "en",
-          "ar"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://www.toptech.studio/#webpage",
-        "url": "https://www.toptech.studio/",
-        "name": "Marketing Agency in Saudi Arabia & Egypt — Top Tech",
-        "description": "Top Tech is a full-service marketing agency in Saudi Arabia and Egypt.",
-        "isPartOf": {
-          "@id": "https://www.toptech.studio/#website"
-        },
-        "about": {
-          "@id": "https://www.toptech.studio/#organization"
-        },
-        "inLanguage": "en",
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://www.toptech.studio/assets/og-image.jpg"
-        }
-      }
-    ]
-  }
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/assets/img/mascot-jump.webp">
+  <link rel="stylesheet" href="/assets/css/style.css?v=1790387858">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Top Tech", "description": "Full-service marketing agency in Saudi Arabia and Egypt", "url": "https://www.toptech.studio/", "email": "toptechcompany51@gmail.com", "telephone": ["+966592661980", "+201501030214"], "areaServed": ["SA", "EG", "GCC"], "openingHours": "Su-Th 09:00-18:00", "address": [{"@type": "PostalAddress", "addressLocality": "Riyadh", "addressCountry": "SA"}, {"@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "EG"}], "sameAs": ["https://www.instagram.com/toptechagency/", "https://www.tiktok.com/@toptechagency1", "https://x.com/toptechstudio1", "https://www.behance.net/TopTechCompany"]}</script>
 </head>
-<body data-shape="play">
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===================== PRELOADER ===================== -->
-  <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader__inner">
-      <div class="loader__logo"><img src="/assets/logo-white.svg" alt="Top Tech" id="loaderLogo" /></div>
-      <div class="loader__row">
-        <span class="loader__pct" id="loaderPct">000</span>
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Top Tech — home">
+        <img src="/assets/img/logo.png" alt="Top Tech" width="96" height="60">
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main menu">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#why">Why us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <div class="nav-mobile-extra">
+          <a class="btn btn-primary btn-block" href="/contact">Start a project</a>
+          <a class="btn btn-whatsapp btn-block" href="https://wa.me/966592661980" target="_blank" rel="noopener">
+            <svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp
+          </a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a class="lang-switch" href="https://www.toptech.studio/ar" hreflang="ar" lang="ar" aria-label="النسخة العربية">ع</a>
+        <a class="btn btn-primary btn-sm header-cta" href="/contact">Start a project</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
       </div>
-      <div class="loader__bar"><span id="loaderBar"></span></div>
-    </div>
-    <div class="loader__curtain"></div>
-  </div>
-
-  <!-- ===================== WEBGL UNIVERSE ===================== -->
-  <canvas id="gl" aria-hidden="true"></canvas>
-  <div class="vignette" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-
-  <!-- ===================== CHROME ===================== -->
-  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
-
-  <div class="cursor" id="cursor" aria-hidden="true">
-    <span class="cursor__dot"></span>
-    <span class="cursor__ring"><i class="cursor__label" id="cursorLabel"></i></span>
-  </div>
-
-  <header class="header">
-    <a class="header__logo" href="#top" data-cursor="hover" aria-label="Top Tech home">
-      <img src="/assets/logo-white.svg" alt="Top Tech" />
-    </a>
-    <nav class="header__nav" aria-label="Primary">
-      <a href="#story" data-cursor="hover" data-i18n="nav_story">Story</a>
-      <a href="#services" data-cursor="hover" data-i18n="nav_services">Services</a>
-      <a href="#reviews" data-cursor="hover" data-i18n="nav_clients">Clients</a>
-      <a href="/articles" data-cursor="hover" data-i18n="nav_insights">Articles</a>
-      <a href="/contact" data-cursor="hover" data-i18n="nav_contact">Contact</a>
-    </nav>
-    <div class="header__actions">
-      <button class="langtoggle" id="langToggle" data-cursor="hover" aria-label="Switch language">
-        <span data-lang="en">EN</span>
-        <span data-lang="ar">ع</span>
-      </button>
-      <a class="header__cta magnetic" href="/contact" data-cursor="go" data-i18n="nav_cta">Start a project</a>
     </div>
   </header>
 
-  <main id="top">
+  <main id="main">
 
-    <!-- ===================== HERO ===================== -->
-    <section class="hero" id="hero" data-shape="play">
-      <p class="hero__kicker reveal-line"><span class="hero__kicker-dot"></span><span data-i18n="hero_kicker">Marketing Agency — KSA &amp; Egypt</span></p>
-      <h1 class="hero__title" id="heroTitle" data-i18n="hero_title" data-i18n-html aria-label="We make brands grow.">
-        <span class="hero__line"><span class="split" data-split>WE</span>&nbsp;<span class="split" data-split>MAKE</span></span>
-        <span class="hero__line hero__line--accent"><span class="split" data-split>BRANDS</span>&nbsp;<span class="split split--outline" data-split>GROW</span><span class="split hero__dot" data-split>.</span></span>
-      </h1>
-      <div class="hero__foot">
-        <p class="hero__blurb reveal-line"><span data-i18n="hero_blurb" data-i18n-html>Top Tech is a full-service marketing agency born from motion.<br>We combine creativity with strategy to deliver content that<br>doesn't just look good — it actually performs.</span></p>
-        <div class="hero__scroll" aria-hidden="true">
-          <span class="hero__scroll-track"><span class="hero__scroll-thumb"></span></span>
-          <span data-i18n="hero_scroll">Scroll</span>
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <img src="/assets/img/asterisk.webp" alt="" width="18" height="18">
+            Full-service marketing agency · Riyadh &amp; Cairo
+          </p>
+          <h1 class="hero-title reveal">
+            We help your<br>
+            business <span class="hl">grow</span>.
+          </h1>
+          <p class="hero-lead reveal">
+            Top Tech is a full-service marketing agency in Saudi Arabia and Egypt. We build your strategy, run your
+            accounts and content, and launch ad campaigns that turn spend into measurable growth — one team, under one roof.
+          </p>
+          <div class="hero-ctas reveal">
+            <a class="btn btn-primary btn-lg" href="/contact">
+              Start a project
+              <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="/projects">
+              See our work
+            </a>
+          </div>
+          <div class="hero-trust reveal">
+            <div class="faces" aria-hidden="true">
+              <img src="/assets/img/face-smile.webp" alt="" width="44" height="55">
+              <img src="/assets/img/face-wink.webp" alt="" width="44" height="58">
+              <img src="/assets/img/face-wow.webp" alt="" width="44" height="58">
+            </div>
+            <p><strong>80+ brands</strong> trust us across Saudi Arabia, the GCC and Egypt</p>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <img class="hero-half" src="/assets/img/logo-shape.png" alt="" width="330" height="451">
+          <img class="hero-asterisk" src="/assets/img/asterisk.webp" alt="" width="120" height="120">
+          <img class="hero-mascot" src="/assets/img/mascot-jump.webp" alt="" width="760" height="826">
+          <div class="float-chip chip-a">
+            <span class="chip-icon"><svg class="i"><use href="#i-trend"/></svg></span>
+            <span><b>Strategy · Content · Ads</b></span>
+          </div>
+          <div class="float-chip chip-b">
+            <span class="chip-icon yellow"><svg class="i"><use href="#i-clock"/></svg></span>
+            <span>Reply within <b>24 hours</b></span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== MARQUEE (filled + translated by lang.js) ===================== -->
-    <!-- Pre-populated with English so CSS animations start with content even if scripts load slowly -->
+    <!-- ============ Marquee ============ -->
     <div class="marquee" aria-hidden="true">
-      <div class="marquee__row" id="marqueeA" data-marquee="marquee_a"><span>Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ </span><span>Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ Strategy ✳ Social Media ✳ Media Buying ✳ Motion ✳ Move your brand ✳ Reels ✳ </span></div>
-      <div class="marquee__row marquee__row--alt" id="marqueeB" data-marquee="marquee_b"><span>80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ </span><span>80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ 80+ Brands ✳ 200+ Motion Videos ✳ 150+ Designs ✳ One Obsession ✳ </span></div>
+      <div class="marquee-track">
+        <span>Marketing strategy</span><i>✳</i><span>Social media</span><i>✳</i><span>Media buying</span><i>✳</i><span>Content</span><i>✳</i><span>Branding</span><i>✳</i><span>Ad videos</span><i>✳</i><span>Real growth</span><i>✳</i>
+        <span>Marketing strategy</span><i>✳</i><span>Social media</span><i>✳</i><span>Media buying</span><i>✳</i><span>Content</span><i>✳</i><span>Branding</span><i>✳</i><span>Ad videos</span><i>✳</i><span>Real growth</span><i>✳</i>
+      </div>
     </div>
 
-    <!-- ===================== STORY / EVOLUTION ===================== -->
-    <section class="story" id="story" data-shape="wave">
-      <p class="manifesto__index" data-i18n="story_index">01 — The evolution</p>
-      <h2 class="story__headline section-head__title" data-i18n="story_headline" data-i18n-html>Born in motion.<br><em>Built for marketing.</em></h2>
-      <div class="story__phases">
-        <article class="phase">
-          <span class="phase__num">01</span>
-          <h3 class="phase__title" data-i18n="phase1_title">The Studio Era</h3>
-          <p class="phase__desc" data-i18n="phase1_desc">We started as Saudi Arabia's premier motion graphics studio — crafting animation, video and visual stories that made brands unforgettable.</p>
-          <span class="phase__label" data-i18n="phase1_label">Motion Graphics</span>
-        </article>
-        <article class="phase">
-          <span class="phase__num">02</span>
-          <h3 class="phase__title" data-i18n="phase2_title">The Content Years</h3>
-          <p class="phase__desc" data-i18n="phase2_desc">Brands didn't just want videos. They wanted audiences. So we built full content engines — planning, producing and publishing across every platform.</p>
-          <span class="phase__label" data-i18n="phase2_label">Content &amp; Social</span>
-        </article>
-        <article class="phase">
-          <span class="phase__num">03</span>
-          <h3 class="phase__title" data-i18n="phase3_title">The Agency. Now.</h3>
-          <p class="phase__desc" data-i18n="phase3_desc">Today Top Tech is a full-stack marketing agency. Strategy, campaigns, performance and creative under one roof. The craft stayed. The mission grew.</p>
-          <span class="phase__label" data-i18n="phase3_label">Full-Service Marketing</span>
-        </article>
+    <!-- ============ Services ============ -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head section-head--split reveal">
+          <div>
+            <p class="eyebrow">What we do</p>
+            <h2 id="services-title">Everything your brand needs<br class="br-desk"> to grow loud.</h2>
+            <p class="section-lead">Six marketing services working as one team — starting with strategy and ending in numbers you can measure.</p>
+          </div>
+          <a class="link-arrow" href="/services">All services <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </header>
+
+        <ul class="services-grid">
+          <li class="svc-card reveal">
+            <span class="svc-card-num" aria-hidden="true">01</span>
+            <span class="service-icon"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg></span>
+            <h3><a class="svc-card-link" href="/services/marketing-strategy">Marketing Strategy</a></h3>
+            <p>Positioning, market research and go-to-market plans built on data — not guesswork.</p>
+            <div class="svc-card-foot">
+              <span class="svc-card-go">Service details <span class="go-circle"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+              <a class="svc-card-pick" href="/contact?service=Marketing%20Strategy">Request it</a>
+            </div>
+          </li>
+          <li class="svc-card reveal">
+            <span class="svc-card-num" aria-hidden="true">02</span>
+            <span class="service-icon"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg></span>
+            <h3><a class="svc-card-link" href="/services/social-media-marketing">Social Media Marketing</a></h3>
+            <p>Account management and organic and paid campaigns on every platform your audience lives on.</p>
+            <div class="svc-card-foot">
+              <span class="svc-card-go">Service details <span class="go-circle"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+              <a class="svc-card-pick" href="/contact?service=Social%20Media%20Marketing">Request it</a>
+            </div>
+          </li>
+          <li class="svc-card reveal">
+            <span class="svc-card-num" aria-hidden="true">03</span>
+            <span class="service-icon"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span>
+            <h3><a class="svc-card-link" href="/services/media-buying">Media Buying</a></h3>
+            <p>Paid campaigns planned, run and optimised — turning ad spend into measurable growth.</p>
+            <div class="svc-card-foot">
+              <span class="svc-card-go">Service details <span class="go-circle"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+              <a class="svc-card-pick" href="/contact?service=Media%20Buying">Request it</a>
+            </div>
+          </li>
+          <li class="svc-card reveal">
+            <span class="svc-card-num" aria-hidden="true">04</span>
+            <span class="service-icon"><svg class="i" aria-hidden="true"><use href="#i-grid"/></svg></span>
+            <h3><a class="svc-card-link" href="/services/content-management">Content Management</a></h3>
+            <p>End-to-end social content — graphics, videos and reels, planned and produced for your brand.</p>
+            <div class="svc-card-foot">
+              <span class="svc-card-go">Service details <span class="go-circle"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+              <a class="svc-card-pick" href="/contact?service=Content%20Management">Request it</a>
+            </div>
+          </li>
+          <li class="svc-card reveal">
+            <span class="svc-card-num" aria-hidden="true">05</span>
+            <span class="service-icon"><svg class="i" aria-hidden="true"><use href="#i-pen"/></svg></span>
+            <h3><a class="svc-card-link" href="/services/branding-design">Branding &amp; Design</a></h3>
+            <p>Identities, systems and graphic design that make your brand recognisable at a glance.</p>
+            <div class="svc-card-foot">
+              <span class="svc-card-go">Service details <span class="go-circle"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+              <a class="svc-card-pick" href="/contact?service=Branding%20%26%20Design">Request it</a>
+            </div>
+          </li>
+          <li class="svc-card reveal">
+            <span class="svc-card-num" aria-hidden="true">06</span>
+            <span class="service-icon"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></span>
+            <h3><a class="svc-card-link" href="/services/motion-video">Video &amp; Motion</a></h3>
+            <p>Ad videos, motion graphics and reels produced to serve your campaigns and your brand message.</p>
+            <div class="svc-card-foot">
+              <span class="svc-card-go">Service details <span class="go-circle"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+              <a class="svc-card-pick" href="/contact?service=Video%20%26%20Motion">Request it</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- ===================== SERVICES ===================== -->
-    <section class="services" id="services" data-shape="ring">
-      <div class="section-head">
-        <p class="section-head__index" data-i18n="services_index">02 — What we do</p>
-        <h2 class="section-head__title" data-i18n="services_title" data-i18n-html>Everything your brand needs<br><em>to grow loud.</em></h2>
+    <!-- ============ Stats ============ -->
+    <section class="stats" aria-label="Our numbers">
+      <div class="container">
+        <ul class="stats-grid">
+          <li class="stat reveal">
+            <span class="stat-num"><span class="count" data-to="80">80</span>+</span>
+            <span class="stat-label">Brands trust us across Saudi Arabia and the GCC</span>
+          </li>
+          <li class="stat reveal">
+            <span class="stat-num"><span class="count" data-to="150">150</span>+</span>
+            <span class="stat-label">Social media designs delivered</span>
+          </li>
+          <li class="stat reveal">
+            <span class="stat-num"><span class="count" data-to="200">200</span>+</span>
+            <span class="stat-label">Videos produced for our clients</span>
+          </li>
+          <li class="stat reveal">
+            <span class="stat-num"><span class="count" data-to="24">24</span><small>hours</small></span>
+            <span class="stat-label">Maximum reply time on any brief</span>
+          </li>
+        </ul>
       </div>
-      <ul class="services__list">
-        <li class="service" data-cursor="view" data-hue="265">
-          <span class="service__num">01</span>
-          <h3 class="service__name"><a class="service__link" href="/services/marketing-strategy" data-i18n="svc1_name">Marketing Strategy</a></h3>
-          <p class="service__desc" data-i18n="svc1_desc">Positioning, market research and go-to-market plans built on data — not guesswork.</p>
-          <span class="service__arrow" aria-hidden="true">→</span>
-        </li>
-        <li class="service" data-cursor="view" data-hue="300">
-          <span class="service__num">02</span>
-          <h3 class="service__name"><a class="service__link" href="/services/social-media-marketing" data-i18n="svc2_name">Social Media Marketing</a></h3>
-          <p class="service__desc" data-i18n="svc2_desc">Organic and paid campaigns across every platform your audience lives on.</p>
-          <span class="service__arrow" aria-hidden="true">→</span>
-        </li>
-        <li class="service" data-cursor="view" data-hue="200">
-          <span class="service__num">03</span>
-          <h3 class="service__name"><a class="service__link" href="/services/content-management" data-i18n="svc3_name">Content Management</a></h3>
-          <p class="service__desc" data-i18n="svc3_desc">End-to-end social content — graphics, videos and reels, planned and produced for your brand.</p>
-          <span class="service__arrow" aria-hidden="true">→</span>
-        </li>
-        <li class="service" data-cursor="view" data-hue="160">
-          <span class="service__num">04</span>
-          <h3 class="service__name"><a class="service__link" href="/services/branding-design" data-i18n="svc4_name">Branding &amp; Design</a></h3>
-          <p class="service__desc" data-i18n="svc4_desc">Identities, systems and graphic design that make brands recognisable at a glance.</p>
-          <span class="service__arrow" aria-hidden="true">→</span>
-        </li>
-        <li class="service" data-cursor="view" data-hue="38">
-          <span class="service__num">05</span>
-          <h3 class="service__name"><a class="service__link" href="/services/motion-video" data-i18n="svc5_name">Motion &amp; Video</a></h3>
-          <p class="service__desc" data-i18n="svc5_desc">Our origin craft — motion graphics, video editing and videography with cinematic polish.</p>
-          <span class="service__arrow" aria-hidden="true">→</span>
-        </li>
-        <li class="service" data-cursor="view" data-hue="20">
-          <span class="service__num">06</span>
-          <h3 class="service__name"><a class="service__link" href="/services/media-buying" data-i18n="svc6_name">Media Buying</a></h3>
-          <p class="service__desc" data-i18n="svc6_desc">Paid campaigns planned, placed and optimised — turning ad spend into measurable growth.</p>
-          <span class="service__arrow" aria-hidden="true">→</span>
-        </li>
-      </ul>
-      <p class="services__more">
-        <a class="btn btn--ghost" href="/services" data-cursor="hover" data-i18n="services_all" data-i18n-html>All services <i aria-hidden="true">&rarr;</i></a>
-      </p>
     </section>
 
-    <!-- ===================== REVIEWS (replaces Work) ===================== -->
-    <section class="reviews" id="reviews" data-shape="scatter">
-      <div class="section-head section-head--center">
-        <p class="section-head__index" data-i18n="reviews_index">03 — Client love</p>
-        <h2 class="section-head__title" data-i18n="reviews_title" data-i18n-html>Straight from our<br><em>clients' chats.</em></h2>
+    <!-- ============ Why us ============ -->
+    <section class="section section--tint" id="why" aria-labelledby="why-title">
+      <div class="container why-grid">
+        <header class="section-head why-head reveal">
+          <p class="eyebrow">Why Top Tech</p>
+          <h2 id="why-title">A marketing agency that cares about results, not post counts.</h2>
+          <p class="section-lead">We don't sell you isolated posts and designs. We build a complete marketing system run by one team, where every decision is tied to a business goal.</p>
+          <img class="why-asterisk" src="/assets/img/asterisk.webp" alt="" width="84" height="84" loading="lazy">
+        </header>
+
+        <ul class="why-list">
+          <li class="why-item reveal">
+            <span class="why-icon"><svg class="i"><use href="#i-target"/></svg></span>
+            <h3>Strategy first</h3>
+            <p>We define the audience, the message and the channels before the first post or ad, so your budget isn't spent on guesswork.</p>
+          </li>
+          <li class="why-item reveal">
+            <span class="why-icon"><svg class="i"><use href="#i-grid"/></svg></span>
+            <h3>One team, start to finish</h3>
+            <p>Strategy, content, design and ads under one roof, so nothing gets lost between one stage and the next.</p>
+          </li>
+          <li class="why-item reveal">
+            <span class="why-icon"><svg class="i"><use href="#i-pin"/></svg></span>
+            <h3>We know the Saudi and Egyptian markets</h3>
+            <p>With offices in Riyadh and Cairo, we know that buying behaviour, language and platforms differ between the two markets.</p>
+          </li>
+          <li class="why-item reveal">
+            <span class="why-icon"><svg class="i"><use href="#i-trend"/></svg></span>
+            <h3>Clear numbers, honest reports</h3>
+            <p>We agree on the metrics up front, then measure and improve based on what the market says — not on impressions.</p>
+          </li>
+        </ul>
       </div>
-      <div class="reviews__rows">
-        <div class="reviews__row">
-          <div class="reviews__track" id="reviewRowA">
-            <article class="bubble"><header><span class="bubble__avatar" style="--av:#f9b527">M</span><div><h4>Client</h4><small>WhatsApp · Riyadh</small></div></header><p>Thank you so much — it was a pleasure working with you guys. Thanks a lot for your efforts and your kind support 🙏🩵</p><footer>11:42 <i>✓✓</i></footer></article>
-            <article class="bubble bubble--ar" dir="rtl"><header><span class="bubble__avatar" style="--av:#8a67d8">ع</span><div><h4>عميل</h4><small>واتساب · السعودية</small></div></header><p>Perfecto 🤩 عاااااش</p><footer>09:15 <i>✓✓</i></footer></article>
-            <article class="bubble bubble--ar" dir="rtl"><header><span class="bubble__avatar" style="--av:#ff8a5c">س</span><div><h4>عميل</h4><small>واتساب · الرياض</small></div></header><p>الشغل دايماً قبل الموعد والجودة ثابتة. أحسن قرار خدناه السنة دي 🔥</p><footer>14:03 <i>✓✓</i></footer></article>
-            <article class="bubble"><header><span class="bubble__avatar" style="--av:#5ec9a8">B</span><div><h4>Brand manager</h4><small>WhatsApp · Jeddah</small></div></header><p>Our reels finally stopped getting skipped. Engagement doubled in two months 📈</p><footer>16:27 <i>✓✓</i></footer></article>
+    </section>
+
+    <!-- ============ Work ============ -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head section-head--split reveal">
+          <div>
+            <p class="eyebrow">Our work</p>
+            <h2 id="work-title">Real work in every specialty.</h2>
+            <p class="section-lead">Pick a specialty to see our work and results in it.</p>
+          </div>
+          <a class="link-arrow" href="/projects">All work <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </header>
+
+        <div class="work-tabs" role="tablist" aria-label="Specialties">
+          <button type="button" role="tab" class="work-tab" id="tab-ads" aria-controls="panel-ads" aria-selected="true" tabindex="0"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg><span>Media buying</span></button>
+          <button type="button" role="tab" class="work-tab" id="tab-motion" aria-controls="panel-motion" aria-selected="false" tabindex="-1"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg><span>Motion graphics</span></button>
+          <button type="button" role="tab" class="work-tab" id="tab-reels" aria-controls="panel-reels" aria-selected="false" tabindex="-1"><svg class="i" aria-hidden="true"><use href="#i-reel"/></svg><span>Reels & editing</span></button>
+          <button type="button" role="tab" class="work-tab" id="tab-social" aria-controls="panel-social" aria-selected="false" tabindex="-1"><svg class="i" aria-hidden="true"><use href="#i-grid"/></svg><span>Social media design</span></button>
+        </div>
+        <div class="work-panel" role="tabpanel" id="panel-ads" aria-labelledby="tab-ads" tabindex="0">
+          <p class="work-panel-lead">Paid campaigns with measurable results — sales, bookings and messages at a lower cost.</p>
+          <ul class="case-minis">
+          <li class="case-mini reveal">
+            <div class="case-head">
+              <img src="/assets/img/cases/new-idea-logo.webp" alt="New Idea logo" width="52" height="52" loading="lazy">
+              <div><h3 dir="auto">New Idea</h3><p>Wall-art store on Salla · Saudi Arabia</p></div>
+            </div>
+            <p class="case-stat"><b><span dir="ltr">43k</span> <small>SAR</small></b><span>in sales during the campaign</span></p>
+            <p class="case-note">Return on ad spend (ROAS) of about 6×</p>
+            <div class="mini-shots mini-shots--3"><button type="button" class="shot-btn" data-image="/assets/img/cases/new-idea-salla.webp" data-title="New Idea&#x27;s Salla sales dashboard: SAR 43.2k and 138 orders"><img src="/assets/img/cases/new-idea-salla.webp" alt="New Idea&#x27;s Salla sales dashboard: SAR 43.2k and 138 orders" width="1200" height="565" loading="lazy"></button><button type="button" class="shot-btn" data-image="/assets/img/cases/new-idea-meta.webp" data-title="New Idea campaign results on Instagram (Meta)"><img src="/assets/img/cases/new-idea-meta.webp" alt="New Idea campaign results on Instagram (Meta)" width="1200" height="399" loading="lazy"></button><button type="button" class="shot-btn" data-image="/assets/img/cases/new-idea-tiktok.webp" data-title="New Idea campaign results on TikTok"><img src="/assets/img/cases/new-idea-tiktok.webp" alt="New Idea campaign results on TikTok" width="1200" height="399" loading="lazy"></button></div>
+          </li>
+          <li class="case-mini reveal">
+            <div class="case-head">
+              <img src="/assets/img/cases/falcon-wings-logo.webp" alt="Falcon Wings logo" width="52" height="52" loading="lazy">
+              <div><h3 dir="auto">Falcon Wings</h3><p>Flight dispatch & aviation training academy · Saudi Arabia</p></div>
+            </div>
+            <p class="case-stat"><b><span dir="ltr">6</span> <small>groups</small></b><span>courses fully booked</span></p>
+            <p class="case-note">Course price: about SAR 25k · At least 5 people per group</p>
+            <div class="mini-shots mini-shots--3"><button type="button" class="shot-btn" data-image="/assets/img/cases/falcon-wings-ads.webp" data-title="Falcon Wings ad set results on Meta"><img src="/assets/img/cases/falcon-wings-ads.webp" alt="Falcon Wings ad set results on Meta" width="1200" height="396" loading="lazy"></button><button type="button" class="shot-btn" data-image="/assets/img/cases/falcon-wings-ads-2.webp" data-title="Falcon Wings campaign results"><img src="/assets/img/cases/falcon-wings-ads-2.webp" alt="Falcon Wings campaign results" width="1200" height="392" loading="lazy"></button><button type="button" class="shot-btn" data-image="/assets/img/cases/falcon-wings-ads-3.webp" data-title="Falcon Wings Jeddah and Riyadh ad results"><img src="/assets/img/cases/falcon-wings-ads-3.webp" alt="Falcon Wings Jeddah and Riyadh ad results" width="1200" height="396" loading="lazy"></button></div>
+          </li>
+          <li class="case-mini reveal">
+            <div class="case-head">
+              <img src="/assets/img/cases/beauty-valley-logo.webp" alt="Beauty Valley logo" width="52" height="52" loading="lazy">
+              <div><h3 dir="auto">Beauty Valley</h3><p>Cosmetic clinic · Cairo, Egypt</p></div>
+            </div>
+            <p class="case-stat"><b><span dir="ltr">5</span> <small>EGP</small></b><span>cost per message</span></p>
+            <p class="case-note">The typical cost per message in Cairo is EGP 10–15</p>
+            <div class="mini-shots mini-shots--1"><button type="button" class="shot-btn" data-image="/assets/img/cases/beauty-valley-ads.webp" data-title="Beauty Valley messaging campaign results on Meta"><img src="/assets/img/cases/beauty-valley-ads.webp" alt="Beauty Valley messaging campaign results on Meta" width="1200" height="1047" loading="lazy"></button></div>
+          </li>
+        </ul>
+          <p class="work-panel-more"><a class="btn btn-primary btn-lg" href="/projects#ads">See all media buying work <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+        </div>
+        <div class="work-panel" role="tabpanel" id="panel-motion" aria-labelledby="tab-motion" tabindex="0" hidden>
+          <p class="work-panel-lead">Explainer and ad videos in motion graphics for brands in Saudi Arabia and Egypt.</p>
+          <ul class="projects-grid projects-grid--motion">
+          <li class="project-card reveal"><button type="button" class="card-btn" data-video="hevKv9xpOCg" data-title="Motion graphics video for Wafi"><span class="project-media" style="aspect-ratio:16/9"><img src="/assets/img/videos/hevKv9xpOCg.webp" alt="" loading="lazy"><span class="play-badge" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span></span><span class="project-body">
+                <h3>Motion graphics video for Wafi</h3>
+                <span class="project-client">Wafi</span>
+                <span class="project-link">Play video <svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span>
+              </span></button></li>
+          <li class="project-card reveal"><button type="button" class="card-btn" data-video="tiKTDsf82G8" data-title="Motion graphics video for Watan Care"><span class="project-media" style="aspect-ratio:16/9"><img src="/assets/img/videos/tiKTDsf82G8.webp" alt="" loading="lazy"><span class="play-badge" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span></span><span class="project-body">
+                <h3>Motion graphics video for Watan Care</h3>
+                <span class="project-client">Watan Care</span>
+                <span class="project-link">Play video <svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span>
+              </span></button></li>
+          <li class="project-card reveal"><button type="button" class="card-btn" data-video="t5N26saL8dc" data-title="Motion graphics video for Modmen Shawarma"><span class="project-media" style="aspect-ratio:16/9"><img src="/assets/img/videos/t5N26saL8dc.webp" alt="" loading="lazy"><span class="play-badge" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span></span><span class="project-body">
+                <h3>Motion graphics video for Modmen Shawarma</h3>
+                <span class="project-client">Modmen Shawarma · Riyadh</span>
+                <span class="project-link">Play video <svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span>
+              </span></button></li>
+        </ul>
+          <p class="work-panel-more"><a class="btn btn-primary btn-lg" href="/projects#motion">See all motion graphics work <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+        </div>
+        <div class="work-panel" role="tabpanel" id="panel-reels" aria-labelledby="tab-reels" tabindex="0" hidden>
+          <p class="work-panel-lead">Filming, editing and short reels with a fast pace built to stop the scroll.</p>
+          <ul class="projects-grid projects-grid--reels">
+          <li class="project-card reveal"><button type="button" class="card-btn" data-insta="Dc_YkkPtb3n" data-title="Reel: “Break-even ROAS”"><span class="project-media" style="aspect-ratio:9/16"><img src="/assets/img/reels/Dc_YkkPtb3n.webp" alt="" loading="lazy"><span class="play-badge" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span></span><span class="project-body">
+                <h3>Reel: “Break-even ROAS”</h3>
+                <span class="project-client">Top Tech · Instagram</span>
+                <span class="project-link">Play reel <svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span>
+              </span></button></li>
+          <li class="project-card reveal"><button type="button" class="card-btn" data-insta="DcyZugvNx1u" data-title="Reel: “How to increase your sales”"><span class="project-media" style="aspect-ratio:9/16"><img src="/assets/img/reels/DcyZugvNx1u.webp" alt="" loading="lazy"><span class="play-badge" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span></span><span class="project-body">
+                <h3>Reel: “How to increase your sales”</h3>
+                <span class="project-client">Top Tech · Instagram</span>
+                <span class="project-link">Play reel <svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span>
+              </span></button></li>
+          <li class="project-card reveal"><button type="button" class="card-btn" data-insta="Dcn0PzXMWlY" data-title="Reel: “Starting a new brand?”"><span class="project-media" style="aspect-ratio:9/16"><img src="/assets/img/reels/Dcn0PzXMWlY.webp" alt="" loading="lazy"><span class="play-badge" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span></span><span class="project-body">
+                <h3>Reel: “Starting a new brand?”</h3>
+                <span class="project-client">Top Tech · Instagram</span>
+                <span class="project-link">Play reel <svg class="i" aria-hidden="true"><use href="#i-play-fill"/></svg></span>
+              </span></button></li>
+        </ul>
+          <p class="work-panel-more"><a class="btn btn-primary btn-lg" href="/projects#reels">See all reels & editing work <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+        </div>
+        <div class="work-panel" role="tabpanel" id="panel-social" aria-labelledby="tab-social" tabindex="0" hidden>
+          <p class="work-panel-lead">Post and campaign designs that keep the brand consistent on every platform.</p>
+          <ul class="projects-grid projects-grid--social">
+          <li class="project-card reveal"><button type="button" class="card-btn" data-image="/assets/img/designs/ig-DbvjCvPM9gC.webp" data-title="Top Tech starts a new chapter"><span class="project-media"><img src="/assets/img/designs/ig-DbvjCvPM9gC.webp" alt="" loading="lazy"></span><span class="project-body">
+                <h3>Top Tech starts a new chapter</h3>
+                <span class="project-client">Top Tech · Instagram</span>
+                <span class="project-link">View design <svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span>
+              </span></button></li>
+          <li class="project-card reveal"><button type="button" class="card-btn" data-image="/assets/img/designs/ig-DdgNuAwiQaU.webp" data-title="“Spending thousands on ads and sales are flat?”"><span class="project-media"><img src="/assets/img/designs/ig-DdgNuAwiQaU.webp" alt="" loading="lazy"></span><span class="project-body">
+                <h3>“Spending thousands on ads and sales are flat?”</h3>
+                <span class="project-client">Top Tech · Instagram</span>
+                <span class="project-link">View design <svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span>
+              </span></button></li>
+          <li class="project-card reveal"><button type="button" class="card-btn" data-image="/assets/img/designs/ig-Ddlr59Pjd4k.webp" data-title="“Not every like is a customer”"><span class="project-media"><img src="/assets/img/designs/ig-Ddlr59Pjd4k.webp" alt="" loading="lazy"></span><span class="project-body">
+                <h3>“Not every like is a customer”</h3>
+                <span class="project-client">Top Tech · Instagram</span>
+                <span class="project-link">View design <svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span>
+              </span></button></li>
+        </ul>
+          <p class="work-panel-more"><a class="btn btn-primary btn-lg" href="/projects#social">See all social media design work <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Clients ============ -->
+    <section class="clients" id="clients" aria-labelledby="clients-title">
+      <div class="container clients-head reveal">
+        <p class="eyebrow eyebrow--light">Our clients</p>
+        <h2 id="clients-title">Brands that <span class="hl hl--light">trust</span> us.</h2>
+        <p class="clients-lead">More than <b>80</b> brands across Saudi Arabia, the GCC and Egypt chose Top Tech to grow their business.</p>
+      </div>
+      <div class="logo-rows">
+        <ul class="logo-row"><li><img src="/assets/img/clients/loqma.webp" alt="Loqma" width="160" height="160" loading="lazy"></li><li><img src="/assets/img/clients/modmen-shawarma.webp" alt="Modmen Shawarma" width="160" height="160" loading="lazy"></li><li><img src="/assets/img/clients/kaser.webp" alt="Kaser" width="160" height="160" loading="lazy"></li><li><img src="/assets/img/clients/mb.webp" alt="MB" width="160" height="160" loading="lazy"></li><li><img src="/assets/img/clients/watan-care.webp" alt="Watan Care" width="160" height="160" loading="lazy"></li><li><img src="/assets/img/clients/wafi.webp" alt="Wafi" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/loqma.webp" alt="" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/modmen-shawarma.webp" alt="" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/kaser.webp" alt="" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/mb.webp" alt="" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/watan-care.webp" alt="" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/wafi.webp" alt="" width="160" height="160" loading="lazy"></li></ul>
+        <ul class="logo-row logo-row--reverse"><li><img src="/assets/img/clients/alfares.webp" alt="Alfares" width="160" height="160" loading="lazy"></li><li><img src="/assets/img/clients/solopro.webp" alt="SoloPro" width="160" height="160" loading="lazy"></li><li><img src="/assets/img/clients/maternal-able.webp" alt="Maternal Able" width="160" height="160" loading="lazy"></li><li><img src="/assets/img/clients/elyak.webp" alt="ELYAK" width="160" height="160" loading="lazy"></li><li><img src="/assets/img/clients/casca.webp" alt="CASCA Coffee Roasters" width="160" height="160" loading="lazy"></li><li><img src="/assets/img/clients/jwaher.webp" alt="Jwaher Jewels" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/alfares.webp" alt="" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/solopro.webp" alt="" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/maternal-able.webp" alt="" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/elyak.webp" alt="" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/casca.webp" alt="" width="160" height="160" loading="lazy"></li><li aria-hidden="true"><img src="/assets/img/clients/jwaher.webp" alt="" width="160" height="160" loading="lazy"></li></ul>
+      </div>
+    </section>
+
+    <!-- ============ Reviews ============ -->
+    <section class="section section--chat" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section-head reviews-head reveal">
+          <div>
+            <p class="eyebrow">Client love</p>
+            <h2 id="reviews-title">Straight from<br>our clients' chats.</h2>
+          </div>
+          <img class="reviews-face" src="/assets/img/face-wink.webp" alt="" width="120" height="158" loading="lazy">
+        </header>
+
+        <ul class="chat-grid">
+          <li class="bubble reveal" dir="ltr">
+            <div class="bubble-meta"><span class="avatar">S</span><span><b>Startup founder</b> · WhatsApp · Riyadh</span></div>
+            <p>From strategy to media buying — one team, zero headaches. Numbers speak for themselves 🎯</p>
+            <span class="bubble-time">10:08 <svg class="i"><use href="#i-check2"/></svg></span>
+          </li>
+          <li class="bubble reveal" dir="ltr">
+            <div class="bubble-meta"><span class="avatar a2">B</span><span><b>Brand manager</b> · WhatsApp · Jeddah</span></div>
+            <p>Our reels finally stopped getting skipped. Engagement doubled in two months 📈</p>
+            <span class="bubble-time">16:27 <svg class="i"><use href="#i-check2"/></svg></span>
+          </li>
+          <li class="bubble reveal" dir="ltr">
+            <div class="bubble-meta"><span class="avatar a3">A</span><span><b>Client</b> · WhatsApp · GCC</span></div>
+            <p>The brand reveal video got more shares than anything we ever posted 🚀</p>
+            <span class="bubble-time">20:46 <svg class="i"><use href="#i-check2"/></svg></span>
+          </li>
+          <li class="bubble reveal" dir="ltr">
+            <div class="bubble-meta"><span class="avatar a4">M</span><span><b>Client</b> · WhatsApp · Riyadh</span></div>
+            <p>Thank you so much — it was a pleasure working with you guys. Thanks a lot for your efforts and your kind support 🙏🩵</p>
+            <span class="bubble-time">11:42 <svg class="i"><use href="#i-check2"/></svg></span>
+          </li>
+          <li class="bubble reveal" lang="ar" dir="rtl">
+            <div class="bubble-meta"><span class="avatar">س</span><span><b>عميل</b> · واتساب · الرياض</span></div>
+            <p>الشغل دايماً قبل الموعد والجودة ثابتة. أحسن قرار خدناه السنة دي 🔥</p>
+            <span class="bubble-time">14:03 <svg class="i"><use href="#i-check2"/></svg></span>
+          </li>
+          <li class="bubble reveal" lang="ar" dir="rtl">
+            <div class="bubble-meta"><span class="avatar a3">م</span><span><b>مدير تسويق</b> · واتساب · الدمام</span></div>
+            <p>أول مرة نشتغل مع Agency بترد في نفس اليوم وتسلّم قبل الديدلاين ✨</p>
+            <span class="bubble-time">13:31 <svg class="i"><use href="#i-check2"/></svg></span>
+          </li>
+          <li class="bubble reveal" lang="ar" dir="rtl">
+            <div class="bubble-meta"><span class="avatar a2">ف</span><span><b>صاحب مشروع</b> · واتساب · جدة</span></div>
+            <p>فريق فاهم السوق بجد، والموشن جرافيك بتاعهم مستوى تاني 🎬</p>
+            <span class="bubble-time">19:54 <svg class="i"><use href="#i-check2"/></svg></span>
+          </li>
+          <li class="bubble reveal" lang="ar" dir="rtl">
+            <div class="bubble-meta"><span class="avatar a4">ع</span><span><b>عميل</b> · واتساب · السعودية</span></div>
+            <p>Perfecto 🤩 عاااااش</p>
+            <span class="bubble-time">09:15 <svg class="i"><use href="#i-check2"/></svg></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--tint" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <header class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Got a question?<br>The answer is probably here.</h2>
+          <p class="section-lead">If it isn't, message us directly on WhatsApp and we'll reply within 24 hours.</p>
+          <img class="faq-face" src="/assets/img/face-wow.webp" alt="" width="120" height="159" loading="lazy">
+        </header>
+
+        <div class="faq-list">
+          <details class="faq-item reveal" open>
+            <summary>How much do your services cost?</summary>
+            <div class="faq-body">
+              <p>The price depends on the scope: the number of platforms, the monthly content volume, the type of video and the ad budget. Send us your project details and we'll reply within 24 hours with a clear picture. To understand what drives the price before you contact us, read <a href="/articles/digital-marketing-agency-cost-saudi-arabia">How much does digital marketing cost in Saudi Arabia?</a></p>
+            </div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Do you work with startups?</summary>
+            <div class="faq-body">
+              <p>Yes. With early-stage companies we keep the strategy deliberately narrow — one audience, one message, one or two channels — because the real goal at that stage is learning fast, not covering every possibility.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can you work on Saudi Arabia and Egypt at the same time?</summary>
+            <div class="faq-body">
+              <p>Yes, and it's a common request. We treat them as two connected but separate markets: shared positioning where it genuinely fits, and separate decisions on audience, channels and messaging where the markets differ.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>We already post regularly — do we need a strategy?</summary>
+            <div class="faq-body">
+              <p>Posting regularly is execution; it answers "how often", not "why this in particular". If you can't explain in one sentence who your content is for and what you want them to believe, strategy is the missing piece — and it usually makes the same budget work harder.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can I order just one service?</summary>
+            <div class="faq-body">
+              <p>Of course. You can start with a single service such as a motion video or a brand identity. When the services come together under one roof, the strategy becomes the standing brief for social, content, design and ads.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What are your working hours, and how do I reach you?</summary>
+            <div class="faq-body">
+              <p>We work Sunday to Thursday, 9am to 6pm, from our offices in Riyadh and Cairo. The fastest way is WhatsApp, or fill in the <a href="/contact">contact form</a>.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta" id="contact" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-grid">
+          <div class="cta-copy">
+            <p class="eyebrow eyebrow--light">Ready when you are</p>
+            <h2 id="cta-title">Ready to <span class="hl hl--light">grow</span> your business?</h2>
+            <p class="cta-lead">Tell us about your project — we reply within 24 hours.</p>
+
+            <div class="cta-actions">
+              <a class="btn btn-yellow btn-lg" href="/contact">
+                Start a project
+                <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="cta-mascot" aria-hidden="true">
+            <img src="/assets/img/mascot-sit.webp" alt="" width="525" height="1193" loading="lazy">
           </div>
         </div>
-        <div class="reviews__row">
-          <div class="reviews__track" id="reviewRowB">
-            <article class="bubble bubble--ar" dir="rtl"><header><span class="bubble__avatar" style="--av:#5ec9a8">ف</span><div><h4>صاحب مشروع</h4><small>واتساب · جدة</small></div></header><p>فريق فاهم السوق بجد، والموشن جرافيك بتاعهم مستوى تاني 🎬</p><footer>19:54 <i>✓✓</i></footer></article>
-            <article class="bubble"><header><span class="bubble__avatar" style="--av:#ff8a5c">S</span><div><h4>Startup founder</h4><small>WhatsApp · Riyadh</small></div></header><p>From strategy to media buying — one team, zero headaches. Numbers speak for themselves 🎯</p><footer>10:08 <i>✓✓</i></footer></article>
-            <article class="bubble bubble--ar" dir="rtl"><header><span class="bubble__avatar" style="--av:#f9b527">م</span><div><h4>مدير تسويق</h4><small>واتساب · الدمام</small></div></header><p>أول مرة نشتغل مع Agency بترد في نفس اليوم وتسلّم قبل الديدلاين ✨</p><footer>13:31 <i>✓✓</i></footer></article>
-            <article class="bubble"><header><span class="bubble__avatar" style="--av:#8a67d8">A</span><div><h4>Client</h4><small>WhatsApp · GCC</small></div></header><p>The brand reveal video got more shares than anything we ever posted 🚀</p><footer>20:46 <i>✓✓</i></footer></article>
-          </div>
-        </div>
+
+        <ul class="cta-contacts">
+          <li>
+            <a href="https://wa.me/966592661980" target="_blank" rel="noopener">
+              <span class="cc-icon"><svg class="i"><use href="#i-whatsapp"/></svg></span>
+              <span><small>WhatsApp · Saudi Arabia</small><b>+966 59 266 1980</b></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/201501030214" target="_blank" rel="noopener">
+              <span class="cc-icon"><svg class="i"><use href="#i-whatsapp"/></svg></span>
+              <span><small>WhatsApp · Egypt</small><b>+20 15 0103 0214</b></span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:toptechcompany51@gmail.com">
+              <span class="cc-icon"><svg class="i"><use href="#i-mail"/></svg></span>
+              <span><small>Email</small><b>toptechcompany51@gmail.com</b></span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
-
-    <!-- ===================== STATS ===================== -->
-    <section class="stats" id="stats" data-shape="bars">
-      <p class="section-head__index" data-i18n="stats_index">04 — Signal strength</p>
-      <ul class="stats__grid">
-        <li><strong><span class="count" data-count="80">0</span>+</strong><span data-i18n="stat1">Brands trust us across KSA &amp; the GCC</span></li>
-        <li><strong><span class="count" data-count="200">0</span>+</strong><span data-i18n="stat2">Motion videos produced</span></li>
-        <li><strong><span class="count" data-count="150">0</span>+</strong><span data-i18n="stat3">Social media designs delivered</span></li>
-        <li><strong><span class="count" data-count="24">0</span>h</strong><span data-i18n="stat4">Response time on every brief</span></li>
-      </ul>
-    </section>
-
-    <!-- ===================== CONTACT CTA ===================== -->
-    <footer class="contact" id="contact" data-shape="sphere">
-      <p class="contact__kicker" data-i18n="contact_kicker">05 — Ready when you are</p>
-      <h2 class="contact__title" data-i18n="contact_title" data-i18n-html>
-        <span class="contact__line">LET'S MAKE</span>
-        <span class="contact__line contact__line--outline">NOISE</span>
-      </h2>
-      <p class="contact__sub" data-i18n="contact_sub">Tell us about your project — we reply within 24 hours.</p>
-      <a class="contact__cta magnetic" href="/contact" data-cursor="go" data-i18n="contact_cta" data-i18n-html>Start a project <i>→</i></a>
-      <div class="contact__meta">
-        <div>
-          <span data-i18n="meta_talk">Talk now</span>
-          <a href="https://wa.me/966592661980" target="_blank" rel="noopener" data-cursor="hover">+966 59 266 1980</a>
-          <a href="https://wa.me/201093723960" target="_blank" rel="noopener" data-cursor="hover">+20 10 9372 3960</a>
-          <a href="mailto:toptechcompany51@gmail.com" data-cursor="hover">toptechcompany51@gmail.com</a>
-        </div>
-        <div>
-          <span data-i18n="meta_socials">Socials</span>
-          <a href="https://www.instagram.com/toptechagency/" target="_blank" rel="noopener" data-cursor="hover">Instagram</a>
-          <a href="https://www.tiktok.com/@toptechagency1" target="_blank" rel="noopener" data-cursor="hover">TikTok</a>
-        <a href="https://x.com/toptechstudio1" target="_blank" rel="noopener" data-cursor="hover">X</a>
-          <a href="https://www.behance.net/TopTechCompany" target="_blank" rel="noopener" data-cursor="hover">Behance</a>
-        </div>
-        <div>
-          <span data-i18n="meta_base">Offices</span>
-          <p data-i18n="meta_base_text" data-i18n-html>Riyadh, KSA · Cairo, Egypt<br>Sun–Thu · 9am–6pm</p>
-        </div>
-        <div>
-          <span data-i18n="meta_copy">© 2026</span>
-          <p data-i18n="meta_copy_text" data-i18n-html>Top Tech.<br>All signals reserved.</p>
-        </div>
-      </div>
-    </footer>
-
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
-  <script src="/lang.js"></script>
-  <script src="/transition.js"></script>
-  <script src="/main.js"></script>
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <img class="footer-scallop" src="/assets/img/scallop.png" alt="" aria-hidden="true">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/img/logo-white.png" alt="Top Tech" width="120" height="75" loading="lazy">
+        <p>A full-service marketing agency in Saudi Arabia and Egypt: strategy, social media, content and paid ads — under one roof.</p>
+        <ul class="socials">
+          <li><a href="https://www.instagram.com/toptechagency/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a href="https://www.tiktok.com/@toptechagency1" target="_blank" rel="noopener" aria-label="TikTok"><svg class="i" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+          <li><a href="https://x.com/toptechstudio1" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+          <li><a href="https://www.behance.net/TopTechCompany" target="_blank" rel="noopener" aria-label="Behance" class="be">Bē</a></li>
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-label="Services">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing-strategy">Marketing Strategy</a></li>
+          <li><a href="/services/social-media-marketing">Social Media Marketing</a></li>
+          <li><a href="/services/media-buying">Media Buying</a></li>
+          <li><a href="/services/content-management">Content Management</a></li>
+          <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+          <li><a href="/services/motion-video">Video &amp; Motion</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Site links">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">All services</a></li>
+          <li><a href="/projects">Our work</a></li>
+          <li><a href="/#why">Why Top Tech</a></li>
+          <li><a href="/#reviews">Reviews</a></li>
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/contact">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Offices</h4>
+        <ul>
+          <li>Riyadh, Saudi Arabia</li>
+          <li>Cairo, Egypt</li>
+          <li>Sun – Thu · 9am – 6pm</li>
+          <li><a class="footer-wa" href="https://wa.me/966592661980" target="_blank" rel="noopener" aria-label="WhatsApp Saudi Arabia +966 59 266 1980"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg><span dir="ltr">+966 59 266 1980</span></a></li>
+          <li><a class="footer-wa" href="https://wa.me/201501030214" target="_blank" rel="noopener" aria-label="WhatsApp Egypt +20 15 0103 0214"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg><span dir="ltr">+20 15 0103 0214</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Top Tech. All rights reserved.</p>
+      <a href="#top" class="to-top">Back to top <svg class="i" aria-hidden="true"><use href="#i-up"/></svg></a>
+    </div>
+  </footer>
+
+  <!-- Media viewer (videos + images) -->
+  <dialog class="media-modal" id="media-modal" aria-labelledby="media-title">
+    <div class="media-bar">
+      <p id="media-title"></p>
+      <a class="media-ext" id="media-ext" href="#" target="_blank" rel="noopener" hidden><span class="media-ext-label"></span> <svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a>
+      <button type="button" class="media-close" id="media-close" aria-label="Close">×</button>
+    </div>
+    <div class="media-frame" id="media-frame"></div>
+  </dialog>
+
+
+  <!-- ============ Icon sprite ============ -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m6 11 6-6 6 6"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01M12 12h.01M16 12h.01" stroke-width="2.6"/></symbol>
+    <symbol id="i-play-fill" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></symbol>
+    <symbol id="i-reel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.6"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.6"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M12 7.5v5.5"/><path d="M12 16.5h.01" stroke-width="2.6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.5 5 8 4.5 3 4.5v14c5 0 7.5.5 9 2 1.5-1.5 4-2 9-2v-14c-5 0-7.5.5-9 2Z"/><path d="M12 6.5v14"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H5v14h14v-4"/><path d="M14 4h6v6"/><path d="M20 4 11 13"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6 9 7 9-7"/></symbol>
+    <symbol id="i-check2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 12.5 4 4 8.5-9"/><path d="m10.5 16.5 1 0 8.5-9"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></symbol>
+  </svg>
+  <script src="/assets/js/main.js?v=1790387858" defer></script>
 </body>
 </html>

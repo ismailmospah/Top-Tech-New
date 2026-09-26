@@ -1,0 +1,137 @@
+    <section class="page-hero page-hero--contact">
+      <div class="container ph-contact">
+        <div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="@/index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Contact</span>
+        </nav>
+        <h1>Let's start <span class="hl">your project</span>.</h1>
+        <p class="page-lead">Tell us about your brand and what you need, and we'll reply within 24 hours with a clear picture of the next step.</p>
+        </div>
+        <div class="ph-mascot" aria-hidden="true">
+          <img class="ph-mascot-asterisk" src="@/assets/img/asterisk.webp" alt="" width="70" height="70">
+          <img class="ph-mascot-img" src="@/assets/img/mascot-sit.webp" alt="" width="525" height="1193">
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-page" id="contact" aria-label="Contact form">
+      <div class="container contact-layout">
+        <form class="brief-form" id="brief-form" novalidate>
+          <div class="form-main">
+            <h2>Send us your project details</h2>
+            <p class="form-hint">Fill in the details and we'll reply within 24 hours. Fields marked <span class="req">*</span> are required.</p>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="f-name">Name <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="e.g. Sarah Ahmed">
+                <p class="field-error" id="err-name" hidden>Please enter your name.</p>
+              </div>
+              <div class="field">
+                <label for="f-brand">Brand or company</label>
+                <input id="f-brand" name="brand" type="text" autocomplete="organization" placeholder="Optional">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-phone">WhatsApp number <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="+20 1X XXXX XXXX">
+              <p class="field-error" id="err-phone" hidden>Please enter a valid WhatsApp number.</p>
+            </div>
+
+            <fieldset class="field">
+              <legend>Which services do you need?</legend>
+              <div class="chips" id="service-chips">
+                <label class="chip"><input type="checkbox" name="services" value="Marketing Strategy"><span>Strategy</span></label>
+                <label class="chip"><input type="checkbox" name="services" value="Social Media Marketing"><span>Social media</span></label>
+                <label class="chip"><input type="checkbox" name="services" value="Media Buying"><span>Media buying</span></label>
+                <label class="chip"><input type="checkbox" name="services" value="Content Management"><span>Content</span></label>
+                <label class="chip"><input type="checkbox" name="services" value="Branding &amp; Design"><span>Branding &amp; design</span></label>
+                <label class="chip"><input type="checkbox" name="services" value="Video &amp; Motion"><span>Video &amp; motion</span></label>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <h3 class="form-group-title">Project details</h3>
+
+              <fieldset class="field">
+                <legend>Where is your business based?</legend>
+                <div class="seg">
+                  <label><input type="radio" name="market" value="201501030214" data-market="eg" data-label="Egypt" checked><span>Egypt</span></label>
+                  <label><input type="radio" name="market" value="966592661980" data-market="ksa" data-label="Saudi Arabia &amp; GCC"><span>Saudi Arabia &amp; GCC</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="field">
+                <legend>Approximate budget <span class="legend-note" id="budget-currency">(EGP)</span></legend>
+                <div class="chips budget-group" data-market="ksa" hidden>
+                  <label class="chip"><input type="radio" name="budget" value="SAR 5k – 15k"><span>5k – 15k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="SAR 15k – 50k"><span>15k – 50k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="SAR 50k+"><span>50k+</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="Not decided yet"><span>Not decided yet</span></label>
+                </div>
+                <div class="chips budget-group" data-market="eg">
+                  <label class="chip"><input type="radio" name="budget" value="EGP 30k – 75k"><span>30k – 75k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="EGP 75k – 200k"><span>75k – 200k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="EGP 200k+"><span>200k+</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="Not decided yet"><span>Not decided yet</span></label>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label for="f-msg">About the project <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="f-msg" name="message" rows="5" required placeholder="What's the goal? When do you want to start?"></textarea>
+                <p class="field-error" id="err-msg" hidden>Please write a short note about your project.</p>
+              </div>
+            </div>
+
+            <p class="form-note" id="form-note" role="alert" hidden></p>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" id="form-submit">
+              <span class="btn-label">Send</span>
+              <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+            <p class="form-alt">Prefer WhatsApp? <a href="https://wa.me/966592661980" id="wa-alt" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg> Message us on WhatsApp</a></p>
+          </div>
+
+          <div class="form-success" id="form-success" tabindex="-1" hidden>
+            <img src="@/assets/img/face-smile.webp" alt="" width="96" height="120">
+            <h2>Thank you, <span id="success-name"></span>!</h2>
+            <p>We've received your request, and our team will get back to you within 24 hours.</p>
+            <div class="form-success-actions">
+              <a class="btn btn-whatsapp" id="success-wa" href="https://wa.me/966592661980" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg> Continue on WhatsApp</a>
+              <button class="btn btn-ghost" type="button" id="success-reset">Send another request</button>
+            </div>
+          </div>
+        </form>
+
+        <aside class="contact-aside">
+          <div class="aside-card">
+            <h2>Talk to us directly</h2>
+            <ul class="aside-contacts">
+              <li>
+                <a href="https://wa.me/966592661980" target="_blank" rel="noopener">
+                  <span class="cc-icon"><svg class="i"><use href="#i-whatsapp"/></svg></span>
+                  <span><small>WhatsApp · Saudi Arabia</small><b>+966 59 266 1980</b></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/201501030214" target="_blank" rel="noopener">
+                  <span class="cc-icon"><svg class="i"><use href="#i-whatsapp"/></svg></span>
+                  <span><small>WhatsApp · Egypt</small><b>+20 15 0103 0214</b></span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:toptechcompany51@gmail.com">
+                  <span class="cc-icon"><svg class="i"><use href="#i-mail"/></svg></span>
+                  <span><small>Email</small><b>toptechcompany51@gmail.com</b></span>
+                </a>
+              </li>
+            </ul>
+            <p class="aside-hours"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg> Sun – Thu · 9am – 6pm · Riyadh &amp; Cairo</p>
+          </div>
+
+        </aside>
+      </div>
+    </section>

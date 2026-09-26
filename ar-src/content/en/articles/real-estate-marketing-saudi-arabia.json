@@ -1,0 +1,251 @@
+{
+  "slug": "real-estate-marketing-saudi-arabia",
+  "meta_title": "Real Estate Marketing in Saudi Arabia: How to Generate Better Leads — Top Tech",
+  "meta_description": "How to improve lead quality in real estate marketing in Saudi Arabia: qualification, content, advertising, landing pages, follow-up speed, and measuring beyond the form.",
+  "title": "Real estate marketing: how to generate better leads",
+  "lead": "Real estate marketing rarely fails to generate leads. It usually fails to generate the <strong>right</strong> leads. The difference between those two is the difference between a busy sales team and a productive one.",
+  "label": "Articles",
+  "date": "2026-08-31",
+  "date_display": "31 August 2026",
+  "author": "Top Tech",
+  "read_time": "3 min read",
+  "toc": [
+    {
+      "id": "quality-problem",
+      "text": "Why cost per lead misleads here"
+    },
+    {
+      "id": "why-low-quality",
+      "text": "Where weak leads come from"
+    },
+    {
+      "id": "raise-quality",
+      "text": "How to raise quality"
+    },
+    {
+      "id": "content",
+      "text": "The content that works in property"
+    },
+    {
+      "id": "speed",
+      "text": "Speed is decisive"
+    },
+    {
+      "id": "measure",
+      "text": "Measure beyond the form"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "quality-problem",
+      "label": null,
+      "title": "Why cost per lead misleads here",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "In real estate specifically, cost per lead is among the most dangerous metrics to read alone. The reason is simple: the gap between \"someone filled in a form\" and \"someone who can buy and wants to now\" is far wider than in almost any other category.",
+            "A property buyer needs financial capacity, qualified financing, the right timing and serious intent. Any one of those missing makes the lead worthless however cheap it was.",
+            "The usual result: a campaign with an excellent cost per lead, and a sales team spending weeks on calls that go nowhere — a real cost that appears on no advertising dashboard."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-low-quality",
+      "label": null,
+      "title": "Where weak leads come from",
+      "content": [
+        {
+          "kind": "ticks",
+          "items": [
+            "<strong>Optimising toward the form rather than the sale.</strong> Ask a platform for the most forms at the lowest cost and it finds the people quickest to fill one in, not the most serious about buying.",
+            "<strong>Ads that hide the price entirely.</strong> With no indication of range, everyone enquires — and sales discovers most are outside it.",
+            "<strong>A promise that does not match reality.</strong> An ad implying one thing and a page saying another produces curiosity rather than intent.",
+            "<strong>A two-field form.</strong> It makes applying as easy for the uncommitted as for the serious.",
+            "<strong>Broad targeting with no qualifier.</strong> General interest in property does not indicate ability to buy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raise-quality",
+      "label": null,
+      "title": "How to raise quality",
+      "content": [
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "title": "Qualify inside the ad itself",
+              "text": "State a price range, unit type or location clearly. This reduces lead volume and raises the share who are serious — a trade that is almost always worth making in property."
+            },
+            {
+              "title": "Optimise toward a deeper conversion",
+              "text": "Instead of optimising for the form, optimise for a completed call, a booked appointment or a site visit. The platform will find you entirely different people."
+            },
+            {
+              "title": "Add one qualification step",
+              "text": "A question about budget, timing or financing method. One extra question filters the uncommitted and gives sales context before the first call."
+            },
+            {
+              "title": "Separate campaigns by stage",
+              "text": "Someone searching today and someone exploring for later are not one audience. A single message to both fails with both."
+            },
+            {
+              "title": "Show the unit before the form",
+              "text": "A video tour or a clear floor plan automatically filters out people the unit does not suit — before they consume sales time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "content",
+      "label": null,
+      "title": "The content that works in property",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "Effective real estate content reduces uncertainty. Anything that makes the decision clearer moves the sale closer."
+          ]
+        },
+        {
+          "kind": "ticks",
+          "items": [
+            "<strong>Real video tours.</strong> Video reduces wasted viewings more than anything else — whoever sees the unit and still comes, comes seriously.",
+            "<strong>Clear floor plans and areas.</strong> Ambiguity about space generates questions that consume sales time.",
+            "<strong>Content about the location, not just the unit.</strong> Schools, services, roads — many buyers choose the neighbourhood before the property.",
+            "<strong>Explaining financing and procedure.</strong> What most often stalls a decision is uncertainty about the steps, not the price.",
+            "<strong>Motion graphics for numbers and plans.</strong> Payment structures and timelines are understood far faster in motion — see <a href=\"@/services/motion-video.html\">motion and video</a>."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "speed",
+      "label": null,
+      "title": "Speed is decisive",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "In property specifically, response time is among the strongest separators between a campaign that works and one that does not — and it usually sits entirely outside marketing's control.",
+            "A buyer who filled in your form probably filled in three in the same sitting. Whoever calls first starts the conversation from a completely different position.",
+            "So before increasing any budget, ask: how long does our team actually take to respond? A campaign producing leads that sit for two days is not a weak campaign — it is a campaign wasted after handover."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "label": null,
+      "title": "Measure beyond the form",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "The advertising dashboard stops at the form. The real story starts after it, and you cannot improve what you cannot see."
+          ]
+        },
+        {
+          "kind": "ticks",
+          "items": [
+            "What share were actually reachable?",
+            "What share were within the price range?",
+            "What share booked a viewing?",
+            "What share completed a purchase, and over what period?",
+            "Which campaign and which ad produced the people who actually bought?"
+          ]
+        },
+        {
+          "kind": "prose",
+          "paras": [
+            "Feed these numbers back to the campaigns and you will often discover that the campaign with the highest cost per lead is the cheapest per completed sale. That single discovery changes the entire budget allocation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Questions",
+      "title": "Frequently asked",
+      "content": [
+        {
+          "kind": "faq",
+          "items": [
+            {
+              "q": "Should we put the price in the ad?",
+              "a": [
+                "In most cases yes, or at least a range. Hiding price raises lead volume and sharply lowers quality — and you pay for both, once in the ad and again in sales time. If a project genuinely requires price confidentiality, compensate with another clear qualifier: unit type, location, or target segment."
+              ]
+            },
+            {
+              "q": "Which platform is best for real estate?",
+              "a": [
+                "It depends on the property type and the stage, and there is no single answer that fits everyone. Residential, investment and commercial audiences behave differently. The decision should come from knowing who actually buys from you — which starts with reviewing your past deals, not with a standard platform list."
+              ]
+            },
+            {
+              "q": "How long before we see results?",
+              "a": [
+                "The property buying cycle is far longer than e-commerce, so judging final sales after a few weeks is unfair. But that is not an open excuse: you should see progress on nearer metrics — reachability rate, viewings booked, and the share of leads inside the price range."
+              ]
+            },
+            {
+              "q": "We get plenty of leads and nobody buys. What's wrong?",
+              "a": [
+                "Check qualification before creative. Usually the campaign is optimised toward form volume, or the ad states no price qualifier, or your team's response time is long. All three produce the same symptom for completely different reasons — diagnose before changing. More in <a href=\"@/articles/is-your-paid-advertising-working.html\">measuring advertising results</a>."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related services",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/services/media-buying.html",
+              "text": "Media Buying"
+            },
+            {
+              "href": "@/services/motion-video.html",
+              "text": "Motion & Video"
+            },
+            {
+              "href": "@/services/content-management.html",
+              "text": "Content Management"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related reading",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/articles/is-your-paid-advertising-working.html",
+              "text": "How to know if your paid advertising is actually working"
+            },
+            {
+              "href": "@/articles/common-marketing-mistakes.html",
+              "text": "Common mistakes that make companies spend without results"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

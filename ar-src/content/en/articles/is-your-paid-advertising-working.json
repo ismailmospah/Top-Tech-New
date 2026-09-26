@@ -1,0 +1,254 @@
+{
+  "slug": "is-your-paid-advertising-working",
+  "meta_title": "How to Know If Your Paid Advertising Is Actually Working — Top Tech",
+  "meta_description": "The metrics that genuinely indicate paid advertising success: return on ad spend, cost per acquisition, cost per lead, lead quality, and the measurement problems that mislead most advertisers.",
+  "title": "How to know if your paid advertising is actually working",
+  "lead": "Most companies do not know whether their advertising works, and not because numbers are missing but because there are too many. The platform dashboard shows dozens of metrics, and most describe <strong>activity</strong> rather than <strong>outcome</strong>. Telling the two apart is the whole skill.",
+  "label": "Articles",
+  "date": "2026-08-31",
+  "date_display": "31 August 2026",
+  "author": "Top Tech",
+  "read_time": "3 min read",
+  "toc": [
+    {
+      "id": "vanity-vs-real",
+      "text": "Activity metrics versus outcome metrics"
+    },
+    {
+      "id": "the-numbers",
+      "text": "The numbers worth tracking"
+    },
+    {
+      "id": "cheap-leads",
+      "text": "The cheap-lead trap"
+    },
+    {
+      "id": "measurement-first",
+      "text": "Before judging: is your measurement even correct?"
+    },
+    {
+      "id": "after-the-click",
+      "text": "What happens after the click"
+    },
+    {
+      "id": "how-long",
+      "text": "How long before judging?"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "vanity-vs-real",
+      "label": null,
+      "title": "Activity metrics versus outcome metrics",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "Start by sorting what you look at into two groups:"
+          ]
+        },
+        {
+          "kind": "ticks",
+          "items": [
+            "<strong>Describes activity:</strong> impressions, reach, views, clicks, followers, click-through rate. Useful for diagnosis, not for judgement.",
+            "<strong>Describes outcome:</strong> qualified leads, cost per lead, cost per acquisition, return on ad spend, revenue attributed to the campaign."
+          ]
+        },
+        {
+          "kind": "prose",
+          "paras": [
+            "The simple test: could this number rise while your sales stay flat? If yes, it is an activity metric. Views can double without a single extra riyal of revenue; attributed revenue cannot."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the-numbers",
+      "label": null,
+      "title": "The numbers worth tracking",
+      "content": [
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "title": "Cost per lead (CPL)",
+              "text": "What you paid per enquiry. Useful, but genuinely misleading on its own — it says nothing about the quality of that enquiry."
+            },
+            {
+              "title": "Cost per acquisition (CAC)",
+              "text": "What you paid per actual paying customer. This is the number that matters, and it is always considerably higher than cost per lead."
+            },
+            {
+              "title": "Return on ad spend (ROAS)",
+              "text": "Revenue per unit of spend. Best suited to e-commerce, where the purchase is immediate and trackable."
+            },
+            {
+              "title": "Conversion rate",
+              "text": "What share of arrivals completed the action. If it falls while clicks hold steady, the problem is after the click rather than before it."
+            },
+            {
+              "title": "Lead quality",
+              "text": "What share of leads your sales team could actually reach and qualify. The one number no platform provides — it has to come from your team."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cheap-leads",
+      "label": null,
+      "title": "The cheap-lead trap",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "The most common scenario we see: a campaign with an excellent cost per lead and a demoralised sales team, because nobody answers the phone.",
+            "What usually happened is that the campaign was optimised toward the wrong objective. Ask a platform for the most form fills at the lowest cost and it will do exactly that — finding the people quickest to fill in a form, who are not necessarily the people most serious about buying.",
+            "The fix is rarely different targeting. It is changing what you ask the campaign for: optimise toward a deeper conversion (a completed call, a booked appointment, a purchase) rather than the form, and add a light qualification step that filters out the uncommitted."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "measurement-first",
+      "label": null,
+      "title": "Before judging: is your measurement even correct?",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "Before concluding a campaign has failed, verify that what you are measuring is right. In a large share of the accounts we have audited, the first real improvement came from fixing measurement rather than changing targeting."
+          ]
+        },
+        {
+          "kind": "ticks",
+          "items": [
+            "<strong>Is the pixel actually firing?</strong> Check that events register on the correct pages.",
+            "<strong>Are conversions being double-counted?</strong> A duplicate installation or an event firing twice makes numbers look better than they are.",
+            "<strong>Does attribution add up?</strong> If every platform claims the credit, the total will exceed your real sales.",
+            "<strong>Are phone and message sales counted?</strong> Many conversions in Saudi Arabia and Egypt end on WhatsApp or a call — invisible in the dashboard unless connected.",
+            "<strong>Are you comparing like periods?</strong> A month containing a season or a holiday does not compare to an ordinary one."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "after-the-click",
+      "label": null,
+      "title": "What happens after the click",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "An excellent ad pointing at a weak page wastes most of what it earned. Before judging the campaign, inspect what the visitor sees after clicking:"
+          ]
+        },
+        {
+          "kind": "ticks",
+          "items": [
+            "Page load speed, on mobile specifically",
+            "Does the page deliver exactly what the ad promised, or talk about something else?",
+            "How many form fields — every extra field loses a share of applicants",
+            "Is the requested action obvious, or buried below the fold?",
+            "How long does your team take to respond — an hour or three days?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-long",
+      "label": null,
+      "title": "How long before judging?",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "Judging after a few days misleads; waiting months without intervening wastes money. The more useful criterion is not time but <strong>volume of data</strong>: has the campaign gathered enough conversions for differences to be meaningful, or could the gap between two ads be chance?",
+            "In practice: the opening days are the platform learning, and are not a basis for judgement. Then a period of gathering sufficient data. Then a decision based on repeated patterns rather than one good day.",
+            "And changing a campaign daily prevents it from stabilising at all — a more common error than excessive patience."
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Questions",
+      "title": "Frequently asked",
+      "content": [
+        {
+          "kind": "faq",
+          "items": [
+            {
+              "q": "What is a good return on ad spend?",
+              "a": [
+                "There is no universally correct figure, and anyone who gives you one is guessing. An acceptable return depends on your margin: a product at 70% margin tolerates a far lower return than one at 15%. Calculate your own break-even first — the return at which you cover product and advertising cost — then set your target clearly above it."
+              ]
+            },
+            {
+              "q": "The platform says the campaign works and sales have not moved. Why?",
+              "a": [
+                "Three common causes, in order: broken measurement counting conversions that did not happen; misattribution, where the platform claims credit for sales that would have happened anyway; or poor lead quality, where the journey stops at your sales team. Always start by verifying measurement."
+              ]
+            },
+            {
+              "q": "Is an ad that does not sell immediately a failure?",
+              "a": [
+                "Not necessarily — it depends on the buying cycle. High-value products and business services are not bought from a single ad. But that is not an open excuse: if a campaign is not selling, it should still show progress on a nearer metric — qualified enquiries, booked appointments, or returning visits."
+              ]
+            },
+            {
+              "q": "Should we stop a weak campaign or fix it?",
+              "a": [
+                "Start by diagnosing where it breaks. Poor reach is a targeting problem; good reach with poor clicks is a creative problem; good clicks with poor conversion is a landing page or offer problem. Stopping before diagnosing loses what you learned. More detail on the <a href=\"@/services/media-buying.html\">media buying page</a>."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related services",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/services/media-buying.html",
+              "text": "Media Buying"
+            },
+            {
+              "href": "@/services/marketing-strategy.html",
+              "text": "Marketing Strategy"
+            },
+            {
+              "href": "@/services/social-media-marketing.html",
+              "text": "Social Media Marketing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related reading",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/articles/common-marketing-mistakes.html",
+              "text": "Common mistakes that make companies spend without results"
+            },
+            {
+              "href": "@/articles/how-to-choose-a-marketing-agency.html",
+              "text": "How to choose a digital marketing agency"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

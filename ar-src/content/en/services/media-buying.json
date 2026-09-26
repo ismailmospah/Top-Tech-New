@@ -1,0 +1,288 @@
+{
+  "slug": "media-buying",
+  "meta_title": "Media Buying & Paid Advertising Agency — Top Tech, KSA & Egypt",
+  "meta_description": "Media buying and paid advertising management in Saudi Arabia and Egypt: Meta, TikTok, Snapchat, Google and X campaigns planned, launched, optimised and reported against real business metrics.",
+  "title": "Media buying",
+  "lead": "Paid advertising is the fastest way to find out whether your offer and your creative work. It is also the fastest way to spend money finding out nothing at all. The difference is whether the campaign was built around a decision you intend to make.",
+  "label": "Services — 06",
+  "blocks": [
+    {
+      "id": null,
+      "label": "Overview",
+      "title": "What media buying involves",
+      "content": [
+        {
+          "kind": "prose",
+          "paras": [
+            "Media buying is planning where advertising budget goes, placing it, and managing it while it runs. It covers audience and platform choice, campaign structure, budget allocation, creative testing, tracking, optimisation and reporting.",
+            "The part that decides results is usually not the platform settings. It is the <strong>creative</strong> and the <strong>offer</strong>. Targeting on the major platforms has become largely automated; what still separates campaigns is whether the ad is worth stopping for and whether what it asks people to do is worth doing. That is why we do not treat media buying as separate from content and video production.",
+            "The second thing that decides results is measurement. If you cannot see which spend produced which outcome, optimisation becomes guesswork dressed up as reporting. Tracking gets set up before launch, not after the first disappointing month."
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Audience",
+      "title": "Who this is for",
+      "content": [
+        {
+          "kind": "ticks",
+          "items": [
+            "<strong>Businesses running ads with unclear returns</strong> — spend goes out, results are hard to attribute.",
+            "<strong>E-commerce brands</strong> that need campaigns judged on revenue and return on ad spend, not clicks.",
+            "<strong>Companies generating leads</strong> — real estate, education, healthcare, services — where lead quality matters more than lead volume.",
+            "<strong>Brands launching</strong> a product or entering Saudi Arabia or Egypt for the first time.",
+            "<strong>Companies boosting posts</strong> without a campaign structure behind it.",
+            "<strong>Advertisers who have plateaued</strong> — results were fine, then stopped improving."
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Problems",
+      "title": "The problems it solves",
+      "content": [
+        {
+          "kind": "cards",
+          "items": [
+            {
+              "title": "Spend without attribution",
+              "text": "Money goes into several platforms and nobody can say which one produced the sales."
+            },
+            {
+              "title": "Cheap leads that never convert",
+              "text": "Cost per lead looks excellent and the sales team cannot reach or close any of them."
+            },
+            {
+              "title": "Boosting instead of campaigning",
+              "text": "Promoting posts is a blunt tool: no structure, no testing, no control over who is reached."
+            },
+            {
+              "title": "Creative fatigue",
+              "text": "The same ad runs for months, performance decays, and the fix attempted is a higher budget."
+            },
+            {
+              "title": "Broken or missing tracking",
+              "text": "Pixels not firing, events misconfigured, conversions counted twice — optimising against wrong data."
+            },
+            {
+              "title": "Traffic sent nowhere useful",
+              "text": "A strong ad pointing at a slow or unconvincing landing page wastes most of what it earned."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Scope",
+      "title": "What we do",
+      "content": [
+        {
+          "kind": "cards",
+          "items": [
+            {
+              "title": "Campaign planning",
+              "text": "Objective, audience, platform mix and budget split, decided before anything is launched."
+            },
+            {
+              "title": "Platform management",
+              "text": "Meta, TikTok, Snapchat, Google and X — chosen for where your audience is, not for a fixed package."
+            },
+            {
+              "title": "Tracking setup",
+              "text": "Pixels, events and conversion tracking verified before launch, so the data can be trusted."
+            },
+            {
+              "title": "Ad creative",
+              "text": "Ads designed and produced by the same team that makes your content, including video and motion."
+            },
+            {
+              "title": "Testing",
+              "text": "Structured tests of audiences, creative and offers — one variable at a time, so results mean something."
+            },
+            {
+              "title": "Optimisation",
+              "text": "Active management: shifting budget toward what works and stopping what does not, with a stated reason."
+            },
+            {
+              "title": "Reporting",
+              "text": "Reporting against your business metrics — cost per lead, cost per acquisition, return on ad spend — plus what we changed and why."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Process",
+      "title": "How we work",
+      "content": [
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "title": "Account audit",
+              "text": "Existing campaigns, tracking and history: what has been spent, what worked and what the data can actually support."
+            },
+            {
+              "title": "Plan and structure",
+              "text": "Objectives, audiences, campaign structure and budget split agreed in advance, with a defined success measure."
+            },
+            {
+              "title": "Tracking and creative",
+              "text": "Tracking verified and the first creative set produced — usually several variants rather than one."
+            },
+            {
+              "title": "Launch and learn",
+              "text": "The opening period is deliberately about learning which audience and creative combinations work."
+            },
+            {
+              "title": "Optimise and scale",
+              "text": "Budget concentrates on what performs. Scaling happens gradually, because sharp increases usually reset performance."
+            },
+            {
+              "title": "Report and adjust",
+              "text": "A monthly read of spend against results, what we learned, and what changes — including honest accounts of tests that failed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Deliverables",
+      "title": "What you get",
+      "content": [
+        {
+          "kind": "ticks",
+          "items": [
+            "A campaign plan with objectives, audiences and budget split",
+            "Verified tracking and conversion setup",
+            "Ad creative in the formats each platform needs, in Arabic and English",
+            "Structured campaigns built and launched on the chosen platforms",
+            "Ongoing optimisation with documented changes",
+            "Reporting against cost per lead, cost per acquisition or return on ad spend",
+            "Clear recommendations for the following period"
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Questions",
+      "title": "Common questions",
+      "content": [
+        {
+          "kind": "faq",
+          "items": [
+            {
+              "q": "How do we know if our paid advertising is actually working?",
+              "a": [
+                "By judging it against a business number rather than a platform number. Impressions, reach and even clicks describe activity; cost per qualified lead, cost per acquisition and return on ad spend describe outcomes.",
+                "Two checks matter most. First, is tracking correct — are conversions being counted once, and attributed to the right campaign? Second, what happens after the click: for lead generation, how many leads the sales team could actually reach and close. A campaign with an excellent cost per lead and a terrible close rate is not working, whatever the dashboard says."
+              ]
+            },
+            {
+              "q": "What budget do we need to start?",
+              "a": [
+                "It depends on the market, the platform and how competitive your category is — the honest answer is that it varies more than any published figure suggests.",
+                "The more useful principle: the budget has to be large enough to gather meaningful data within a reasonable period. Spend spread too thinly across too many campaigns produces numbers nobody can learn from. We would rather start focused on one platform and one objective and expand once something is working."
+              ]
+            },
+            {
+              "q": "Do you handle the creative as well as the buying?",
+              "a": [
+                "Yes, and we think separating them is a mistake. Creative is the biggest lever on paid performance, and an agency that only manages placements is optimising around a fixed constraint. Ads are produced by the same team handling <a href=\"@/services/content-management.html\">content</a> and <a href=\"@/services/motion-video.html\">motion and video</a>."
+              ]
+            },
+            {
+              "q": "Which platforms do you buy on?",
+              "a": [
+                "Meta, TikTok, Snapchat, Google and X, chosen per client. Platform mix genuinely differs between Saudi Arabia and Egypt, and between B2C and B2B, so it is a decision that comes out of the plan rather than a standard list."
+              ]
+            },
+            {
+              "q": "Who owns the ad accounts?",
+              "a": [
+                "You do. We work inside your accounts wherever possible, so the spend history, the audiences and the learning stay yours if we ever stop working together."
+              ]
+            },
+            {
+              "q": "Can you improve campaigns we are already running?",
+              "a": [
+                "Yes. That starts with an audit of the account and the tracking. In a fair number of cases the first meaningful improvement comes from fixing measurement rather than changing targeting — you cannot optimise reliably against data that is wrong."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related services",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/services/social-media-marketing.html",
+              "text": "Social Media Marketing"
+            },
+            {
+              "href": "@/services/marketing-strategy.html",
+              "text": "Marketing Strategy"
+            },
+            {
+              "href": "@/services/motion-video.html",
+              "text": "Motion & Video"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "label": "Related reading",
+      "title": null,
+      "content": [
+        {
+          "kind": "related",
+          "items": [
+            {
+              "href": "@/articles/digital-marketing-agency-cost-saudi-arabia.html",
+              "text": "How much does a digital marketing agency cost in Saudi Arabia?"
+            },
+            {
+              "href": "@/articles/social-media-management-cost-saudi-arabia.html",
+              "text": "How much does social media management cost?"
+            },
+            {
+              "href": "@/articles/video-production-cost-saudi-arabia.html",
+              "text": "How much does video production cost?"
+            },
+            {
+              "href": "@/articles/is-your-paid-advertising-working.html",
+              "text": "How to know if your paid advertising is actually working"
+            },
+            {
+              "href": "@/articles/common-marketing-mistakes.html",
+              "text": "Common mistakes that make companies spend without results"
+            },
+            {
+              "href": "@/articles/startup-marketing-strategy.html",
+              "text": "How to build a digital marketing strategy for a startup"
+            },
+            {
+              "href": "@/articles/real-estate-marketing-saudi-arabia.html",
+              "text": "Real estate marketing: how to generate better leads"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
