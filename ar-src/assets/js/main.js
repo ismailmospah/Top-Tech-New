@@ -81,6 +81,29 @@
     counters.forEach((c) => co.observe(c));
   }
 
+  /* ---------- Lead events (GA4 · Meta Pixel · TikTok Pixel) ---------- */
+  // Only on the live domain, so local previews and tests don't add fake leads to the ad accounts.
+  // Add ?track-debug to a URL to log the events to the console instead of sending them.
+  const LIVE = /(^|\.)toptech\.studio$/.test(location.hostname);
+  const DEBUG = new URLSearchParams(location.search).has('track-debug');
+  const trackLead = (method, extra = {}) => {
+    const data = { method, language: root.lang, page: location.pathname, ...extra };
+    if (DEBUG) { console.info('[lead]', data); window.__leads = [...(window.__leads || []), data]; return; }
+    if (!LIVE) return;
+    if (typeof gtag === 'function') gtag('event', 'generate_lead', data);
+    if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: method, content_category: data.page });
+    if (window.ttq && typeof ttq.track === 'function') ttq.track('Lead', { content_name: method, description: data.page });
+  };
+
+  // any WhatsApp link (footer numbers, contact cards, form link, mobile menu) — once per page view
+  let waTracked = false;
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href*="wa.me/"]');
+    if (!a || waTracked) return;
+    waTracked = true;
+    trackLead('whatsapp', { number: (a.getAttribute('href').match(/wa\.me\/(\d+)/) || [])[1] || '' });
+  });
+
   /* ---------- Footer year ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -320,6 +343,7 @@
   const showNote = (msg) => { note.textContent = msg; note.hidden = !msg; };
 
   const showSuccess = () => {
+    trackLead('form', { market: market().dataset.market });
     $('success-name').textContent = val('name').split(/\s+/)[0];
     refreshWa();
     form.classList.add('is-sent');
