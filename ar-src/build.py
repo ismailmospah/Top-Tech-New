@@ -131,6 +131,46 @@ ARROW = icon("arrow")
 
 # --------------------------------------------------------------------------- shell
 
+# Analytics & ad pixels carried over unchanged from the previous site (same IDs): GA4, Meta Pixel,
+# TikTok Pixel, and Meta's domain-verification tag. Page views only, exactly as before.
+TRACKING_HEAD = """  <meta name="facebook-domain-verification" content="jgs5un48jog44hoh5u0pxr8ckapcc9" />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXWC3SFZJ2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NXWC3SFZJ2');
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2116622618904017');
+    fbq('track', 'PageView');
+  </script>
+
+  <!-- TikTok Pixel -->
+  <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+      ttq.load('D7FF5L3C77U41JIS43T0');
+      ttq.page();
+    }(window, document, 'ttq');
+  </script>
+"""
+TRACKING_BODY = """  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2116622618904017&ev=PageView&noscript=1"/></noscript>
+"""
+
+
 def head(*, title, desc, path, og_title=None, jsonld=None, preload=None):
     ld = "".join(
         f'\n  <script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (jsonld or []))
@@ -162,9 +202,9 @@ def head(*, title, desc, path, og_title=None, jsonld=None, preload=None):
   <link href="https://fonts.googleapis.com/css2?{fonts}&display=swap" rel="stylesheet">{pre}
   <link rel="stylesheet" href="@/assets/css/style.css?v={VERSION}">
   <script>document.documentElement.classList.add('js')</script>{ld}
-</head>
+{TRACKING_HEAD}</head>
 <body id="top">
-  <a class="skip-link" href="#main">{L("تخطَّ إلى المحتوى", "Skip to content")}</a>
+{TRACKING_BODY}  <a class="skip-link" href="#main">{L("تخطَّ إلى المحتوى", "Skip to content")}</a>
 '''
 
 
