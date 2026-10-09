@@ -102,6 +102,10 @@ button, input, textarea, select { font: inherit; color: inherit; }
 
 .btn-whatsapp { background: var(--wa); color: #fff; box-shadow: 0 8px 20px -8px rgba(31, 175, 90, .6); }
 .btn-whatsapp:hover { background: var(--wa-dark); transform: translateY(-2px); }
+.btn-wa-outline { background: #fff; color: var(--wa-dark); border-color: var(--wa); }
+.btn-wa-outline:hover { background: var(--wa); color: #fff; transform: translateY(-2px); }
+/* country flags (flag-icons, MIT) */
+.flag { width: 1.4em; height: 1.05em; flex: none; object-fit: cover; border-radius: 3px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .12); }
 
 /* ---------- Eyebrow / section heads ---------- */
 .eyebrow {
@@ -198,6 +202,8 @@ button, input, textarea, select { font: inherit; color: inherit; }
   .main-nav ul { flex-direction: column; gap: 2px; }
   .main-nav ul a { padding: .8em 1em; border-radius: 12px; font-size: 1.1rem; }
   .nav-mobile-extra { display: grid; gap: 10px; margin-block-start: 16px; }
+  .nav-wa { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .nav-wa .btn { padding-inline: .8em; }
   .header-actions { margin-inline-start: auto; }
 }
 

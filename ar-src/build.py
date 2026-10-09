@@ -233,9 +233,14 @@ def header(*, is_home, active=None, cta_href="@/contact.html", alt_path="/"):
         </ul>
         <div class="nav-mobile-extra">
           <a class="btn btn-primary btn-block" href="{cta_href}">{L("ابدأ مشروعك", "Start a project")}</a>
-          <a class="btn btn-whatsapp btn-block" href="{WA_KSA}" target="_blank" rel="noopener">
-            {icon("whatsapp")} {L("واتساب", "WhatsApp")}
-          </a>
+          <div class="nav-wa">
+            <a class="btn btn-whatsapp" href="{WA_EG}" target="_blank" rel="noopener" aria-label="{L("واتساب مصر", "WhatsApp Egypt")}">
+              {icon("whatsapp")} {L("واتساب", "WhatsApp")} <img class="flag" src="@/assets/img/flags/eg.svg" alt="" width="20" height="15">
+            </a>
+            <a class="btn btn-wa-outline" href="{WA_KSA}" target="_blank" rel="noopener" aria-label="{L("واتساب السعودية", "WhatsApp Saudi Arabia")}">
+              {icon("whatsapp")} {L("واتساب", "WhatsApp")} <img class="flag" src="@/assets/img/flags/sa.svg" alt="" width="20" height="15">
+            </a>
+          </div>
         </div>
       </nav>
 
